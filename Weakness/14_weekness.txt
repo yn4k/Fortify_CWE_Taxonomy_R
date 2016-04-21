@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.ejb_bad_practices_use_of_awt_swing -->						
+							<h1>
+							   EJB Bad Practices: Use of AWT/Swing
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The program violates the Enterprise JavaBeans specification by using AWT/Swing. 
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  The Enterprise JavaBeans specification requires that every bean provider follow a set of programming guidelines designed to ensure that the bean will be portable and behave consistently in any EJB container [1].<br><br>In this case, the program violates the following EJB guideline:<br><br>"An enterprise bean must not use the AWT functionality to attempt to output information to a display, or to input information from a keyboard."<br><br>A requirement that the specification justifies in the following way:<br><br>"Most servers do not allow direct interaction between an application program and a keyboard/display attached to the server system."
+							</p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>The Enterprise JavaBeans 2.1 Specification</em> Sun Microsystems<br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 575</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.ejb_bad_practices_use_of_awt_swing
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

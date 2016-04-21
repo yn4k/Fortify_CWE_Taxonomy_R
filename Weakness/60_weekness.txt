@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.code_correctness_constructor_invokes_overridable_function -->						
+							<h1>
+							   Code Correctness: Constructor Invokes Overridable Function
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  A constructor of the class calls a function that can be overridden.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  When a constructor calls an overridable function, it may allow an attacker to access the <code>this</code> reference prior to the object being fully initialized, which can in turn lead to a vulnerability.<br><br><b>Example 1:</b> The following calls a method that can be overridden.<br><br></p>
+<pre><br>  ...<br>  class User {<br>    private String username;<br>    private boolean valid;<br>    public User(String username, String password){<br>      this.username = username;<br>      this.valid = validateUser(username, password);<br>    }<br>    public boolean validateUser(String username, String password){<br>      //validate user is real and can authenticate<br>      ...<br>    }<br>    public final boolean isValid(){<br>      return valid;<br>    }<br>  }<br></pre>
+<br><br>Since the function <code>validateUser</code> and the class are not <code>final</code>, it means that they can be overridden, and then initializing a variable to the subclass that overrides this function would allow bypassing of the <code>validateUser</code> functionality. For example: <br><br><pre><br>  ...<br>  class Attacker extends User{<br>    public Attacker(String username, String password){<br>      super(username, password);<br>    }<br>    public boolean validateUser(String username, String password){<br>      return true;<br>    }<br>  }<br>  ...<br>  class MainClass{<br>    public static void main(String[] args){<br>      User hacker = new Attacker("Evil", "Hacker");<br>      if (hacker.isValid()){<br>        System.out.println("Attack successful!");<br>      }else{<br>        System.out.println("Attack failed");<br>      }<br>    }<br>  }<br></pre>
+<br><br>The above code prints "Attack successful!", since the <code>Attacker</code> class overrides the <code>validateUser()</code> function that is called from the constructor of the superclass <code>User</code>, and Java will first look in the subclass for functions called from the constructor.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>MET05-J. Ensure that constructors do not call overridable methods</em> CERT<br></p>
+																									   <p>[2]  <em>EXTEND-5: Limit the extensibility of classes and methods</em> Oracle<br></p>
+																									   <p>[3]  <em>OBJECT-4: Prevent constructors from calling methods that can be overridden</em> Oracle<br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.code_correctness_constructor_invokes_overridable_function
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

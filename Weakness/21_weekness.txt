@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.configuration.java.file_disclosure_spring_webflow -->						
+							<h1>
+							   File Disclosure: Spring Webflow
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Constructing a server-side redirect path with user input could allow an attacker to download application binaries (including application classes or jar files) or view arbitrary files within protected directories.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  In Spring Webflow, a view resolver is used to translate a view name into an actual rendering technology. Typically a view resolver will limit the type and location of the files using prefixes and suffixes. However, using request parameters specify the view name allows this mechanism to be circumvented.<br><b>Example 1:</b> The following Spring Webflow configurations uses request parameters to specify the view name.<br></p>
+<pre><br>&lt;webflow:end-state id="finalStep" view="${requestParameters.url}"/&gt;<br>&lt;webflow:view-state id="showView" view="${requestParameters.test}"&gt;<br></pre>
+<br>The default Spring Webflow view resolver is intended to only allow jsp files in "/WEB-INF/views/" to be resolved.<br><pre><br><br>&lt;bean class="org.springframework.web.servlet.view.<br>               InternalResourceViewResolver"&gt;<br>    &lt;property name="prefix" value="/WEB-INF/views/" /&gt;<br>    &lt;property name="suffix" value=".jsp" /&gt;<br>&lt;/bean&gt;<br><br></pre>
+<br>An attacker could use the following URL to view the applicationContext.xml file: "http://www.yourcorp.com/webApp/logic?url=../applicationContext.xml;x="<br>The <code>InternalResourceViewResolver</code> will take the prefix it is configured with then concatenate the value passed in the view attribute and finally add the suffix.<br>The resulting relative URL, "/WEB-INF/views/../applicationContext.xml;x=.jsp" is passed to the server-side request dispatcher. The semicolon allows the attacker to convert the ".jsp" suffix into a path parameter.  This attack can be used to disclose any file under the web app root.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Ryan Berg and Dinis Cruz <em>Two Security Vulnerabilities in the Spring Framework's MVC</em> <br></p>
+																									   <p>[2] Seth Ladd <em>Expert Spring MVC and Web Flow</em> <br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 552</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2007 <em>A4 Insecure Direct Object Reference</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2010 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2013 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.4</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[15] Standards Mapping - SANS Top 25 2009 <em>Risky Resource Management - CWE ID 073</em> <br></p>
+																									   <p>[16] Standards Mapping - Web Application Security Consortium Version 2.00 <em>URL Redirector Abuse (WASC-38)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.configuration.java.file_disclosure_spring_webflow
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

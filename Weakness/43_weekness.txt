@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.password_management_weak_redundancy -->						
+							<h1>
+							   Password Management: Weak Redundancy
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The password should be given twice instead of duplicated.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							   Duplicating the password is not the way this API should be used. The intent of this API is to make sure that the user does not mistype the password. Duplicating the password circumvents this safety mechanism.<br><br><b>Example 1:</b><br></p>
+<pre><br>        String password=request.getParameter("password");<br>        ...<br>        DefaultUser user = (DefaultUser) ESAPI.authenticator().createUser(username, password, password);<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] OWASP <em>ESAPI Secure Coding API: User</em> <br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 521</em> <br></p>
+																									   <p>[3] Standards Mapping - FIPS200 <em>IA</em> <br></p>
+																									   <p>[4] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M5 Poor Authorization and Authentication</em> <br></p>
+																									   <p>[5] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 3.4, Requirement 6.5.8, Requirement 8.4</em> <br></p>
+																									   <p>[6] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 3.4, Requirement 6.3.1.3, Requirement 6.5.8, Requirement 8.4</em> <br></p>
+																									   <p>[7] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 3.4, Requirement 6.5.3, Requirement 8.4</em> <br></p>
+																									   <p>[8] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 3.4, Requirement 6.5.3, Requirement 8.2.1</em> <br></p>
+																									   <p>[9] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 3.4, Requirement 6.5.3, Requirement 8.2.1</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.password_management_weak_redundancy
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

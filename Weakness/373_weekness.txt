@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.missing_securitymanager_check_serializable -->						
+							<h1>
+							   Missing SecurityManager Check: Serializable
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  A serializable class that performs a <code>SecurityManager</code> check in its constructor needs to perform the same check in its <code>readObject()</code> and <code>readObjectNoData</code> methods.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  When a serializable class's <code>readObject()</code> method is invoked, the constructor for the class being deserialized is not invoked. Thus, if a <code>SecurityManager</code> check is present in the constructor of a serializable class, the same <code>SecurityManager</code> check must also be present in the <code>readObject()</code> and <code>readObjectNoData()</code> methods. Otherwise, the security check will be bypassed when the class is deserialized.<br><br><b>Example 1:</b> The following code contains a <code>SecurityManager</code> check in the constructor but not in the <code>readObject()</code> and <code>readObjectNoData()</code> methods.<br></p>
+<pre><br>public class BadSecurityCheck implements Serializable {<br><br>private int id;<br><br>public BadSecurityCheck() {<br>    SecurityManager sm = System.getSecurityManager();<br>    if (sm != null) {<br>        sm.checkPermission(new BadPermission("BadSecurityCheck"));<br>    }<br>    id = 1;<br>}<br><br>public void readObject(ObjectInputStream in) throws ClassNotFoundException, IOException {<br>    in.defaultReadObject();<br>}<br><br>public void readObjectNoData(ObjectInputStream in) throws ClassNotFoundException, IOException {<br>    in.defaultReadObject();<br>}<br>}<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>"Secure Coding Guidelines for the Java Programming Language, version 2.0" Sun Microsystems, Inc. [Online]. [Accessed: Aug. 30, 2007].</em> Sun Microsystems, Inc.<br></p>
+																									   <p>[2] C. Lai <em>Java Insecurity: Accounting for Subtleties That Can Compromise Code</em> <br></p>
+																									   <p>[3]  <em>SERIAL-4: Duplicate the SecurityManager checks enforced in a class during serialization and deserialization</em> Oracle<br></p>
+																									   <p>[4] Standards Mapping - Common Weakness Enumeration <em>CWE ID 358</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>AC-3 Access Enforcement (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M5 Poor Authorization and Authentication</em> <br></p>
+																									   <p>[7] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Insufficient Authorization (WASC-02)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.missing_securitymanager_check_serializable
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

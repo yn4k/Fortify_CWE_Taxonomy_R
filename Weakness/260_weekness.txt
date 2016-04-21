@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.dynamic_code_evaluation_script_injection -->						
+							<h1>
+							   Dynamic Code Evaluation: Script Injection
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Interpreting user-controlled instructions at run-time can allow attackers to execute malicious code.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Many modern programming languages allow dynamic interpretation of source instructions. This capability allows programmers to perform dynamic instructions based on input received from the user. Code injection vulnerabilities occur when the programmer incorrectly assumes that instructions supplied directly from the user will perform only innocent operations, such as performing simple calculations on active user objects or otherwise modifying the user's state. However, without proper validation, a user might specify operations the programmer does not intend.<br><br><b>Example:</b> In this classic code injection example, the application implements a basic calculator that allows the user to specify commands for execution.<br><br></p>
+<pre><br>...<br>        ScriptEngineManager scriptEngineManager = new ScriptEngineManager();<br>        ScriptEngine scriptEngine = scriptEngineManager.getEngineByExtension("js");<br>        userOps = request.getParameter("operation");<br>        Object result = scriptEngine.eval(userOps);<br>...<br></pre>
+<br><br>The program behaves correctly when the <code>operation</code> parameter is a benign value, such as "8 + 7 * 2", in which case the <code>result</code> variable is assigned a value of 22. However, if an attacker specifies languages operations that are both valid and malicious, those operations would be executed with the full privilege of the parent process. Such attacks are even more dangerous when the underlying language provides access to system resources or allows execution of system commands. For example, Javascript allows invocation of Java objects; if an attacker were to specify " java.lang.Runtime.getRuntime().exec("shutdown -h now")" as the value of  <code>operation</code>, a shutdown command would be executed on the host system.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>INJECT-8: Take care interpreting untrusted code</em> Oracle<br></p>
+																									   <p>[2]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 95, CWE ID 494</em> <br></p>
+																									   <p>[4] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M7 Client Side Injection</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2004 <em>A6 Injection Flaws</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2007 <em>A3 Malicious File Execution</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.3</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[16] Standards Mapping - SANS Top 25 2009 <em>Insecure Interaction - CWE ID 116</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[23] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Improper Input Handling (WASC-20)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.dynamic_code_evaluation_script_injection
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

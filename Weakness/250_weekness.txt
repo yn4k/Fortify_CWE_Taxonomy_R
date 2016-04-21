@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.cross_site_scripting_persistent -->						
+							<h1>
+							   Cross-Site Scripting: Persistent
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Sending unvalidated data to a web browser can result in the browser executing malicious code.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Cross-site scripting (XSS) vulnerabilities occur when:<br><br>1. Data enters a web application through an untrusted source. In the case of Persistent (also known as Stored) XSS, the untrusted source is typically a database or other back-end datastore, while in the case of Reflected XSS it is typically a web request.<br><br><br>2. The data is included in dynamic content that is sent to a web user without being validated.<br><br>The malicious content sent to the web browser often takes the form of a segment of JavaScript, but may also include HTML, Flash or any other type of code that the browser may execute. The variety of attacks based on XSS is almost limitless, but they commonly include transmitting private data like cookies or other session information to the attacker, redirecting the victim to web content controlled by the attacker, or performing other malicious operations on the user's machine under the guise of the vulnerable site.<br><br><b>Example 1:</b> The following JSP code segment queries a database for an employee with a given ID and prints the corresponding employee's name.<br><br></p>
+<pre><br>&lt;%...<br>Statement stmt = conn.createStatement();<br>ResultSet rs = stmt.executeQuery("select * from emp where id="+eid);<br>if (rs != null) {<br>   rs.next();<br>   String name = rs.getString("name");<br>}<br>%&gt;<br><br>Employee Name: &lt;%= name %&gt;<br></pre>
+<br><br>This code functions correctly when the values of <code>name</code> are well-behaved, but it does nothing to prevent exploits if they are not. This code can appear less dangerous because the value of <code>name</code> is read from a database, whose contents are apparently managed by the application. However, if the value of <code>name</code> originates from user-supplied data, then the database can be a conduit for malicious content. Without proper input validation on all data stored in the database, an attacker can execute malicious commands in the user's web browser. This type of exploit, known as Persistent (or Stored) XSS, is particularly insidious because the indirection caused by the data store makes it more difficult to identify the threat and increases the possibility that the attack will affect multiple users. XSS got its start in this form with web sites that offered a "guestbook" to visitors. Attackers would include JavaScript in their guestbook entries, and all subsequent visitors to the guestbook page would execute the malicious code.<br><br><b>Example 2:</b> The following JSP code segment reads an employee ID, <code>eid</code>, from an HTTP request and displays it to the user.<br><br><pre><br>&lt;% String eid = request.getParameter("eid"); %&gt;<br>...<br>Employee ID: &lt;%= eid %&gt;<br></pre>
+<br><br>As in Example 1, this code operates correctly if <code>eid</code> contains only standard alphanumeric text. If <code>eid</code> has a value that includes meta-characters or source code, then the code will be executed by the web browser as it displays the HTTP response.<br><br>Initially this might not appear to be much of a vulnerability. After all, why would someone enter a URL that causes malicious code to run on their own computer? The real danger is that an attacker will create the malicious URL, then use e-mail or social engineering tricks to lure victims into visiting a link to the URL. When victims click the link, they unwittingly reflect the malicious content through the vulnerable web application back to their own computers. This mechanism of exploiting vulnerable web applications is known as Reflected XSS.<br><br>Some think that in the mobile world, classic web application vulnerabilities, such as cross-site scripting, do not make sense -- why would the user attack themself? However, keep in mind that the essence of mobile platforms is applications that are downloaded from various sources and run alongside each other on the same device. The likelihood of running a piece of malware next to a banking application is high, which necessitates expanding the attack surface of mobile applications to include inter-process communication.<br><br><b>Example 3:</b> The following code enables JavaScript in Android's WebView (by default, JavaScript is disabled) and loads a page based on the value received from an Android intent.<br><br><pre><br>...<br>        WebView webview = (WebView) findViewById(R.id.webview);<br>        webview.getSettings().setJavaScriptEnabled(true);<br>        String url = this.getIntent().getExtras().getString("url");<br>        webview.loadUrl(url);<br>...<br></pre>
+<br><br>If the value of <code>url</code> starts with <code>javascript:</code>, JavaScript code that follows will execute within the context of the web page inside WebView.<br><br>As the examples demonstrate, XSS vulnerabilities are caused by code that includes unvalidated data in an HTTP response. There are three vectors by which an XSS attack can reach a victim:<br><br>- As in Example 1, the application stores dangerous data in a database or other trusted data store. The dangerous data is subsequently read back into the application and included in dynamic content. Persistent XSS exploits occur when an attacker injects dangerous content into a data store that is later read and included in dynamic content. From an attacker's perspective, the optimal place to inject malicious content is in an area that is displayed to either many users or particularly interesting users. Interesting users typically have elevated privileges in the application or interact with sensitive data that is valuable to the attacker. If one of these users executes malicious content, the attacker may be able to perform privileged operations on behalf of the user or gain access to sensitive data belonging to the user.<br><br>- As in Example 2, data is read directly from the HTTP request and reflected back in the HTTP response. Reflected XSS exploits occur when an attacker causes a user to supply dangerous content to a vulnerable web application, which is then reflected back to the user and executed by the web browser. The most common mechanism for delivering malicious content is to include it as a parameter in a URL that is posted publicly or e-mailed directly to victims. URLs constructed in this manner constitute the core of many phishing schemes, whereby an attacker convinces victims to visit a URL that refers to a vulnerable site. After the site reflects the attacker's content back to the user, the content is executed and proceeds to transfer private information, such as cookies that may include session information, from the user's machine to the attacker or perform other nefarious activities.<br><br>- As in Example 3, a source outside the application stores dangerous data in a database or other data store, and the dangerous data is subsequently read back into the application as trusted data and included in dynamic content.<br><br>A number of modern web frameworks provide mechanisms for performing validation of user input. Struts and Struts 2 are among them. To highlight the unvalidated sources of input, the rulepacks dynamically re-prioritize the issues reported by HPE Security Fortify Static Code Analyzer by lowering their probability of exploit and providing pointers to the supporting evidence whenever the framework validation mechanism is in use. We refer to this feature as Context-Sensitive Ranking. To further assist the HPE Security Fortify user with the auditing process, the HPE Security Fortify Software Security Research Group makes available the Data Validation project template that groups the issues into folders based on the validation mechanism applied to their source of input.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Understanding Malicious Content Mitigation for Web Developers</em> CERT<br></p>
+																									   <p>[2]  <em>HTML 4.01 Specification</em> W3<br></p>
+																									   <p>[3] Tongbo Luo, Hao Hao, Wenliang Du, Yifei Wang, and Heng Yin <em>Attacks on WebView in the Android System</em> <br></p>
+																									   <p>[4] Erika Chin and David Wagner <em>Bifocals: AnalyzingWebView Vulnerabilities in Android Applications</em> <br></p>
+																									   <p>[5]  <em>INJECT-3: XML and HTML generation requires care</em> Oracle<br></p>
+																									   <p>[6]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[7] Standards Mapping - Common Weakness Enumeration <em>CWE ID 79, CWE ID 80</em> <br></p>
+																									   <p>[8] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[9] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M7 Client Side Injection</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2004 <em>A4 Cross Site Scripting</em> <br></p>
+																									   <p>[12] Standards Mapping - OWASP Top 10 2007 <em>A1 Cross Site Scripting (XSS)</em> <br></p>
+																									   <p>[13] Standards Mapping - OWASP Top 10 2010 <em>A2 Cross-Site Scripting (XSS)</em> <br></p>
+																									   <p>[14] Standards Mapping - OWASP Top 10 2013 <em>A3 Cross-Site Scripting (XSS)</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.4</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.1</em> <br></p>
+																									   <p>[17] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.7</em> <br></p>
+																									   <p>[18] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.7</em> <br></p>
+																									   <p>[19] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.7</em> <br></p>
+																									   <p>[20] Standards Mapping - SANS Top 25 2009 <em>Insecure Interaction - CWE ID 079</em> <br></p>
+																									   <p>[21] Standards Mapping - SANS Top 25 2010 <em>Insecure Interaction - CWE ID 079</em> <br></p>
+																									   <p>[22] Standards Mapping - SANS Top 25 2011 <em>Insecure Interaction - CWE ID 079</em> <br></p>
+																									   <p>[23] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I, APP3580 CAT I</em> <br></p>
+																									   <p>[24] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I, APP3580 CAT I</em> <br></p>
+																									   <p>[25] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I, APP3580 CAT I</em> <br></p>
+																									   <p>[26] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I, APP3580 CAT I</em> <br></p>
+																									   <p>[27] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I, APP3580 CAT I</em> <br></p>
+																									   <p>[28] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I, APP3580 CAT I</em> <br></p>
+																									   <p>[29] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Cross-Site Scripting</em> <br></p>
+																									   <p>[30] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Cross-Site Scripting (WASC-08)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.cross_site_scripting_persistent
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

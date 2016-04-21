@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.system_information_leak_internal -->						
+							<h1>
+							   System Information Leak: Internal
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Revealing system data or debugging information helps an adversary learn about the system and form a plan of attack.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  An internal information leak occurs when system data or debugging information is sent to a local file, console, or screen via printing or logging.<br><br><br><br><b>Example 1:</b> The following code prints an exception to the standard error stream:<br><br></p>
+<pre><br>try {<br>    ...<br>} catch (Exception e) {<br>    e.printStackTrace();<br>}<br></pre>
+<br><br>Depending upon the system configuration, this information can be dumped to a console, written to a log file, or exposed to a user. In some cases the error message tells the attacker precisely what sort of an attack the system is vulnerable to. For example, a database error message can reveal that the application is vulnerable to a SQL injection attack. Other error messages can reveal more oblique clues about the system. In the example above, the leaked information could imply information about the type of operating system, the applications installed on the system, and the amount of care that the administrators have put into configuring the program.<br><br>In the mobile world, information leaks are also a concern.<br><br><b>Example 2:</b> The code below logs the stack trace of a caught exception on the Android platform.<br><pre><br>...<br>try {<br>  ...<br>} catch (Exception e) {<br>    Log.e(TAG, Log.getStackTraceString(e));<br>}<br>...<br></pre>
+<br><h2>REFERENCES</h2>
+																								   <p>[1] Ernst Haselsteiner and Klemens Breitfuss <em>Security in Near Field Communication (NFC): Strengths and Weaknesses</em> <br></p>
+																									   <p>[2]  <em>ERR01-J. Do not allow exceptions to expose sensitive information</em> CERT<br></p>
+																									   <p>[3]  <em>ENV02-J. Do not trust the values of environment variables</em> CERT<br></p>
+																									   <p>[4]  <em>FUNDAMENTALS-4: Establish trust boundaries</em> Oracle<br></p>
+																									   <p>[5]  <em>CONFIDENTIAL-1: Purge sensitive information from exceptions</em> Oracle<br></p>
+																									   <p>[6]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[7] Standards Mapping - Common Weakness Enumeration <em>CWE ID 497</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M2 Insecure Data Storage</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2007 <em>A6 Information Leakage and Improper Error Handling</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.5</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.5</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.5</em> <br></p>
+																									   <p>[14] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[15] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[20] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Information Leakage</em> <br></p>
+																									   <p>[21] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Information Leakage (WASC-13)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.system_information_leak_internal
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.intent_manipulation -->						
+							<h1>
+							   Intent Manipulation
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Allowing user input to control Intent parameters could enable an attacker to control the behavior of the subsequent activity.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  <br>  An intent manipulation issue occurs when the following two conditions are met:<br><br>1. An attacker can specify the action, classname, or component of an Android Intent.<br><br>For example, an attacker may be able to specify the classname or the component to handle the intent.<br><br>2. By specifying the action, classname, or component, the attacker gains a capability that would not otherwise be permitted.<br><br>For example, the program may give the attacker the ability to transmit sensitive information to a third-party software on the device.<br><br><br><br><b>Example 1:</b> The following code uses an argument read from an HTTP request to set the classname of an intent.<br><br></p>
+<pre><br>String arg = request.getParameter("arg");<br>...<br>Intent intent = new Intent();<br>...<br>intent.setClassName(arg);<br>ctx.startActivity(intent);<br>...<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Intent</em> <br></p>
+																									   <p>[2]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 99</em> <br></p>
+																									   <p>[4] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M8 Security Decisions Via Untrusted Inputs</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2007 <em>A4 Insecure Direct Object Reference</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2010 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2013 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.4</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I, APP3600 CAT II</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I, APP3600 CAT II</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I, APP3600 CAT II</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I, APP3600 CAT II</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I, APP3600 CAT II</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I, APP3600 CAT II</em> <br></p>
+																									   <p>[22] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Improper Input Handling (WASC-20)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.intent_manipulation
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

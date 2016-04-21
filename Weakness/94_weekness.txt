@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.unreleased_resource_android_sqlite_database -->						
+							<h1>
+							   Unreleased Resource: Android SQLite Database
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  An Android activity fails to release the Android database handler in its <code>onPause()</code>, <code>onStop()</code>, or <code>onDestroy()</code> event handlers.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  The Android activity maintains an Android SQLite database handler that is not closed in <code>onPause()</code>, <code>onStop()</code>, or <code>onDestroy()</code> callback. The Android OS invokes these callbacks whenever it needs to send the current activity to the background, or when it needs to temporarily destroy the activity when system resources are low. By failing to close the database properly, the activity can potentially exhaust the device of available cursors if the activity is constantly restarted. In addition, depending on the implementation, the Android operating system can also throws <code>DatabaseObjectNotClosedException</code>, which crashes the application if the exception is not caught.<br><br><b>Example:</b> The following code describes an Android activity that caches user data and writes the data to disk when the activity is stopped. Note that does not override the base <code>onPause()</code>, which should be used to release the database object, nor does it properly release it during its shutdown sequence.<br><br></p>
+<pre><br>public class MyDBHelper extends SQLiteOpenHelper {<br>  ...<br>}<br><br>public class UnreleasedDBActivity extends Activity {<br>  private myDBHelper dbHelper;<br>  private SQLiteDatabase db;<br><br>  @Override<br>  public void onCreate(Bundle state) {<br>      ...<br>      db = dbHelper.getWritableDatabase();<br>      ...<br>  }<br><br>  @Override<br>  public void onRestart() {<br>      ...<br>  }<br><br>  @Override<br>  public void onStop() {<br>      db.insert(cached_data);     // flush cached data<br>  }<br>}<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Data Storage, Android Developers</em> <br></p>
+																									   <p>[2]  <em>FIO04-J. Release resources when they are no longer needed</em> CERT<br></p>
+																									   <p>[3]  <em>DOS-2: Release resources in all cases</em> Oracle<br></p>
+																									   <p>[4] Standards Mapping - Common Weakness Enumeration <em>CWE ID 404, CWE ID 619</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-5 Denial of Service Protection (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2004 <em>A9 Application Denial of Service</em> <br></p>
+																									   <p>[7] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.9</em> <br></p>
+																									   <p>[8] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[9] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[10] Standards Mapping - SANS Top 25 2009 <em>Risky Resource Management - CWE ID 404</em> <br></p>
+																									   <p>[11] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[12] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[13] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[14] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[15] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[17] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Denial of Service</em> <br></p>
+																									   <p>[18] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Denial of Service (WASC-10)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.unreleased_resource_android_sqlite_database
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

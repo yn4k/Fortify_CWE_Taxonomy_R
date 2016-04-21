@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.internal.java.null_dereference_dereference_after_check -->						
+							<h1>
+							   Redundant Null Check
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The program can dereference a null pointer, thereby causing a null pointer exception.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Null pointer exceptions usually occur when one or more of the programmer's assumptions is violated. Specifically, dereference-after-check errors occur when a program makes an explicit check for null, but proceeds to dereference the object when it is known to be null. Errors of this type are often the result of a typo or programmer oversight.<br><br>Most null pointer issues result in general software reliability problems, but if attackers can intentionally cause the program to dereference a null pointer, they can use the resulting exception to mount a denial of service attack or to cause the application to reveal debugging information that will be valuable in planning subsequent attacks.<br><br><b>Example 1:</b> In the following code, the programmer confirms that the variable <code>foo</code> is <code>null</code> and subsequently dereferences it erroneously. If <code>foo</code> is <code>null</code> when it is checked in the <code>if</code> statement, then a null dereference will occur, thereby causing a null pointer exception.<br><br></p>
+<pre><br>if (foo == null) {<br>	foo.setBar(val);<br>	...<br>}<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Standards Mapping - Common Weakness Enumeration <em>CWE ID 476</em> <br></p>
+																									   <p>[2] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-5 Denial of Service Protection (P1)</em> <br></p>
+																									   <p>[3] Standards Mapping - OWASP Top 10 2004 <em>A9 Application Denial of Service</em> <br></p>
+																									   <p>[4] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.9</em> <br></p>
+																									   <p>[5] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[6] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[7] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[8] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[9] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[10] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[11] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Denial of Service</em> <br></p>
+																									   <p>[12] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Denial of Service (WASC-10)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.internal.java.null_dereference_dereference_after_check
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

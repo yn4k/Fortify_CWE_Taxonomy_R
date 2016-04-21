@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.code_correctness_call_to_system_gc -->						
+							<h1>
+							   Code Correctness: Call to System.gc()
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Explicit requests for garbage collection are a bellwether indicating likely performance problems.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  At some point in every Java developer's career, a problem surfaces that appears to be so mysterious, impenetrable, and impervious to debugging that there seems to be no alternative but to blame the garbage collector. Especially when the bug is related to time and state, there may be a hint of empirical evidence to support this theory: inserting a call to <code>System.gc()</code> sometimes seems to make the problem go away.<br><br>In almost every case we have seen, calling <code>System.gc()</code> is the wrong thing to do. In fact, calling <code>System.gc()</code> can cause performance problems if it is invoked too often.
+							</p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] D. H. Hovermeyer <em>FindBugs User Manual</em> <br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 730</em> <br></p>
+																									   <p>[3] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-5 Denial of Service Protection (P1)</em> <br></p>
+																									   <p>[4] Standards Mapping - OWASP Top 10 2004 <em>A9 Application Denial of Service</em> <br></p>
+																									   <p>[5] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.9</em> <br></p>
+																									   <p>[6] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[7] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[8] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[9] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[10] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[11] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[12] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Denial of Service</em> <br></p>
+																									   <p>[13] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Denial of Service (WASC-10)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.code_correctness_call_to_system_gc
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

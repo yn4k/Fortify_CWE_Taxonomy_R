@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.ognl_expression_injection_struts2_includeparams -->						
+							<h1>
+							   OGNL Expression Injection: Struts 2
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The Url built using the Struts 2 <code>&lt;s:url /&gt;</code> or <code>&lt;s:a /&gt;</code> tags evaluates the query parameters as OGNL expressions allowing an attacker to modify system variables like Session or execute arbitrary commands on the server.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Object-Graph Navigation Language (OGNL) is an open-source Expression Language (EL) for Java that allows the evaluation of EL expression in the Struts 2 Value Stack context. Allowing unvalidated expressions to be evaluated against the Value Stack will allow an attacker to access and modify system variables or execute arbitrary code.<br><br>Setting the <code>includeParams</code> parameter to <code>all</code> or <code>get</code> makes Struts 2 to evaluate all the request parameters as OGNL expressions and include the evaluated expressions as parameters for the Url or Anchor built using <code>&lt;s:url /&gt;</code> or <code>&lt;s:a /&gt;</code> tags. An attacker can submit any arbitrary OGNL payload in the request query that will be evaluated by Struts 2 when rendering the URL.<br></p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Apache Commons OGNL - Object Graph Navigation Library</em> <br></p>
+																									   <p>[2] Meder Kydyraliev <em>Milking a horse or executing remote code in modern Java frameworks</em> <br></p>
+																									   <p>[3] Apache Struts 2 <em>Apache Struts 2 Security Bulletin S2-013</em> <br></p>
+																									   <p>[4] Apache Struts 2 <em>Apache Struts 2 Security Bulletin S2-014</em> <br></p>
+																									   <p>[5] Standards Mapping - Common Weakness Enumeration <em>CWE ID 95</em> <br></p>
+																									   <p>[6] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[7] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2004 <em>A6 Injection Flaws</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2007 <em>A2 Injection Flaws</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[12] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.2</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[17] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[18] Standards Mapping - SANS Top 25 2009 <em>Insecure Interaction - CWE ID 116</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[23] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[24] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[25] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Improper Input Handling (WASC-20)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.ognl_expression_injection_struts2_includeparams
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

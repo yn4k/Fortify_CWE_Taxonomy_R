@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.semantic.java.system_information_leak -->						
+							<h1>
+							   System Information Leak
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Revealing system data or debugging information helps an adversary learn about the system and form a plan of attack.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  An information leak occurs when system data or debugging information leaves the program through an output stream or logging function.<br><br><br><br><b>Example 1:</b> The following code prints an exception to the standard error stream:<br><br></p>
+<pre><br>try {<br>    ...<br>} catch (Exception e) {<br>    e.printStackTrace();<br>}<br></pre>
+<br><br>Depending upon the system configuration, this information can be dumped to a console, written to a log file, or exposed to a remote user. For example, with scripting mechanisms it is trivial to redirect output information from "Standard error" or "Standard output" into a file or another program. Alternatively the system that the program runs on could have a remote logging mechanism such as a "syslog" server that will send the logs to a remote device. During development you will have no way of knowing where this information may end up being displayed.<br><br>In some cases the error message tells the attacker precisely what sort of an attack the system is vulnerable to. For example, a database error message can reveal that the application is vulnerable to a SQL injection attack. Other error messages can reveal more oblique clues about the system. In the example above, the leaked information could imply information about the type of operating system, the applications installed on the system, and the amount of care that the administrators have put into configuring the program.<br><br>Here is another scenario, specific to the mobile world. Most mobile devices now implement a Near-Field Communication (NFC) protocol for quickly sharing information between devices using radio communication. It works by bringing devices to close proximity or simply having them touch each other. Even though the communication range of NFC is limited to just a few centimeters, eavesdropping, data modification and various other types of attacks are possible, since NFC alone does not ensure secure communication.<br><br><b>Example 2:</b> The Android platform provides support for NFC. The following code creates a message that gets pushed to the other device within the range.<br><pre><br>...<br>public static final String TAG = "NfcActivity";<br>private static final String DATA_SPLITTER = "__:DATA:__";<br>private static final String MIME_TYPE = "application/my.applications.mimetype";<br>...<br>public NdefMessage createNdefMessage(NfcEvent event) {<br>    TelephonyManager tm = (TelephonyManager)Context.getSystemService(Context.TELEPHONY_SERVICE);<br>    String VERSION = tm.getDeviceSoftwareVersion();<br>    String text = TAG + DATA_SPLITTER + VERSION;<br>    NdefRecord record = new NdefRecord(NdefRecord.TNF_MIME_MEDIA,<br>            MIME_TYPE.getBytes(), new byte[0], text.getBytes());<br>    NdefRecord[] records = { record };<br>    NdefMessage msg = new NdefMessage(records);<br>    return msg;<br>}<br>...<br></pre>
+<br><br>NFC Data Exchange Format (NDEF) message contains typed data, a URI, or a custom application payload. If the message contains information about the application, such as its name, MIME type, or device software version, this information could be leaked to an eavesdropper. In the example above, HPE Security Fortify Static Code Analyzer reports a System Information Leak vulnerability on the return statement.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Ernst Haselsteiner and Klemens Breitfuss <em>Security in Near Field Communication (NFC): Strengths and Weaknesses</em> <br></p>
+																									   <p>[2]  <em>ERR01-J. Do not allow exceptions to expose sensitive information</em> CERT<br></p>
+																									   <p>[3]  <em>ENV02-J. Do not trust the values of environment variables</em> CERT<br></p>
+																									   <p>[4]  <em>FUNDAMENTALS-4: Establish trust boundaries</em> Oracle<br></p>
+																									   <p>[5]  <em>CONFIDENTIAL-1: Purge sensitive information from exceptions</em> Oracle<br></p>
+																									   <p>[6] Standards Mapping - Common Weakness Enumeration <em>CWE ID 497</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M2 Insecure Data Storage</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2007 <em>A6 Information Leakage and Improper Error Handling</em> <br></p>
+																									   <p>[9] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.5</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.5</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.5</em> <br></p>
+																									   <p>[13] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[14] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[15] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3620 CAT II</em> <br></p>
+																									   <p>[19] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Information Leakage</em> <br></p>
+																									   <p>[20] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Information Leakage (WASC-13)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.semantic.java.system_information_leak
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

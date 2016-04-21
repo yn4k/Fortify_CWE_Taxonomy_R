@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.dead_code_expression_is_always_false -->						
+							<h1>
+							   Dead Code: Expression is Always false
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  This expression (or part of it) will always evaluate to <code>false</code>.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  This expression (or part of it) will always evaluate to <code>false</code>; the program could be rewritten in a simpler form. The nearby code may be present for debugging purposes, or it may not have been maintained along with the rest of the program. The expression may also be indicative of a bug earlier in the method.<br><br><b>Example 1:</b> The following method never sets the variable <code>secondCall</code> after initializing it to <code>false</code>. (The variable <code>firstCall</code> is mistakenly used twice.)  The result is that the expression <code>firstCall &amp;&amp; secondCall</code> will always evaluate to <code>false</code>, so <code>setUpDualCall()</code> will never be invoked.<br><br></p>
+<pre><br>public void setUpCalls() {<br>  boolean firstCall = false;<br>  boolean secondCall = false;<br><br>  if (fCall &gt; 0) {<br>    setUpFCall();<br>    firstCall = true;<br>  }<br>  if (sCall &gt; 0) {<br>    setUpSCall();<br>    firstCall = true;<br>  }<br><br>  if (firstCall &amp;&amp; secondCall) {<br>    setUpDualCall();<br>  }<br>}<br></pre>
+<br><br><b>Example 2:</b> The following method never sets the variable <code>firstCall</code> to <code>true</code>. (The variable <code>firstCall</code> is mistakenly set to <code>false</code> after the first conditional statement.)  The result is that the first part of the expression <code>firstCall &amp;&amp; secondCall</code> will always evaluate to <code>false</code>.<br><br><pre><br>public void setUpCalls() {<br>  boolean firstCall = false;<br>  boolean secondCall = false;<br><br>  if (fCall &gt; 0) {<br>    setUpFCall();<br>    firstCall = false;<br>  }<br>  if (sCall &gt; 0) {<br>    setUpSCall();<br>    secondCall = true;<br>  }<br><br>  if (firstCall || secondCall) {<br>    setUpForCall();<br>  }<br>}<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Standards Mapping - Common Weakness Enumeration <em>CWE ID 570</em> <br></p>
+																									   <p>[2] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[3] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[4] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[5] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[6] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[7] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3050 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.dead_code_expression_is_always_false
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

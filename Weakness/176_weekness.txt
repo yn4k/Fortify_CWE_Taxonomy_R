@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.config.java.j2ee_misconfiguration_duplicate_servlet_mapping -->						
+							<h1>
+							   J2EE Misconfiguration: Duplicate Servlet Mapping
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Multiple servlet mappings for the same URL pattern exist. Duplicate servlet mappings often indicate left over debug code or a typographical error.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Duplicate servlet mappings serve no purpose since only the last entry will be applied when the same URL pattern is used in multiple servlet mappings.<br><br><br><br><b>Example 1:</b> In the following example, the URL pattern <code>/servletA/*</code> is used in two different servlet mappings.<br></p>
+<pre><br>&lt;servlet-mapping&gt;<br>    &lt;servlet-name&gt;ServletA&lt;/servlet-name&gt;<br>    &lt;url-pattern&gt;/servletA/*&lt;/url-pattern&gt;<br>&lt;/servlet-mapping&gt;<br>&lt;servlet-mapping&gt;<br>    &lt;servlet-name&gt;ServletB&lt;/servlet-name&gt;<br>    &lt;url-pattern&gt;/servletA/*&lt;/url-pattern&gt;<br>&lt;/servlet-mapping&gt;<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Standards Mapping - Common Weakness Enumeration <em>CWE ID 398</em> <br></p>
+																									   <p>[2] Standards Mapping - OWASP Top 10 2013 <em>A5 Security Misconfiguration</em> <br></p>
+																									   <p>[3] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Application Misconfiguration (WASC-15)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.config.java.j2ee_misconfiguration_duplicate_servlet_mapping
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

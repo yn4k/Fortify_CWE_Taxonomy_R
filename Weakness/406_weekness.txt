@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.weak_cryptographic_hash_user_controlled_algorithm -->						
+							<h1>
+							   Weak Cryptographic Hash: User-Controlled Algorithm
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Using a user-controlled algorithm within a cryptographic hash may enable the attacker to specify a weak cryptographic hash algorithm, compromising data integrity and security of the application.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Weak Cryptographic Hash: User-Controlled Algorithm issues occur when:<br><br>1. Data enters a program through an untrusted source<br><br>2. The user-controlled data is used to specify the cryptographic hash algorithm.<br><br>As with many software security vulnerabilities, Weak Cryptographic Hash: User-Controlled Algorithm is a means to an end, not an end in and of itself. At its root, the vulnerability is straightforward: an attacker passes malicious data to an application, and the data is then used to specify the cryptographic hash algorithm. An attacker could specify a hash algorithm such as MD5, which has known weaknesses, to undermine the data integrity and security of the application.<br><br><b>Example 1:</b> The following code uses a user-controlled algorithm:<br></p>
+<pre><br>    ...<br>    Properties prop = new Properties();<br>    prop.load(new FileInputStream("config.properties"));<br>    String algorithm = prop.getProperty("hash");<br>    ...<br>    MessageDigest messageDigest = MessageDigest.getInstance(algorithm);<br>    messageDigest.update(hashInput.getBytes("UTF-8"));<br>    ...<br></pre>
+<br><br>The above code will run successfully, but anyone who can get to this functionality will be able to manipulate the hash algorithm by modifying the property <code>hash</code>. Once the program has shipped, it can be nontrivial to undo an issue regarding user-controlled algorithms, as it would be extremely difficult to know whether or not a given cryptographic hash had its algorithm parameter determined by a malicious user.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Stach &amp; Liu <em>MD5 and MD4 Collision Generators</em> <br></p>
+																									   <p>[2] Xiaoyun Wang, Yiqun Lisa Yin, and Hongbo Yu <em>Finding Collisions in the Full SHA-1</em> <br></p>
+																									   <p>[3] Xiaoyun Wang and Hongbo Yu <em>How to Break MD5 and Other Hash Functions</em> <br></p>
+																									   <p>[4]  <em>SDL Development Practices</em> Microsoft<br></p>
+																									   <p>[5]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[6] Standards Mapping - Common Weakness Enumeration <em>CWE ID 328</em> <br></p>
+																									   <p>[7] Standards Mapping - FIPS200 <em>MP</em> <br></p>
+																									   <p>[8] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-13 Cryptographic Protection (P1)</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M6 Broken Cryptography</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2004 <em>A8 Insecure Storage</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2007 <em>A8 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[12] Standards Mapping - OWASP Top 10 2010 <em>A7 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[13] Standards Mapping - OWASP Top 10 2013 <em>A6 Sensitive Data Exposure</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.3, Requirement 6.5.8</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[17] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[18] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[23] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[24] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3150.1 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.weak_cryptographic_hash_user_controlled_algorithm
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

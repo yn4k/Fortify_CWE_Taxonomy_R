@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.code_correctness_string_comparison_of_float -->						
+							<h1>
+							   Code Correctness: String Comparison of Float
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Comparing a floating-point value with a <code>String</code> object is unreliable and should not be done.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  In order to compare a floating-point value to a <code>String</code> object, it must first be changed into a <code>String</code> object, typically via a function such as <code>Double.toString()</code>. Depending on the type and value of the floating-point variable, when converted to a <code>String</code> object, it could be "NaN", "Infinity", "-Infinity", have a certain amount of trailing decimal places containing zeroes, or may contain an exponent field. If converted to a hexadecimal String, the representation may differ greatly as well.<br><br><b>Example 1:</b> The following compares a floating-point variable with a <code>String</code>.<br><br></p>
+<pre><br>  ...<br>  int initialNum = 1;<br>  ...<br>  String resultString = Double.valueOf(initialNum/10000.0).toString();<br>  if (s.equals("0.0001")){<br>    //do something<br>    ...<br>  }<br>  ...<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>NUM11-J. Do not compare or inspect the string representation of floating-point values</em> CERT<br></p>
+																									   <p>[2]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 398</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.code_correctness_string_comparison_of_float
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

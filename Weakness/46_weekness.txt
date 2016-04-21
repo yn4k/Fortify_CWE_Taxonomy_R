@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.config.java.struts2_bad_practices_dynamic_method_invocation -->						
+							<h1>
+							   Struts 2 Bad Practices: Dynamic Method Invocation
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The Struts 2 Action exposes a public method that can be invoked by end users overriding the Action's <code>execute()</code> method.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Struts 2 introduced a feature called "Dynamic Method Invocation" which allow an Action to expose methods other than execute(). The "!" (bang) character can be used in the Action URL to invoke any public method in the Action in "Dynamic Method Invocation" is enabled.  Developers that are not aware of this feature can inadvertently expose internal business logic to attackers.<br><br>  As an example, if the Action contains a public method called getUserPassword() that takes no arguments and fails to disable the "Dynamic Method Invocation" feature, an attacker will be able to take advantage of this visiting the following URL: <code>http://server/app/recoverpassword!getPassword.action</code><br><br></p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Struts 2 Security Vulnerability - Dynamic Method Invocation</em> <br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 285</em> <br></p>
+																									   <p>[3] Standards Mapping - FIPS200 <em>AC</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>AC-3 Access Enforcement (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2004 <em>A2 Broken Access Control</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2007 <em>A4 Insecure Direct Object Reference</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2010 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2013 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.2</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.4</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[15] Standards Mapping - SANS Top 25 2009 <em>Porous Defenses - CWE ID 285</em> <br></p>
+																									   <p>[16] Standards Mapping - SANS Top 25 2010 <em>Porous Defenses - CWE ID 285</em> <br></p>
+																									   <p>[17] Standards Mapping - SANS Top 25 2011 <em>Porous Defenses - CWE ID 862</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[23] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[24] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Insufficient Authorization</em> <br></p>
+																									   <p>[25] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Insufficient Authorization (WASC-02)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.config.java.struts2_bad_practices_dynamic_method_invocation
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

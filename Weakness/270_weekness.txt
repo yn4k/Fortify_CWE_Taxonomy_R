@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.header_manipulation_smtp -->						
+							<h1>
+							   Header Manipulation: SMTP
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Including unvalidated data in an SMTP header can enable attackers to add arbitrary headers, such as <code>CC</code> or <code>BCC</code> that can be used to leak the mail contents to themselves or use the mail server as a spam bot.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  SMTP Header Manipulation vulnerabilities occur when:<br><br>  1. Data enters an application through an untrusted source, most frequently an HTTP request in a web application.<br><br>  2. The data is included in an SMTP header sent to a mail server without being validated.<br><br>  As with many software security vulnerabilities, SMTP Header Manipulation is a means to an end, not an end in itself. At its root, the vulnerability is straightforward: an attacker passes malicious data to a vulnerable application, and the application includes the data in an SMTP header.<br><br>  One of the most common SMTP Header Manipulation attacks is used for distributing spam e-mails. If an application contains a vulnerable "Contact us" form that allows setting the subject and the body of the email, an attacker will be able to set any arbitrary content and inject a <code>CC</code> header with a list of email addresses to spam anonymously since the email will be sent from the victim server.<br><br><b>Example:</b> The following code segment reads the subject and body of a "Contact us" form:<br><br></p>
+<pre><br>  String subject = request.getParameter("subject");<br>  String body = request.getParameter("body");<br>  MimeMessage message = new MimeMessage(session);<br>  message.setFrom(new InternetAddress("webform@acme.com"));<br>  message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("support@acme.com"));<br>  message.setSubject("[Contact us query] " + subject);<br>  message.setText(body);<br>  Transport.send(message);<br></pre>
+<br><br>  Assuming a string consisting of standard alpha-numeric characters, such as "Page not working" is submitted in the request, the SMTP headers might take the following form:<br><br><pre><br>  ...<br>  subject: [Contact us query] Page not working<br>  ...<br></pre>
+<br><br>  However, because the value of the header is constructed from unvalidated user input the response will only maintain this form if the value submitted for <code>subject</code> does not contain any CR and LF characters. If an attacker submits a malicious string, such as "Congratulations!! You won the lottery!!!\r\ncc:victim1@mail.com,victim2@mail.com ...", then the SMTP headers would be of the following form:<br><br><pre><br>  ...<br>  subject: [Contact us query] Congratulations!! You won the lottery<br>  cc: victim1@mail.com,victim2@mail.com<br>  ...<br></pre>
+<br><br>  This will effectively allow an attacker to craft spam messages or to send anonymous emails amongst other attacks.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] OWASP <em>Testing for IMAP/SMTP Injection (OTG-INPVAL-011)</em> <br></p>
+																									   <p>[2] Vicente Aguilera Díaz <em>MX Injection: Capturing and Exploiting Hidden Mail Servers</em> <br></p>
+																									   <p>[3]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[4] Standards Mapping - Common Weakness Enumeration <em>CWE ID 93</em> <br></p>
+																									   <p>[5] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[6] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2007 <em>A2 Injection Flaws</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.2</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[23] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Abuse of Functionality (WASC-42)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.header_manipulation_smtp
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

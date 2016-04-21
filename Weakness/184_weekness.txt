@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.config.java.j2ee_misconfiguration_invalid_servlet_name -->						
+							<h1>
+							   J2EE Misconfiguration: Invalid Servlet Name
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  An invalid servlet name can prevent legitimate access to the intended Servlet.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  A missing or duplicate servlet name in <code>web.xml</code> is an error. Every Servlet should have a unique name (<code>servlet-name</code>) and a corresponding mapping (<code>servlet-mapping</code>).<br><br><br><br><b>Example 1:</b> The following entry from <code>web.xml</code> shows several erroneous servlet definitions.<br></p>
+<pre><br>&lt;!-- No &lt;servlet-name&gt; specified: --&gt;<br>    &lt;servlet&gt;<br>        &lt;servlet-class&gt;com.class.MyServlet&lt;/servlet-class&gt;<br>        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br>    &lt;/servlet&gt;<br><br>&lt;!-- Empty &lt;servlet-name&gt; node: --&gt;<br>    &lt;servlet&gt;<br>        &lt;servlet-name/&gt;<br>        &lt;servlet-class&gt;com.class.MyServlet&lt;/servlet-class&gt;<br>        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br>    &lt;/servlet&gt;<br><br>&lt;!-- Duplicate &lt;servlet-name&gt; nodes: --&gt;<br>    &lt;servlet&gt;<br>        &lt;servlet-name&gt;MyServlet&lt;/servlet-name&gt;<br>        &lt;servlet-name&gt;Servlet&lt;/servlet-name&gt;<br>        &lt;servlet-class&gt;com.class.MyServlet&lt;/servlet-class&gt;<br>        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br>    &lt;/servlet&gt;<br></pre>
+<br>These errors may cause an unintentional denial of access to the Servlet.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Sun Microsystems, Inc. <em>Java Servlet Specification 2.4</em> <br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 730</em> <br></p>
+																									   <p>[3] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-5 Denial of Service Protection (P1)</em> <br></p>
+																									   <p>[4] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Top 10 2004 <em>A9 Application Denial of Service</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2013 <em>A5 Security Misconfiguration</em> <br></p>
+																									   <p>[7] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.9</em> <br></p>
+																									   <p>[8] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[9] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[10] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[11] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[12] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[13] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP6080 CAT II</em> <br></p>
+																									   <p>[14] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Denial of Service</em> <br></p>
+																									   <p>[15] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Denial of Service (WASC-10)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.config.java.j2ee_misconfiguration_invalid_servlet_name
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

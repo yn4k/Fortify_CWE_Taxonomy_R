@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.code_correctness_comparison_of_boxed_primitive_types -->						
+							<h1>
+							   Code Correctness: Comparison of Boxed Primitive Types
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Comparing boxed primitives using equality operators instead of their <code>equals()</code> method can result in unexpected behavior.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  When dealing with boxed primitives, when comparing equality, the boxed primitive's <code>equals()</code> method should be called instead of the operators <code>==</code> and <code>!=</code>. The Java Specification states about boxing conversions: <br><br>"If the value p being boxed is an integer literal of type int between -128 and 127 inclusive, or the boolean literal true or false, or a character literal between '\u0000' and '\u007f' inclusive, then let a and b be the results of any two boxing conversions of p. It is always the case that a == b."<br><br>This means that if a boxed primitive is used (other than <code>Boolean</code> or <code>Byte</code>), only a range of values will be cached, or memoized. For a subset of values, using <code>==</code> or <code>!=</code> will return the correct value, for all other values outside of this subset, this will return the result of comparing the object addresses.<br><br><b>Example 1:</b> The following example uses equality operators on boxed primitives.<br><br></p>
+<pre><br>  ...<br>  Integer mask0 = 100;<br>  Integer mask1 = 100;<br>  ...<br>  if (file0.readWriteAllPerms){<br>    mask0 = 777;<br>  }<br>  if (file1.readWriteAllPerms){<br>    mask1 = 777;<br>  }<br>  ...<br>  if (mask0 == mask1){<br>    //assume file0 and file1 have same permissions<br>    ...<br>  }<br>  ...<br></pre>
+<br><br>The above code uses <code>Integer</code> boxed primitives to try to compare two <code>int</code> values. If <code>mask0</code> and <code>mask1</code> are both equal to <code>100</code>, then <code>mask0 == mask1</code> will return <code>true</code>. However, when <code>mask0</code> and <code>mask1</code> are both equal to <code>777</code>, now <code>mask0 == maske1</code> will return <code>false</code> as these values are not within the range of cached values for these boxed primitives.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>EXP03-J. Do not use the equality operators when comparing values of boxed primitives</em> CERT<br></p>
+																									   <p>[2]  <em>Java Language Specification Chapter 5. Conversions and Contexts</em> Oracle<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 398, CWE ID 754</em> <br></p>
+																									   <p>[4] Standards Mapping - SANS Top 25 2010 <em>Risky Resource Management - CWE ID 754</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.code_correctness_comparison_of_boxed_primitive_types
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

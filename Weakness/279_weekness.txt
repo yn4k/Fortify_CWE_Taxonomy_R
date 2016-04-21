@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.mail_command_injection_pop3 -->						
+							<h1>
+							   Mail Command Injection: POP3
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Executing POP3 commands coming from an untrusted source can cause the POP3 server to execute malicious commands on behalf of an attacker.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  POP3 command injection vulnerabilities occur when an attacker can influence the commands sent to a POP3 mail server.<br><br>  1. Data enters the application from an untrusted source.<br><br>  2. The data is used as or as part of a string representing a command that is executed by the application.<br><br>  3. By executing the POP3 command, the attacker is able to instruct the server to carry out malicious actions such as sending spam.<br><br><b>Example 1:</b> The following code uses an HTTP request parameter to craft a <code>USER</code> and <code>PASS</code> command that is sent to the POP3 server. An attacker can use this parameter to modify the command sent to the server and inject new commands using CRLF characters.<br><br></p>
+<pre><br>  ...<br>  String username = request.getParameter("username");<br>  String password = request.getParameter("password");<br>  ...<br>  POP3SClient pop3 = new POP3SClient(proto, false);<br>  pop3.login(username, password)<br>  ...<br></pre>
+<br><h2>REFERENCES</h2>
+																								   <p>[1] OWASP <em>Testing for IMAP/SMTP Injection (OTG-INPVAL-011)</em> <br></p>
+																									   <p>[2] Vicente Aguilera Díaz <em>MX Injection: Capturing and Exploiting Hidden Mail Servers</em> <br></p>
+																									   <p>[3]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[4] Standards Mapping - Common Weakness Enumeration <em>CWE ID 93</em> <br></p>
+																									   <p>[5] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[6] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2004 <em>A6 Injection Flaws</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2007 <em>A2 Injection Flaws</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.2</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[17] Standards Mapping - SANS Top 25 2010 <em>Insecure Interaction - CWE ID 078</em> <br></p>
+																									   <p>[18] Standards Mapping - SANS Top 25 2011 <em>Insecure Interaction - CWE ID 078</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3570 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[23] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[24] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[25] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Mail Command Injection (WASC-30)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.mail_command_injection_pop3
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

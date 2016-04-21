@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.semantic.java.code_correctness_byte_array_to_string_conversion -->						
+							<h1>
+							   Code Correctness: Byte Array to String Conversion
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Converting a byte array into a <code>String</code> may lead to data loss.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  When data from a byte array is converted into a <code>String</code>, it is unspecified what will happen to any data that is outside of the applicable character set. This can lead to data being lost, or a decrease in the level of security when binary data is needed to ensure proper security measures are followed.<br><br><b>Example 1:</b> The following code converts data into a String in order to create a hash.<br><br></p>
+<pre><br>  ...<br>  FileInputStream fis = new FileInputStream(myFile);<br>  byte[] byteArr = byte[BUFSIZE];<br>  ...<br>  int count = fis.read(byteArr);<br>  ...<br>  String fileString = new String(byteArr);<br>  String fileSHA256Hex = DigestUtils.sha256Hex(fileString);<br>  // use fileSHA256Hex to validate file <br>  ...<br></pre>
+<br><br>Assuming the size of the file is less than <code>BUFSIZE</code>, this works fine as long as the information in <code>myFile</code> is encoded the same as the default character set, however if it's using a different encoding, or is a binary file, it will lose information. This in turn will cause the resulting SHA hash to be less reliable, and could mean it's far easier to cause collisions, especially if any data outside of the default character set is represented by the same value, such as a question mark.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>STR03-J. Do not encode noncharacter data as a string</em> CERT<br></p>
+																									   <p>[2]  <em>When 'EFBFBD' and Friends Come Knocking: Observations of Byte Array to String Conversions</em> GDS Security<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 486</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.semantic.java.code_correctness_byte_array_to_string_conversion
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

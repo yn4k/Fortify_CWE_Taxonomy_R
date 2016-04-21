@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.code_correctness_readobject_invokes_overridable_function -->						
+							<h1>
+							   Code Correctness: readObject() Invokes Overridable Function
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The <code>readObject()</code> method within the class calls a function that may be overridden.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  During deserialization, <code>readObject()</code> acts like a constructor, so object initialization is not complete until this function ends. Therefore when a <code>readObject()</code> function of a <code>Serializable</code> class calls an overridable function, this may provide the overriding method access to the object's state prior to it being fully initialized.<br><br><b>Example 1:</b> The following <code>readObject()</code> function calls a method that can be overridden.<br><br></p>
+<pre><br>  ...<br>  private void readObject(final ObjectInputStream ois) throws IOException, ClassNotFoundException {<br>    checkStream(ois);<br>    ois.defaultReadObject();<br>  }<br><br>  public void checkStream(ObjectInputStream stream){<br>    ...<br>  }<br></pre>
+<br><br>Since the function <code>checkStream()</code> and its enclosing class are not <code>final</code> and public, it means that the function can be overridden, which may mean that an attacker can override the <code>checkStream()</code> function in order to get access to the object during deserialization.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>SER09-J. Do not invoke overridable methods from the readObject() method</em> CERT<br></p>
+																									   <p>[2]  <em>EXTEND-5: Limit the extensibility of classes and methods</em> Oracle<br></p>
+																									   <p>[3]  <em>SERIAL-3: View deserialization the same as object construction</em> Oracle<br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.code_correctness_readobject_invokes_overridable_function
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

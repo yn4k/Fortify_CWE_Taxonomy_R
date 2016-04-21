@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.config.java.mass_assignment_sensitive_field_exposure -->						
+							<h1>
+							   Mass Assignment: Sensitive Field Exposure
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  A sensitive field is exposed to the model binder.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Modern frameworks allow developers to automatically bind HTTP request parameters from both request query and body into model objects for ease of development and increased productivity. If the binder is not correctly configured to control which HTTP request parameters are bound to which model attributes, an attacker may be able to abuse the model binding process and set any other attributes that should not be exposed to user control. This binding is possible even if the model attributes do not appear in the web forms or API contracts.<br><br><b>Example 1: </b> The following Struts 1 DynaActionForm dynamically defines an ActionForm that is bound to user requests. In this case it is used to register an account by providing the account's type and a user's details:<br><br></p>
+<pre><br>&lt;struts-config&gt;<br>  &lt;form-beans&gt;<br>       &lt;form-bean name="dynaUserForm"   <br>          type="org.apache.struts.action.DynaActionForm" &gt;<br>              &lt;form-property name="type" type="java.lang.String" /&gt;<br>              &lt;form-property name="user" type="com.acme.common.User" /&gt;<br>       &lt;/form-bean&gt;<br>       ...<br><br></pre>
+<br><br>If registration is successful, the user data will be persisted in the database. The <code>User</code> class is defined as:<br><br><pre><br>public class User {<br>  private String name;<br>  private String lastname;<br>  private int age;<br>  private Details details;<br><br>  // Public Getters and Setters<br>  ...<br>}<br></pre>
+<br><br>And the <code>Details</code> class is defined as:<br><br><pre><br>public class Details {<br>  private boolean is_admin;<br>  private int id;<br>  private Date login_date;<br><br>  // Public Getters and Setters<br>  ...<br>}<br></pre>
+<br><br>Given the above scenario, an attacker may be able to explore the application and discover that there is a <code>details</code> attribute in the <code>User</code> model. If this is the case, the attacker may then attempt to overwrite the current values assigned to their attributes.<br>If an attacker can find out these internal attributes, and the framework binder is not correctly configured in order to disallow binding of these attributes, then the attacker would be able to register an administrator account by sending the following request:<br><br><pre><br>type=free&amp;user.name=John&amp;user.lastname=Smith&amp;age=22&amp;details.is_admin=true<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] OWASP <em>Mass assignment</em> <br></p>
+																									   <p>[2] Spring <em>Spring MVC Known Vulnerabilities and Issues</em> <br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 915</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2007 <em>A4 Insecure Direct Object Reference</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2010 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2013 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.2</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[15] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Insufficient Process Validation (WASC-40)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.config.java.mass_assignment_sensitive_field_exposure
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

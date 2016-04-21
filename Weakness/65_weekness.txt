@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.code_correctness_hidden_method -->						
+							<h1>
+							   Code Correctness: Hidden Method
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Static methods cannot be overridden, but may appear to be hidden when called as an instance method.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Static methods cannot be overridden by definition, since they belong to the class rather than an instance of the class. Although there are cases where it looks like a static method has been overridden in a subclass, which may cause confusion and can lead to the incorrect version of the method being called.<br><br><b>Example 1:</b> The following tries to define an API for authenticating users.<br><br></p>
+<pre><br>class AccessLevel{<br>  public static final int ROOT = 0;<br>  //...<br>  public static final int NONE = 9;<br>}<br>//...<br>class User {<br>  private static int access;<br>  public User(){<br>    access = AccessLevel.ROOT;<br>  } <br>  public static int getAccessLevel(){<br>    return access;<br>  }<br>  //...<br>}<br>class RegularUser extends User {<br>  private static int access;<br>  public RegularUser(){<br>    access = AccessLevel.NONE;<br>  } <br>  public static int getAccessLevel(){<br>    return access;<br>  }<br>  public static void escalatePrivilege(){<br>    access = AccessLevel.ROOT;<br>  }<br>  //...<br>}<br>//...<br>class SecureArea {<br>  //...<br>  public static void doRestrictedOperation(User user){<br>    if (user instanceof RegularUser){<br>      if (user.getAccessLevel() == AccessLevel.ROOT){<br>        System.out.println("doing a privileged operation");<br>      }else{<br>        throw new RuntimeException();<br>      }<br>    }<br>  }<br>}<br></pre>
+<br><br>At first glance, this code looks fine. However, since we are calling the method <code>getAccessLevel()</code> against the instance <code>user</code> and not against the classes <code>User</code> or <code>RegularUser</code>, it will mean that this condition will always return <code>true</code>, and the restricted operation will be performed even though <code>instanceof</code> was used in order to get into this part of the <code>if/else</code> block.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>MET07-J. Never declare a class method that hides a method declared in a superclass or superinterface</em> CERT<br></p>
+																									   <p>[2]  <em>Java Language Specification Chapter 8. Classes</em> Oracle<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 486</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.code_correctness_hidden_method
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

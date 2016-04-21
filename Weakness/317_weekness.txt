@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.config.java.struts_unvalidated_action_form -->						
+							<h1>
+							   Struts: Unvalidated Action Form
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Every Action Form must have a corresponding validation form.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  If a Struts Action Form Mapping specifies a form, it must have a validation form defined under the Struts Validator. If an action form mapping does not have a validation form defined, it might be vulnerable to a number of attacks that rely on unchecked input.<br><br>Unchecked input is the root cause of some of today's worst and most common software security problems. Cross-site scripting, SQL injection, and process control vulnerabilities all stem from incomplete or absent input validation. Although J2EE applications are not generally susceptible to memory corruption attacks, if a J2EE application interfaces with native code that does not perform array bounds checking, an attacker may be able to use an input validation mistake in the J2EE application to launch a buffer overflow attack.<br><br>An action or a form may perform validation in other ways, but the Struts Validator provides an excellent way to verify that all input receives at least a basic level of checking. Without this approach, it is difficult, and often impossible, to establish with a high level of confidence that all input is validated.
+							</p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] T. Husted et al. <em>Struts in Action: Building Web Applications with the Leading Java Framework</em> Manning Publications<br></p>
+																									   <p>[2]  <em>The Struts project</em> The Apache Foundation<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 108</em> <br></p>
+																									   <p>[4] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2010 <em>A6 Security Misconfiguration</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2013 <em>A5 Security Misconfiguration</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[14] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[15] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Application Misconfiguration (WASC-15)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.config.java.struts_unvalidated_action_form
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

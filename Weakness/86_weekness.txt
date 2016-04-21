@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.poor_style_redundant_initialization -->						
+							<h1>
+							   Poor Style: Redundant Initialization
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The variable's value is assigned but never used, making it a dead store.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  This variable's initial value is not used. After initialization, the variable is either assigned another value or goes out of scope.<br><br><b>Example:</b> The following code excerpt assigns to the variable <code>r</code> and then overwrites the value without using it.<br><br></p>
+<pre><br>  int r = getNum();<br>  r = getNewNum(buf);<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Standards Mapping - Common Weakness Enumeration <em>CWE ID 398</em> <br></p>
+																									   <p>[2] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[3] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[4] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[5] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[6] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3050 CAT II</em> <br></p>
+																									   <p>[7] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3050 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.poor_style_redundant_initialization
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

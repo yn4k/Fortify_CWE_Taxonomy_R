@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.semantic.java.insecure_randomness_hardcoded_seed -->						
+							<h1>
+							   Insecure Randomness: Hardcoded Seed
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Functions that generate random or pseudorandom values, which are passed a seed, should not be called with a constant argument.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Functions that generate random or pseudorandom values, which are passed a seed, should not be called with a constant argument. If a pseudorandom number generator (such as <code>Random</code>) is seeded with a specific value (using a function like <code>Random.setSeed()</code>), the values returned by <code>Random.nextInt()</code> and similar methods which return or assign values are predictable for an attacker that can collect a number of PRNG outputs.<br><br><b>Example 1:</b> Below, the values produced by the <code>Random</code> object <code>s</code> are predictable from the <code>Random</code> object <code>r</code>.<br><br></p>
+<pre><br>        Random r = new Random();<br>        r.setSeed(12345);<br>        int i = r.nextInt();<br>        byte[] b = new byte[4];<br>        r.nextBytes(b);<br><br>        Random s = new Random();<br>        s.setSeed(12345);<br>        int j = s.nextInt();<br>        byte[] c = new byte[4];<br>        s.nextBytes(c);<br></pre>
+<br><br>In this example, pseudorandom number generators: <code>r</code> and <code>s</code> were identically seeded, so <code>i == j</code>, and corresponding values of arrays <code>b[]</code> and <code>c[]</code> are equal.<br><h2>REFERENCES</h2>
+																								   <p>[1]  <em>Java Cryptography Architecture</em> Sun Microsystems<br></p>
+																									   <p>[2] J. Viega, G. McGraw <em>Building Secure Software</em> Addison-Wesley<br></p>
+																									   <p>[3]  <em>MSC02-J. Generate strong random numbers</em> CERT<br></p>
+																									   <p>[4]  <em>MSC03-J. Never hard code sensitive information</em> CERT<br></p>
+																									   <p>[5] Standards Mapping - Common Weakness Enumeration <em>CWE ID 336</em> <br></p>
+																									   <p>[6] Standards Mapping - FIPS200 <em>MP</em> <br></p>
+																									   <p>[7] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-13 Cryptographic Protection (P1)</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M6 Broken Cryptography</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2004 <em>A8 Insecure Storage</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2007 <em>A8 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2010 <em>A7 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.3, Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[17] Standards Mapping - SANS Top 25 2009 <em>Porous Defenses - CWE ID 330</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3150.2 CAT II</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3150.2 CAT II</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3150.2 CAT II</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3150.2 CAT II</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3150.2 CAT II</em> <br></p>
+																									   <p>[23] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3150.2 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.semantic.java.insecure_randomness_hardcoded_seed
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

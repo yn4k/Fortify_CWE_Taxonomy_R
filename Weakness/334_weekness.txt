@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.access_control_securitymanager_bypass_applet -->						
+							<h1>
+							   Access Control: SecurityManager Bypass
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Invoking this function on untrusted code can allow attackers access to restricted packages and provides them with the ability to execute arbitrary code.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Java APIs that perform tasks using the immediate caller's class loader check should be used with caution. These APIs bypass the SecurityManager check that ensures all callers in the execution chain have been granted the requisite security permission. Access checks against the immediate caller's class loader alone can result in privilege escalation issues whereby some caller in the execution chain is able to access resources without the required permissions.  These APIs, thus, should not be invoked on behalf of untrusted code, as it may compromise system security.<br><br><br><br>Java Applets from an untrusted source or in an untrusted environment with access to these APIs can execute malicious code and compromise system security.<br></p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Secure Coding Guidelines for the Java Programming Language, Version 4.0</em> <br></p>
+																									   <p>[2]  <em>CVE 2012-1682</em> <br></p>
+																									   <p>[3]  <em>CVE 2012-4681</em> <br></p>
+																									   <p>[4]  <em>SEC05-J. Do not use reflection to increase accessibility of classes, methods, or fields</em> CERT<br></p>
+																									   <p>[5]  <em>ACCESS-8: Safely invoke standard APIs that bypass SecurityManager checks depending on the immediate caller's class loader</em> Oracle<br></p>
+																									   <p>[6]  <em>ACCESS-9: Safely invoke standard APIs that perform tasks using the immediate caller's class loader instance</em> Oracle<br></p>
+																									   <p>[7]  <em>ACCESS-10: Be aware of standard APIs that perform Java language access checks against the immediate caller</em> Oracle<br></p>
+																									   <p>[8]  <em>ACCESS-11: Be aware java.lang.reflect.Method.invoke is ignored for checking the immediate caller</em> Oracle<br></p>
+																									   <p>[9] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>AC-3 Access Enforcement (P1)</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M5 Poor Authorization and Authentication</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2013 <em>A7 Missing Function Level Access Control</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Insufficient Authorization</em> <br></p>
+																									   <p>[15] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Insufficient Authorization (WASC-02)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.access_control_securitymanager_bypass_applet
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

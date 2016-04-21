@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.code_correctness_incorrect_serializable_method_signature -->						
+							<h1>
+							   Code Correctness: Incorrect Serializable Method Signature
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Using the incorrect method signature on a method used in serialization may lead to it never being called.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Code Correctness: Incorrect Serializable Method Signature issues occur when a serializable class creates a serialization or deserialization function but does not follow the correct signatures: <br><br></p>
+<pre><br>  private void writeObject(java.io.ObjectOutputStream out) throws IOException;<br>  private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException;<br>  private void readObjectNoData() throws ObjectStreamException;<br></pre>
+<br><br>Deviating from the method signatures that serialization requires may mean that the method is never called during serialization/deserialization, leading to incomplete serialization/deserialization, or could mean that untrusted code could gain access to the objects. <br>In the case that there are exceptions that are not thrown, it may mean that serialization/deserialization fails and crashes the application or potentially even fails quietly such that objects may be only partially constructed correctly, leading to flaws that can be extremely difficult to debug. The caller should catch these exceptions such that incorrect serialization/deserialization can be handled properly without a crash or partially constructed objects.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>SER01-J. Do not deviate from the proper signatures of serialization methods</em> CERT<br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.code_correctness_incorrect_serializable_method_signature
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.often_misued_encoding -->						
+							<h1>
+							   Often Misused: Encoding
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  It is easy to believe that this encoding method will protect against injection attacks, but if the method is not used in exactly the right context, it can offer much less protection than it advertises.<br><br><b>Example 1:</b> The following encoding call allows an attacker quite a bit of latitude for inserting malicious JavaScript:<br></p>
+<pre><br>    out.println("x = " + encoder.encodeForJavaScript(input) + ";");<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] OWASP <em>ESAPI Secure Coding Guideline</em> <br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 176</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.often_misued_encoding
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

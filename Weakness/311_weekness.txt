@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.struts_erroneous_validate_method -->						
+							<h1>
+							   Struts: Erroneous validate() Method
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The validator form defines a <code>validate()</code> method that fails to call <code>super.validate()</code>.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  The Struts Validator uses a form's <code>validate()</code> method to check the contents of the form properties against the constraints specified in the associated validation form. That means the following classes have a <code>validate()</code> method that is part of the validation framework:<br><br></p>
+<pre><br>    ValidatorForm<br>    ValidatorActionForm<br>    DynaValidatorForm<br>    DynaValidatorActionForm<br></pre>
+<br><br>If you create a class that extends one of these classes and if your class implements custom validation logic by overriding the <code>validate()</code> method, you must call <code>super.validate()</code> in your <code>validate()</code> implementation. If you do not, the Validation Framework cannot check the contents of the form against a validation form. In other words, the validation framework will be disabled for the given form.<br><br>Disabling the validation framework for a form exposes the application to numerous types of attacks. Unchecked input is the root cause of vulnerabilities like cross-site scripting, process control, and SQL injection. Although J2EE applications are not generally susceptible to memory corruption attacks, if a J2EE application interfaces with native code that does not perform array bounds checking, an attacker may be able to use an input validation mistake in the J2EE application to launch a buffer overflow attack.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] T. Husted et al. <em>Struts in Action: Building Web Applications with the Leading Java Framework</em> Manning Publications<br></p>
+																									   <p>[2]  <em>The Struts project</em> The Apache Foundation<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 103</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[6] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[7] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1</em> <br></p>
+																									   <p>[8] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[9] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[10] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[11] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[12] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[13] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[14] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[15] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.struts_erroneous_validate_method
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

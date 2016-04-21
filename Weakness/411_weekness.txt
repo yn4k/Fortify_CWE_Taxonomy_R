@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.weak_encryption_byte_array_to_string_conversion -->						
+							<h1>
+							   Weak Encryption: Byte Array to String Conversion
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Converting an encryption key to a <code>String</code> can lead to a significant loss of entropy.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Weak Encryption: Byte Array to String Conversion issues occur when: <br><br>1. An encryption key is created as a byte array<br><br><br>2. The data is converted to a <code>String</code><br><br><br><br><b>Example 1:</b> The following code creates an encryption key and then converts it into a <code>String</code>.<br><br></p>
+<pre><br>import javax.crypto.KeyGenerator;<br>import javax.crypto.SecretKey;<br>  ...<br>  KeyGenerator keygen = KeyGenerator.newInstance("AES");<br>  ...<br>  SecretKey cryptoKey = keygen.generateKey();<br>  byte[] rawCryptoKey = cryptoKey.getEncoded();<br>  ...<br>  String key = new String(rawCryptoKey);<br>  ...<br></pre>
+<br><br>This converts a cryptographic key into a <code>String</code> using the default system character set, however it is unspecified as to what happens when the constructor is given bytes outside the valid range of this character set. As it is, <code>key</code> will likely have a significant loss of entropy compared to the original encryption key <code>rawCryptoKey</code>.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>STR03-J. Do not encode noncharacter data as a string</em> CERT<br></p>
+																									   <p>[2]  <em>When 'EFBFBD' and Friends Come Knocking: Observations of Byte Array to String Conversions</em> GDS Security<br></p>
+																									   <p>[3]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[4] Standards Mapping - Common Weakness Enumeration <em>CWE ID 320</em> <br></p>
+																									   <p>[5] Standards Mapping - FIPS200 <em>MP</em> <br></p>
+																									   <p>[6] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-12 Cryptographic Key Establishment and Management (P1)</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M6 Broken Cryptography</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2004 <em>A8 Insecure Storage</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2007 <em>A8 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2010 <em>A7 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2013 <em>A6 Sensitive Data Exposure</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 3.6.1, Requirement 6.5.8</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 3.6.1, Requirement 6.3.1.3, Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 3.6.1, Requirement 6.5.3</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 3.6.1, Requirement 6.5.3</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 3.6.1, Requirement 6.5.3</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3150.1 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.weak_encryption_byte_array_to_string_conversion
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

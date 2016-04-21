@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.struts2_bad_practices_request_map_tampering -->						
+							<h1>
+							   Struts 2 Bad Practices: Request Map Tampering
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  A Struts 2.x Action implements a class which allows an attacker to modify the application business logic by binding arbitrary data into the session, application or request server side objects
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Apache Struts 2.x included the new Aware interfaces to allow developers to easily inject maps with relevant runtime information into their Actions code. These interfaces include: <code>org.apache.struts2.interceptor.ApplicationtAware</code>, <code>org.apache.struts2.interceptor.SessionAware</code> and <code>org.apache.struts2.interceptor.RequestAware</code>. In order to get any of these data maps injected into their Actions code, developers need to implement the setter specified in the interface (eg: <code>setSession</code> for <code>SessionAware</code> Interface):<br><code><br>public class VulnerableAction extends ActionSupport implements SessionAware {<br><br>  protected Map&lt;String, Object&gt; session;<br><br>  @Override<br>  public void setSession(Map&lt;String, Object&gt; session) {<br>    this.session = session;<br>  }<br></code><br>On the other hand, Struts 2.x automatically binds the request data coming from the user to the Action's properties through public accessors defined in the Action. As the Aware interfaces require the implementation of the public setter defined in the Aware interface, this setter will also be automatically bound to any request parameter that matches the Aware interface setter name which might allow remote attackers to modify run-time data values via a crafted parameter to an application that implements an affected interface, as demonstrated by the <code>SessionAware</code>, <code>RequestAware</code>, <code>ApplicationAware</code> interfaces.<br><br>The following URL will allow an attacker to overwrite the "roles" attribute in the session map, potentially allowing him to become administrator.<br><code><br>http://server/VulnerableAction?session.roles=admin<br></code><br><br>While these interfaces only require the implementation of the setter accessors, if the corresponding getter is also implemented, the changes to these map collections will be session-scoped persisted, rather than just affect the current request scope.<br></p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Standards Mapping - Common Weakness Enumeration <em>CWE ID 20</em> <br></p>
+																									   <p>[2] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[3] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[4] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Top 10 2007 <em>A4 Insecure Direct Object Reference</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2010 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2013 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[8] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[9] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.2</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[13] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Insufficient Process Validation (WASC-40)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.struts2_bad_practices_request_map_tampering
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

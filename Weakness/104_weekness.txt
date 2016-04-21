@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.config.java.html5_overly_permissive_cors_policy -->						
+							<h1>
+							   HTML5: Overly Permissive CORS Policy
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The program defines an overly permissive Cross-Origin Resource Sharing (CORS) policy.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Prior to HTML5, Web browsers enforced the Same Origin Policy which ensures that in order for JavaScript to access the contents of a Web page, both the JavaScript and the Web page must originate from the same domain. Without the Same Origin Policy, a malicious website could serve up JavaScript that loads sensitive information from other websites using a client's credentials, culls through it, and communicates it back to the attacker. HTML5 makes it possible for JavaScript to access data across domains if a new HTTP header called <code>Access-Control-Allow-Origin</code> is defined. With this header, a Web server defines which other domains are allowed to access its domain using cross-origin requests. However, caution should be taken when defining the header because an overly permissive CORS policy will allow a malicious application to communicate with the victim application in an inappropriate way, leading to spoofing, data theft, relay and other attacks.<br><br><b>Example 1:</b> Below is an example of using a wildcard to programmatically specify which domains the application is allowed to communicate with.<br><br></p>
+<pre><br>&lt;websocket:handlers allowed-origins="*"&gt;<br>        &lt;websocket:mapping path="/myHandler" handler="myHandler" /&gt;<br>&lt;/websocket:handlers&gt;<br></pre>
+<br><br>Using the <code>*</code> as the value of the <code>Access-Control-Allow-Origin</code> header indicates that the application's data is accessible to JavaScript running on any domain.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] W3C <em>Cross-Origin Resource Sharing</em> <br></p>
+																									   <p>[2]  <em>Enable Cross-Origin Resource Sharing</em> <br></p>
+																									   <p>[3] Michael Schmidt <em>HTML5 Web Security</em> <br></p>
+																									   <p>[4] Philippe De Ryck, Lieven Desmet, Pieter Philippaerts, and Frank Piessens <em>A Security Analysis of Next Generation Web Standards</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>AC-4 Information Flow Enforcement (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M5 Poor Authorization and Authentication</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2013 <em>A5 Security Misconfiguration</em> <br></p>
+																									   <p>[8] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.10</em> <br></p>
+																									   <p>[9] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Application Misconfiguration (WASC-15)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.config.java.html5_overly_permissive_cors_policy
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.mass_assignment_request_parameters_bound_into_persisted_objects -->						
+							<h1>
+							   Mass Assignment: Request Parameters Bound into Persisted Objects
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							   Allowing database persistent entities to be auto-populated by request parameters will allow an attacker to create unintended records in association entities or update unintended fields in the entity object.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Persistent objects are bound to the underlying database and updated automatically by the persistence framework, such as Hibernate or JPA. Allowing these objects to be dynamically bound to the request by Spring MVC will allow an attacker to inject unexpected values into the database by providing additional request parameters.<br><b>Example 1:</b> The <code>Order</code>, <code>Customer</code>, and <code>Profile</code> are Hibernate persisted classes.<br></p>
+<pre><br>public class Order {<br>	String ordered;<br>	List lineItems;<br>	Customer cust;<br>...<br>}<br>public class Customer {<br>	String customerId;<br>	...<br>    Profile p;<br>...<br>}<br>public class Profile {<br>	String profileId;<br>	String username;<br>	String password;<br>	...<br>}<br></pre>
+<br><code>OrderController</code> is the Spring controller class handling the request:<br><pre><br>@Controller<br>public class OrderController {<br>...<br>	@RequestMapping("/updateOrder")<br>	public String updateOrder(Order order) {<br>		...<br>		session.save(order);<br>	}<br>}<br></pre>
+<br>Because command classes are automatically bound to the request, an attacker can use this vulnerability to update another user's password by adding the following request parameters to the request: "http://www.yourcorp.com/webApp/updateOrder?order.customer.profile.profileId=1234&amp;order.customer.profile.password=urpowned"
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Ryan Berg and Dinis Cruz <em>Two Security Vulnerabilities in the Spring Framework's MVC</em> <br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 915</em> <br></p>
+																									   <p>[3] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[4] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2007 <em>A4 Insecure Direct Object Reference</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2010 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2013 <em>A4 Insecure Direct Object References</em> <br></p>
+																									   <p>[9] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.2</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Abuse of Functionality (WASC-42)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.mass_assignment_request_parameters_bound_into_persisted_objects
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.semantic.java.insecure_storage_android_external_storage -->						
+							<h1>
+							   Insecure Storage: Android External Storage
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The program writes data to the Android device's external storage.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Files saved to the external storage are world-readable and can be modified by the user when they enable USB mass storage to transfer files on a computer. Also, files on the external storage card will remain there even after the application that wrote the files is uninstalled. These limitations can compromise sensitive information written out to storage or allow attackers to inject malicious data into the program by modifying an external file it relies on.<br><br><b>Example 1:</b> In the code below, <code>Environment.getExternalStorageDirectory()</code> returns a reference to the Android device's external storage.<br><br></p>
+<pre> private void WriteToFile(String what_to_write) {<br>        try{<br>            File root = Environment.getExternalStorageDirectory();<br>            if(root.canWrite()) {<br>                File dir = new File(root + "write_to_the_SDcard");<br>                File datafile = new File(dir, number + ".extension");<br>                FileWriter datawriter = new FileWriter(datafile);<br>                BufferedWriter out = new BufferedWriter(datawriter);<br>                out.write(what_to_write);<br>                out.close();<br>             }<br>        }<br>   }<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Data Storage</em> <br></p>
+																									   <p>[2] Paul McNamara <em>Latest 'lost' laptop holds treasure-trove of unencrypted ATT payroll data</em> Network World<br></p>
+																									   <p>[3] Standards Mapping - FIPS200 <em>MP</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-28 Protection of Information at Rest (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M2 Insecure Data Storage</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2013 <em>A6 Sensitive Data Exposure</em> <br></p>
+																									   <p>[7] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[8] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[9] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Information Leakage (WASC-13)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.semantic.java.insecure_storage_android_external_storage
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

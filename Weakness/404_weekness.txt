@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.semantic.java.weak_cryptographic_hash_insecure_pbe_iteration_count -->						
+							<h1>
+							   Weak Cryptographic Hash: Insecure PBE Iteration Count
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The iteration count used by a password-based key derivation function is too low.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  A key derivation function is used to derive a key from a base key and other parameters. In a password-based key derivation function, the base key is a password and the other parameters are a salt value and an iteration count. An iteration count has traditionally served the purpose of increasing the cost of generating keys from a password. If the iteration count is too low, the feasibility of an attack increases because an attacker can compute "rainbow tables" for the application and more easily determine the hashed password values.<br><br><br><br><b>Example 1:</b> The following code uses an iteration count of 50:<br><br></p>
+<pre><br>...<br>final int iterationCount=50;<br>PBEParameterSpec pbeps=new PBEParameterSpec(salt,iterationCount);<br>...<br></pre>
+<br><br>Applications that use a low iteration count for password-based encryption are vulnerable to trivial dictionary-based attacks -- exactly the type of attack that password-based encryption schemes were designed to protect against.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] B. Kaliski <em>PKCS #5: Password-Based Cryptography Specification Version 2.0.</em> Network Working Group<br></p>
+																									   <p>[2] Martin Abadi and Bogdan Warinschi <em>Password-Based Encryption Analyzed.</em> <br></p>
+																									   <p>[3] Mihir Bellare, Thomas Ristenpart, and Stefano Tessaro <em>Multi-Instance Security and its Application to Password-Based Cryptography.</em> <br></p>
+																									   <p>[4] Meltem SonmezTuran, Elaine Barker, William Burr, and Lily Chen <em>NIST Special Publication 800-132: Recommendation for Password-Based Key Derivation.</em> NIST<br></p>
+																									   <p>[5] Standards Mapping - Common Weakness Enumeration <em>CWE ID 916</em> <br></p>
+																									   <p>[6] Standards Mapping - FIPS200 <em>MP</em> <br></p>
+																									   <p>[7] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-13 Cryptographic Protection (P1)</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M6 Broken Cryptography</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2004 <em>A8 Insecure Storage</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2007 <em>A8 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Top 10 2010 <em>A7 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[12] Standards Mapping - OWASP Top 10 2013 <em>A6 Sensitive Data Exposure</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.3, Requirement 6.5.8</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[17] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[18] Standards Mapping - SANS Top 25 2011 <em>Porous Defenses - CWE ID 759</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[22] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[23] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[24] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3150.1 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.semantic.java.weak_cryptographic_hash_insecure_pbe_iteration_count
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

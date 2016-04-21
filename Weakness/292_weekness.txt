@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.config.java.reflected_file_download -->						
+							<h1>
+							   Reflected File Download
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The application allows an attacker to craft a URL that forces a download of arbitrary content that appears to have originated from a trusted domain.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Reflected File Download (RFD) is a vulnerability that allows an attacker to craft a phishing URL or page that, when visited, initiates a download of a file containing arbitrary content appearing to have originated from a trusted domain. Because the user has trust in the given domain, he or she is likely to open the downloaded file, potentially resulting in malicious code execution.<br><br>In order for an attacker to run a successful RFD attack, the following requirements need to be met:<br>- The target application reflects user input without proper validation or encoding. This is used to inject a payload. <br>- The target application allows permissive URLs. The attacker can therefore control the downloaded file's name and extension.<br>- The target application has a misconfigured <code>Content-Disposition</code> header, allows the attacker to control the <code>Content-Type</code> and/or <code>Content-Disposition</code> headers in the HTTP response, or the target application includes a <code>Content-Type</code> that is not rendered by default in the browser.<br><br>For example, if the application uses a Spring Web MVC <code>ContentNegotiationManager</code> to dynamically produce different response formats, it meets the conditions necessary to make an RFD attack possible.<br><br>The <code>ContentNegotiationManager</code> is configured to decide the response format based on the request path extension and to use Java Activation Framework (JAF) to find a <code>Content-Type</code> that better matches the client's requested format. It also allows the client to specify the response content type through the media type that is sent in the request's <code>Accept</code> header.<br><br><b>Example 1:</b> In the following example, the application is configured to allow path extension strategy and Java Activation Framework to determine the response's content type:<br><br></p>
+<pre><br>&lt;bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"&gt;<br>  &lt;property name="favorPathExtension" value="true" /&gt;<br>  &lt;property name="useJaf" value="true" /&gt;<br>&lt;/bean&gt;<br></pre>
+<br><br><b>Example 2:</b> In the following example, the application is configured to allow the request's <code>Accept</code> header to determine the response's content type:  <br><br><pre><br>&lt;bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"&gt;<br>  &lt;property name="ignoreAcceptHeader" value="false" /&gt;<br>&lt;/bean&gt;<br></pre>
+<br><br>Note that the <code>ContentNegotiationManagerFactoryBean</code> property defaults in Spring 4.2.1 are:<br><br>- <code>useJaf</code>: <code>true</code><br>- <code>favorPathExtension</code>: <code>true</code><br>- <code>ignoreAcceptHeader</code>: <code>false</code><br><br>The configuration shown in Example 1 allows an attacker to craft a malicious URL such as:<br><br>http://server/some/resource/endpoint/foo.bat?input=payload<br><br>such that the <code>ContentNegotiationManager</code> will use Java Activation Framework (if activation.jar is found in the classpath) to try to resolve the media type for the given file extension and set the response's <code>ContentType</code> header accordingly. In this example, the file extension is "bat", resulting in a <code>Content-Type</code> header of <code>application/x-msdownload</code> (although the exact <code>Content-Type</code> may vary depending on the server OS and JAF configuration). As a result, once the victim visits this malicious URL, his or her machine will automatically initiate the download of a ".bat" file containing attacker-controlled content. If this file is then executed, the victims machine will run any commands specified by the attacker's payload.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1] Oren Hafif <em>Reflected File Download - A New Web Attack Vector</em> <br></p>
+																									   <p>[2] Alvaro Munoz <em>Reflected File Download in Spring MVC</em> <br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 79</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2004 <em>A1 Unvalidated Input</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2007 <em>A2 Injection Flaws</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.2</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.6</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.config.java.reflected_file_download
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

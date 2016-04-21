@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.weak_encryption_user_controlled_key_size -->						
+							<h1>
+							   Weak Encryption: User-Controlled Key Size
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Encryption functions that take a key size parameter should not be passed a tainted key size value.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Allowing a user-controlled value to determine the key size may enable the attacker to specify an empty key, allowing for relatively easy decryption of any data that has been encrypted with the empty key. Even if a non-zero value is required, an attacker could still specify the lowest possible value, decreasing the security of the encryption.<br><br>Weak Encryption: User-Controlled Key Size issues occur when:<br><br>1. Data enters a program through an untrusted source<br><br>2. User-controlled data is included within the key size parameter, or used entirely as the key size parameter within an encryption function.<br><br>As with many software security vulnerabilities, Weak Encryption: User-Controlled Key Size is a means to an end, not an end in and of itself. At its root, the vulnerability is straightforward: an attacker passes malicious data to an application, and the data is then used as all or part of the key size value while performing encryption.<br><br>The problem with having a user-controlled key size is that it can enable various attacks:<br><br>1. The attacker can use this vulnerability to specify a key size of zero for the encryption operations involving any data accessible by them. From this, it would be trivial to attempt to decrypt their own data using a number of different algorithms along with empty keys in order to leak information about the encryption implementation used within the application. This could make decrypting other users' encrypted data easier by allowing the attacker to focus only on particular algorithms during their cracking efforts.<br>2. The attacker can manipulate other users' encryption key sizes, or trick other users into using an encryption key size of zero (or as low as possible), potentially enabling the attacker to read other users' encrypted data (once the attacker has knowledge of the encryption algorithm used).<br><br><b>Example 1:</b> The following code performs AES encryption with a user-controlled key size parameter:<br></p>
+<pre><br>...<br>Properties prop = new Properties();<br>prop.load(new FileInputStream("config.properties"));<br>String keySize = prop.getProperty("keySize");<br>...<br>PBEKeySpec spec = new PBEKeySpec(<br>                password.toCharArray(),<br>                saltBytes,<br>                pswdIterations,<br>                Integer.parseInt(keySize)<br>                );<br>SecretKey secretKey = factory.generateSecret(spec);<br>SecretKeySpec secret = new SecretKeySpec(secretKey.getEncoded(), "AES");<br>...<br></pre>
+<br><br>The above code will run successfully, but anyone who can get to this functionality will be able to manipulate the key size parameter to the encryption algorithm by modifying the property <code>keySize</code>. Once the program has shipped, it can be nontrivial to undo an issue regarding user-controlled key sizes, as it would be extremely difficult to know whether or not a given encryption operation had its key size parameter determined by a malicious user.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 320</em> <br></p>
+																									   <p>[3] Standards Mapping - FIPS200 <em>MP</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-12 Cryptographic Key Establishment and Management (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M6 Broken Cryptography</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2004 <em>A8 Insecure Storage</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2007 <em>A8 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2010 <em>A7 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2013 <em>A6 Sensitive Data Exposure</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 3.6.1, Requirement 6.5.8</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 3.6.1, Requirement 6.3.1.3, Requirement 6.5.8</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 3.6.1, Requirement 6.5.3</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 3.6.1, Requirement 6.5.3</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 3.6.1, Requirement 6.5.3</em> <br></p>
+																									   <p>[15] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3150.1 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.weak_encryption_user_controlled_key_size
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

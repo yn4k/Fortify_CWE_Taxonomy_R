@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.controlflow.java.portability_flaw_locale_dependent_comparison -->						
+							<h1>
+							   Portability Flaw: Locale Dependent Comparison
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Unexpected portability problems can be found when the locale is not specified.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  When comparing data that may be locale-dependent, an appropriate locale should be specified.<br><br><b>Example 1:</b> The following example tries to perform validation to determine if user input includes a <code>&lt;script&gt;</code> tag.<br></p>
+<pre><br>  ...<br>  public String tagProcessor(String tag){<br>    if (tag.toUpperCase().equals("SCRIPT")){<br>      return null;<br>    }<br>    //does not contain SCRIPT tag, keep processing input<br>    ...<br>  }<br>  ...<br></pre>
+<br><br>The problem with the above code is that <code>java.lang.String.toUpperCase()</code> when used without a locale uses the rules of the default locale. Using the Turkish locale <code>"title".toUpperCase()</code> returns "T\u0130TLE", where "\u0130" is the "LATIN CAPITAL LETTER I WITH DOT ABOVE" character. This can lead to unexpected results, such as in Example 1 where this will prevent the word "script" from being caught by this validation, potentially leading to a Cross-Site Scripting vulnerability.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>STR02-J. Specify an appropriate locale when comparing locale-dependent data</em> CERT<br></p>
+																									   <p>[2]  <em>String (JavaDoc)</em> Oracle<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 474</em> <br></p>
+																									   <p>[4] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[5] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.6</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.controlflow.java.portability_flaw_locale_dependent_comparison
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

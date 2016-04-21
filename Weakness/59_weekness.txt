@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.code_correctness_comparison_with_nan -->						
+							<h1>
+							   Code Correctness: Comparison with NaN
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Making a comparison with <code>NaN</code> is always an error.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  When a comparison is made to <code>NaN</code> it is always evaluated as <code>false</code>, except for the <code>!=</code> operator, which always evaluates to <code>true</code> since <code>NaN</code> is unordered.<br><br><b>Example 1:</b> The following tries to make sure a variable is not <code>NaN</code>.<br><br></p>
+<pre><br>  ...<br>  if (result == Double.NaN){<br>    //something went wrong<br>    throw new RuntimeException("Something went wrong, NaN found");<br>  }<br>  ...<br></pre>
+<br><br>This attempts to verify that <code>result</code> is not <code>NaN</code>, however using the operator <code>==</code> with <code>NaN</code> always results in a value of <code>false</code>, so this check will never throw the exception.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>NUM07-J. Do not attempt comparisons with NaN</em> CERT<br></p>
+																									   <p>[2]  <em>Java Language Specification Chapter 4. Types, Values and Variables</em> Oracle<br></p>
+																									   <p>[3]  <em>INJECT-9: Prevent injection of exceptional floating point values</em> Oracle<br></p>
+																									   <p>[4] Standards Mapping - Common Weakness Enumeration <em>CWE ID 486</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.code_correctness_comparison_with_nan
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

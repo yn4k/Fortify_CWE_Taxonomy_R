@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.semantic.java.weak_encryption -->						
+							<h1>
+							   Weak Encryption
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The identified call uses a weak encryption algorithm that cannot guarantee the confidentiality of sensitive data.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Antiquated encryption algorithms such as DES no longer provide sufficient protection for use with sensitive data. Encryption algorithms rely on key size as one of the primary mechanisms to ensure cryptographic strength. Cryptographic strength is often measured by the time and computational power needed to generate a valid key. Advances in computing power have made it possible to obtain small encryption keys in a reasonable amount of time. For example, the 56-bit key used in DES posed a significant computational hurdle in the 1970's when the algorithm was first developed, but today DES can be cracked in less than a day using commonly available equipment.
+							</p>
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>Java Cryptography Architecture Standard Algorithm Name Documentation</em> Sun Microsystems<br></p>
+																									   <p>[2] distributed.net <em>DES</em> <br></p>
+																									   <p>[3]  <em>FAQ About the Electronic Frontier Foundation's "DES Cracker" Machine</em> Electronic Frontier Foundation<br></p>
+																									   <p>[4]  <em>SDL Development Practices</em> Microsoft<br></p>
+																									   <p>[5]  <em>Microsoft Security Fundamentals</em> Microsoft<br></p>
+																									   <p>[6]  <em>NIST Special Publication 800-132</em> NIST<br></p>
+																									   <p>[7] John Kelsey, Bruce Schneier, and David Wagner <em>Related-key cryptanalysis of 3-WAY, Biham-DES, CAST, DES-X, NewDES, RC2, and TEA</em> <br></p>
+																									   <p>[8] Standards Mapping - Common Weakness Enumeration <em>CWE ID 327</em> <br></p>
+																									   <p>[9] Standards Mapping - FIPS200 <em>MP</em> <br></p>
+																									   <p>[10] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-13 Cryptographic Protection (P1)</em> <br></p>
+																									   <p>[11] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M6 Broken Cryptography</em> <br></p>
+																									   <p>[12] Standards Mapping - OWASP Top 10 2004 <em>A8 Insecure Storage</em> <br></p>
+																									   <p>[13] Standards Mapping - OWASP Top 10 2007 <em>A8 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[14] Standards Mapping - OWASP Top 10 2010 <em>A7 Insecure Cryptographic Storage</em> <br></p>
+																									   <p>[15] Standards Mapping - OWASP Top 10 2013 <em>A6 Sensitive Data Exposure</em> <br></p>
+																									   <p>[16] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[17] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.3, Requirement 6.5.8</em> <br></p>
+																									   <p>[18] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[19] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[20] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.3</em> <br></p>
+																									   <p>[21] Standards Mapping - SANS Top 25 2009 <em>Porous Defenses - CWE ID 327</em> <br></p>
+																									   <p>[22] Standards Mapping - SANS Top 25 2010 <em>Porous Defenses - CWE ID 327</em> <br></p>
+																									   <p>[23] Standards Mapping - SANS Top 25 2011 <em>Porous Defenses - CWE ID 327</em> <br></p>
+																									   <p>[24] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[25] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[26] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[27] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[28] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3150.1 CAT II</em> <br></p>
+																									   <p>[29] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3150.1 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.semantic.java.weak_encryption
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

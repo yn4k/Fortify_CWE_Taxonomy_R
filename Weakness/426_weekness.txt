@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.singleton_member_field_race_condition -->						
+							<h1>
+							   Race Condition: Singleton Member Field
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Servlet member fields might allow one user to see another user's data.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  Many Servlet developers do not understand that a Servlet is a singleton. There is only one instance of the Servlet, and that single instance is used and re-used to handle multiple requests that are processed simultaneously by different threads.<br><br>A common result of this misunderstanding is that developers use Servlet member fields in such a way that one user may inadvertently see another user's data. In other words, storing user data in Servlet member fields introduces a data access race condition.<br><br><b>Example 1:</b> The following Servlet stores the value of a request parameter in a member field and then later echoes the parameter value to the response output stream.<br><br></p>
+<pre><br>public class GuestBook extends HttpServlet {<br><br>   String name;<br><br>   protected void doPost (HttpServletRequest req,<br>                       HttpServletResponse res) {<br>     name = req.getParameter("name");<br>     ...<br>     out.println(name + ", thanks for visiting!");<br>   }<br>}<br></pre>
+<br><br>While this code will work perfectly in a single-user environment, if two users access the Servlet at approximately the same time, it is possible for the two request handler threads to interleave in the following way:<br><br>	Thread 1:	assign "<code>Dick</code>" to <code>name</code><br>	Thread 2:	assign "<code>Jane</code>" to <code>name</code><br>	Thread 1:	print "<code>Jane, thanks for visiting!</code>"<br>	Thread 2:	print "<code>Jane, thanks for visiting!</code>"<br><br> Thereby showing the first user the second user's name.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>The Java Servlet Specification</em> Sun Microsystems<br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 362, CWE ID 488</em> <br></p>
+																									   <p>[3] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SC-4 Information in Shared Resources (P1)</em> <br></p>
+																									   <p>[4] Standards Mapping - OWASP Top 10 2007 <em>A6 Information Leakage and Improper Error Handling</em> <br></p>
+																									   <p>[5] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[6] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.5</em> <br></p>
+																									   <p>[7] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[8] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[9] Standards Mapping - SANS Top 25 2009 <em>Insecure Interaction - CWE ID 362</em> <br></p>
+																									   <p>[10] Standards Mapping - SANS Top 25 2010 <em>Insecure Interaction - CWE ID 362</em> <br></p>
+																									   <p>[11] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[12] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[13] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[14] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[15] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[17] Standards Mapping - Web Application Security Consortium 24 + 2 <em>Information Leakage</em> <br></p>
+																									   <p>[18] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Information Leakage (WASC-13)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.singleton_member_field_race_condition
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

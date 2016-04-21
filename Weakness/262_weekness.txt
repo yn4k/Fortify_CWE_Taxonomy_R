@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.dynamic_code_evaluation_unsafe_xstream_deserialization -->						
+							<h1>
+							   Dynamic Code Evaluation: Unsafe XStream Deserialization
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Deserializing user-controlled XML documents at run-time can allow attackers to execute malicious arbitrary code on the server.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  XStream library provides the developer with an easy way to transmit objects, serializing them to XML documents. But XStream can by default deserialize dynamic proxies allowing an attacker to run arbitrary Java code on the server when the proxy's InvocationHandler is invoked.<br><br><b>Example: </b> The following Java code shows an instance of XStream processing untrusted input.<br><br></p>
+<pre><br>String body = IOUtils.toString(request.getInputStream(), "UTF-8");<br>Contact expl = (Contact) xstream.fromXML(body);<br></pre>
+<br><br><b>Example:</b> The following XML document will instantiate a ProcessBuilder object and will invoke its static start() method to run the windows calculator.<br><br><pre><br>  &lt;dynamic-proxy&gt;<br>  &lt;interface&gt;com.company.model.Contact&lt;/interface&gt;<br>  &lt;handler class="java.beans.EventHandler"&gt;<br>      &lt;target class="java.lang.ProcessBuilder"&gt;<br>    &lt;command&gt;&lt;string&gt;/Applications/Calculator.app/Contents/MacOS/Calculator&lt;/string&gt;&lt;/command&gt;<br>      &lt;/target&gt;<br>      &lt;action&gt;start&lt;/action&gt;<br>  &lt;/handler&gt;<br>  &lt;/dynamic-proxy&gt;<br></pre>
+<br><br><h2>REFERENCES</h2>
+																								   <p>[1]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 95, CWE ID 494</em> <br></p>
+																									   <p>[3] Standards Mapping - FIPS200 <em>SI</em> <br></p>
+																									   <p>[4] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[5] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M7 Client Side Injection</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Top 10 2004 <em>A6 Injection Flaws</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2007 <em>A2 Injection Flaws</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[10] Standards Mapping - Payment Card Industry Data Security Standard Version 1.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 1.2 <em>Requirement 6.3.1.1, Requirement 6.5.2</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 2.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[13] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[14] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.1</em> <br></p>
+																									   <p>[15] Standards Mapping - SANS Top 25 2009 <em>Insecure Interaction - CWE ID 116</em> <br></p>
+																									   <p>[16] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[17] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[18] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[19] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[20] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[21] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3510 CAT I, APP3570 CAT I</em> <br></p>
+																									   <p>[22] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Improper Input Handling (WASC-20)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.dynamic_code_evaluation_unsafe_xstream_deserialization
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

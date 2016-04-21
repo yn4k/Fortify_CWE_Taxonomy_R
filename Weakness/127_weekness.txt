@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.unsafe_mobile_code_database_access -->						
+							<h1>
+							   Unsafe Mobile Code: Database Access
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Applets that perform JDBC database operations in an untrusted environment can compromise database credentials.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  By default, Java Applets are allowed to open database connections back to the server from which they are downloaded. In trusted environments, this is acceptable, however, in untrusted environments attackers could use the Applet to discover database credentials and ultimately gain access to the database directly.<br><br><br><b>Example 1:</b> The following code shows a hardcoded database password being used in an applet.<br></p>
+<pre><br>public class CustomerServiceApplet extends JApplet<br>{<br>    public void paint(Graphics g)<br>    {<br>        ...<br>        conn = DriverManager.getConnection ("jdbc:mysql://db.example.com/customerDB", "csr", "p4ssw0rd");<br>        ...<br></pre>
+<br><br>Users of an Applet with hardcoded JDBC credentials can easily discover the credentials since Applet code is downloaded to the client. Furthermore, if the database connection is made over an unencrypted channel, anyone capable of sniffing traffic on the network can also obtain the credentials. Finally, allowing users to connect directly to a database reveals the presence of a publicly accessible database server, which allows attackers to target the database for direct network attacks.
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>JDBC Guide: Getting Started - Security Considerations</em> Sun Microsystems, Inc.<br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 305</em> <br></p>
+																									   <p>[3] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>AC-3 Access Enforcement (P1)</em> <br></p>
+																									   <p>[4] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[5] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.8</em> <br></p>
+																									   <p>[6] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Insufficient Authorization (WASC-02)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.unsafe_mobile_code_database_access
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

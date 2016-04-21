@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.poor_style_explicit_call_to_finalize -->						
+							<h1>
+							   Poor Style: Explicit Call to finalize()
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  The <code>finalize()</code> method should only be called by the JVM after the object has been garbage collected.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  While the Java Language Specification allows an object's <code>finalize()</code> method to be called from outside the finalizer, doing so is usually a bad idea. For example, calling <code>finalize()</code> explicitly means that <code>finalize()</code> will be called more than once: the first time will be the explicit call and the last time will be the call that is made after the object is garbage collected.<br><br><b>Example 1:</b>  The following code fragment calls <code>finalize()</code> explicitly:<br><br></p>
+<pre><br>// time to clean up<br>widget.finalize();<br></pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>MET12-J. Do not use finalizers</em> CERT<br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 586</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.poor_style_explicit_call_to_finalize
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

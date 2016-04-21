@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.structural.java.race_condition_class_initialization_cycle -->						
+							<h1>
+							   Race Condition: Class Initialization Cycle
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Assigning a static field to a new object calls the constructor even if it is dependent on other variables initialization, which may lead to objects being initialized incorrectly.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  When a Java class is initialized, it calls the initializers for static fields declared in the class prior to the class constructor. This means that a constructor assigned to this will be called prior to other code, and if this constructor is then dependent on other fields or variables being initialized, it may lead to partially initialized objects, or objects initialized with incorrect values.<br><br><b>Example 1:</b> The following class declares a static field and assigns it to a new object.<br><br></p>
+<pre><br>  ...<br>  public class Box{<br>    public int area;<br>    public static final int width = 10;<br>    public static final Box box = new Box();<br>    public static final int height = (int) (Math.random() * 100);<br><br>    public Box(){<br>        area = width * height;<br>    }<br>    ...<br>  }<br>  ...<br></pre>
+<br><br>In the above code, the developer would expect that <code>box.area</code> would be a random integer that happens to be a multiple of 10, due to <code>width</code> being equal to 10. In reality however, this will always have a hardcoded value of 0. Static final fields declared with a compile-time constant are initialized first, and then each one is executed in order. This means that since <code>height</code> is not a compile-time constant, it is declared after the declaration of <code>box</code>, and therefore the constructor is called prior to the field <code>height</code> being initialized.<br><br><b>Example 2:</b> The following classes declare static fields that rely on each other.<br><br><pre><br>  ...<br>  class Foo{<br>    public static final int f = Bar.b - 1;<br>    ...<br>  }<br>  ...<br>  class Bar{<br>    public static final int b = Foo.f + 1;<br>    ...<br>  }<br><br>This example is perhaps easier to identify, but would be dependent on which class is loaded first by the JVM. In this example <code>Foo.f</code> could be either -1 or 0, and <code>Bar.b</code> could be either 0 or 1.</pre>
+							
+							 								<h2>REFERENCES</h2>
+																								   <p>[1]  <em>DCL00-J. Prevent class initialization cycles</em> CERT<br></p>
+																									   <p>[2] Standards Mapping - Common Weakness Enumeration <em>CWE ID 362, CWE ID 367</em> <br></p>
+																									   <p>[3] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[4] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[5] Standards Mapping - SANS Top 25 2009 <em>Insecure Interaction - CWE ID 362</em> <br></p>
+																									   <p>[6] Standards Mapping - SANS Top 25 2010 <em>Insecure Interaction - CWE ID 362</em> <br></p>
+																									   <p>[7] Standards Mapping - Security Technical Implementation Guide Version 3.1 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[8] Standards Mapping - Security Technical Implementation Guide Version 3.4 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[9] Standards Mapping - Security Technical Implementation Guide Version 3.5 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[10] Standards Mapping - Security Technical Implementation Guide Version 3.6 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[11] Standards Mapping - Security Technical Implementation Guide Version 3.7 <em>APP3630.1 CAT II</em> <br></p>
+																									   <p>[12] Standards Mapping - Security Technical Implementation Guide Version 3.9 <em>APP3630.1 CAT II</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.structural.java.race_condition_class_initialization_cycle
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 

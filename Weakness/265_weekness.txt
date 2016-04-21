@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Software Security | Protect your Software at the Source | HPE Security Fortify</title>
+<link rel="stylesheet" href="../css/vcmain.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<script language="javascript">
+
+					if (top.location == self.location)
+					{ //if page is not in its frameset
+					//top.location.href = "/vulncat/index.html?open=" + window.location.href;
+					}
+
+				</script><!-- End of document.header.tile --><body class="level3"><div id="theWrapper">
+						<div id="theContentCenter">
+							<!-- desc.dataflow.java.http_parameter_pollution -->						
+							<h1>
+							   HTTP Parameter Pollution
+							</h1>
+							<h2>ABSTRACT</h2>
+							<p>
+							  Concatenating unvalidated input into a URL can allow an attacker to override the value of a request parameter.  Attacker may be able to override existing parameter values, inject a new parameter or exploit variables out of a direct reach.
+							</p>
+							<h2>EXPLANATION</h2>
+							<p>
+							  HTTP Parameter Pollution (HPP) attacks consist of injecting encoded query string delimiters into other existing parameters. If a web application does not properly sanitize the user input, a malicious user may compromise the logic of the application to perform either client-side or server-side attacks. By submitting additional parameters to a web application, and if these parameters have the same name as an existing parameter, the web application may react in one of the following ways:<br><br>    It may only take the data from the first parameter<br>    It may take the data from the last parameter<br>    It may take the data from all parameters and concatenate them together<br><br></p>
+<pre><br>Technology/HTTP back-end                  | Overall Parsing Result                    | Example          |<br>ASP.NET/IIS                               | All occurrences of the specific parameter | par1=val1|val2   |<br>ASP/IIS                                   | All occurrences of the specific parameter | par1=val1|val2   |<br>PHP/Apache                                | Last occurrence                           | par1=val2        |<br>JSP Servlet/Apache Tomcat                 | First occurrence                          | par1=val1        |<br>JSP Servlet/Oracle Application Server 10g | First occurrence                          | par1=val1        |<br>IBM HTTP Server                           | First occurrence                          | par1=val1        |<br>mod_perl/Apache                           | Becomes an array                          | ARRAY(0x8b9059c) |<br></pre>
+<br><br><b>Example 1:</b> Depending on the application server and the logic of the application itself, the following request might cause confusion to the authentication system and allow an attacker to impersonate another user.<br>http://www.server.com/login.php?name=alice&amp;name=hacker<br><br><b>Example 2:</b> The following code uses input from an HTTP request to render two hyperlinks.<br><pre><br>    ...<br>    String lang = request.getParameter("lang");<br>    GetMethod get = new GetMethod("http://www.host.com");<br>    get.setQueryString("lang=" + lang + "&amp;poll_id=" + poll_id);<br>    get.execute();<br>    ...<br></pre>
+<br><br>URL:  http://www.host.com?poll_id=4567<br>Link1:  &lt;a href="http://www.host.com/vote.php?lang=en&amp;poll_id=4567"&gt;English&lt;a&gt;<br>Link2:  &lt;a href="http://www.host.com/vote.php?lang=es&amp;poll_id=4567"&gt;Spanish&lt;a&gt;<br><br>The programmer has not considered the possibility that an attacker could provide a <code>lang</code> such as <code>en&amp;poll_id=1</code>, and then the attacker will be able to change the <code>poll_id</code> at will.<br><h2>REFERENCES</h2>
+																								   <p>[1]  <em>HTTP Parameter Pollution</em> Luca Carettoni, Independent Researcher &amp; Stefano Di Paola, MindedSecurity<br></p>
+																									   <p>[2]  <em>HTTP Parameter Pollution Vulnerabilities in Web Applications</em> Marco `embyte’ Balduzzi<br></p>
+																									   <p>[3]  <em>INPUT-1: Validate inputs</em> Oracle<br></p>
+																									   <p>[4] Standards Mapping - Common Weakness Enumeration <em>CWE ID 235</em> <br></p>
+																									   <p>[5] Standards Mapping - NIST Special Publication 800-53 Revision 4 <em>SI-10 Information Input Validation (P1)</em> <br></p>
+																									   <p>[6] Standards Mapping - OWASP Mobile Top 10 Risks 2014 <em>M1 Weak Server Side Controls</em> <br></p>
+																									   <p>[7] Standards Mapping - OWASP Top 10 2004 <em>A6 Injection Flaws</em> <br></p>
+																									   <p>[8] Standards Mapping - OWASP Top 10 2007 <em>A2 Injection Flaws</em> <br></p>
+																									   <p>[9] Standards Mapping - OWASP Top 10 2010 <em>A1 Injection</em> <br></p>
+																									   <p>[10] Standards Mapping - OWASP Top 10 2013 <em>A1 Injection</em> <br></p>
+																									   <p>[11] Standards Mapping - Payment Card Industry Data Security Standard Version 3.0 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[12] Standards Mapping - Payment Card Industry Data Security Standard Version 3.1 <em>Requirement 6.5.6</em> <br></p>
+																									   <p>[13] Standards Mapping - Web Application Security Consortium Version 2.00 <em>Improper Input Handling (WASC-20)</em> <br></p>
+																														<div id="theFooter">
+							<p></p>
+							<br><center>
+                                                        © Copyright 2008 - 2015 Hewlett Packard Enterprise Development Company, L.P.
+							<br>
+							(Generated from version 2015.4.0.0008 of the HPE Security Fortify Secure Coding Rulepacks)
+							<br>
+							desc.dataflow.java.http_parameter_pollution
+							</center>
+							<p></p>
+						</div>
+</div>
+</div></body>
+</html>
+ 
