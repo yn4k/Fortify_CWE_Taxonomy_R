@@ -19,6 +19,9 @@ buscarVulnerabilidad <- function(idVulnerabilidad){
 }
 
 convertirVulneravilidadDataFrame <- function(vulnerabilidad){
+  #Id
+  id <- xmlGetAttr(vulnerabilidad, "ID")
+
   #Descripcion
   xpath <- paste("./Description/Description_Summary")
   descripcion <- xpathSApply(vulnerabilidad,xpath,xmlValue)
@@ -27,10 +30,21 @@ convertirVulneravilidadDataFrame <- function(vulnerabilidad){
   xpath <- paste("./Time_of_Introduction/Introductory_Phase")
   fase <- xpathSApply(vulnerabilidad,xpath,xmlValue)
 
-  print(descripcion)
-  df <- data.frame(nombre="Descripcion", valor=descripcion)
+  #Consecuencias habituales
+  xpath <- paste("./Common_Consequences/Common_Consequence/Consequence_Technical_Impact")
+  consecuencia <- xpathSApply(vulnerabilidad,xpath,xmlValue)
 
+  #Taxonomia asociada
+  xpath <- paste("./Taxonomy_Mappings/Taxonomy_Mapping/Mapped_Node_Name")
+  taxonomia <- xpathSApply(vulnerabilidad,xpath,xmlValue)
+
+  df <- data.frame(nombre="ID", valor=id)
+  df <- rbind(df, data.frame(nombre="Descripcion", valor=descripcion))
   df <- rbind(df, data.frame(nombre="FaseIntroduccion", valor=fase))
+  df <- rbind(df, data.frame(nombre="Consecuencia", valor=consecuencia))
+  if (length(taxonomia)>0){
+    df <- rbind(df, data.frame(nombre="Taxonomia", valor=taxonomia))
+  }
 
   return(df)
 }
