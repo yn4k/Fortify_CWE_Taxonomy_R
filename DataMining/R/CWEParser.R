@@ -15,12 +15,22 @@ xmlName(rootNode) #Nombre de la raiz
 #' @examples
 buscarVulnerabilidad <- function(idVulnerabilidad){
   xpath <- paste("/Weakness_Catalog/Weaknesses/Weakness[@ID=",idVulnerabilidad,"]")
-  return(getNode(rootNode,xpath))
+  return(getNodeSet(rootNode, xpath)[[1]])
 }
 
 convertirVulneravilidadDataFrame <- function(vulnerabilidad){
-  xpath <- paste("/Description/Description_Summary")
+  #Descripcion
+  xpath <- paste("./Description/Description_Summary")
   descripcion <- xpathSApply(vulnerabilidad,xpath,xmlValue)
+
+  #Fase de introduccion
+  xpath <- paste("./Time_of_Introduction/Introductory_Phase")
+  fase <- xpathSApply(vulnerabilidad,xpath,xmlValue)
+
   print(descripcion)
-  data.frame()
+  df <- data.frame(nombre="Descripcion", valor=descripcion)
+
+  df <- rbind(df, data.frame(nombre="FaseIntroduccion", valor=fase))
+
+  return(df)
 }
