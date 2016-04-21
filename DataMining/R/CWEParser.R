@@ -1,5 +1,5 @@
 library(XML)
-fileUrl <- "./data/cwec_v2.9.xml"
+fileUrl <- "./Data/cwec_v2.9.xml"
 doc<-xmlTreeParse(fileUrl, useInternal=TRUE)
 
 rootNode<-xmlRoot(doc) #Nodo raiz del XML
