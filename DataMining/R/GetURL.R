@@ -5,7 +5,7 @@ library(scrapeR)
 input <- "http://www.hpenterprisesecurity.com/vulncat/es/vulncat/all.html"
 doc <- htmlTreeParse(input, useInternal=TRUE)
 sink("your.file.txt")
-doc
+print(doc)
 sink()
 text<-readLines("your.file.txt")
 for(j in seq(text)){
