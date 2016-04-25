@@ -15,7 +15,14 @@ xmlName(rootNode) #Nombre de la raiz
 #' @examples
 buscarVulnerabilidad <- function(idVulnerabilidad){
   xpath <- paste("/Weakness_Catalog/Weaknesses/Weakness[@ID=",idVulnerabilidad,"]")
-  return(getNodeSet(rootNode, xpath)[[1]])
+
+  tryCatch({
+    return(getNodeSet(rootNode, xpath)[[1]])
+  }, warning = function(w){
+
+  }, error = function(e){
+    return(NA)
+  } )
 }
 
 convertirVulneravilidadDataFrame <- function(vulnerabilidad){
@@ -47,4 +54,14 @@ convertirVulneravilidadDataFrame <- function(vulnerabilidad){
   }
 
   return(df)
+}
+
+getVulnerabilidad <- function(vulId){
+  nodo <- buscarVulnerabilidad(vulId)
+  if (!is.na(nodo)){
+    return(convertirVulneravilidadDataFrame(nodo))
+  }
+  else {
+    return(NA)
+  }
 }
