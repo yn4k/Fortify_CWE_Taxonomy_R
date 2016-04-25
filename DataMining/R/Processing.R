@@ -14,11 +14,11 @@ for(i in listaEnlaces){
     textWeakness[j] <- gsub("\td","",textWeakness[j])
     textWeakness[j] <- gsub("\t","",textWeakness[j])
   }
-  
+
   #Limpiamos el titulo
   tituloPos<-grep("<h1>",textWeakness)
   titulo<-gsub("  ","",textWeakness[tituloPos+1])
-  
+
   #Limpiamos Abstract
   abstractPosIni<-grep("<h2>ABSTRACT</h2>",textWeakness)
   abstractPosFin<-grep("<h2>EXPLANATION</h2>",textWeakness)-1
@@ -31,7 +31,7 @@ for(i in listaEnlaces){
     abstract[i+1]<-gsub("\\b<code>\\b","",abstract[i+1])
     abstract[i+1]<-gsub("\\b<code>\\b","",abstract[i+1])
   }
-  
+
   ##Limpiamos la explicación
   #explicacionPosIni<-grep("<h2>EXPLANATION</h2>",textWeakness)
   #checkEjemplo<-grep("<b>Example",textWeakness)
@@ -52,7 +52,7 @@ for(i in listaEnlaces){
   #for(i in 0:(referencePosFin-referencePosIni-1)){
   #  reference[i+1]<-gsub("[<h2></h2><p></p><br><em></em>]","",textWeakness[referencePosIni+i])
   #}
-  
+
   #Sacar OWAST 2013
   lineaOwast<-grep("Standards Mapping - OWASP Top 10 2013",textWeakness)
   if(!is.na(lineaOwast[1])){
@@ -62,7 +62,7 @@ for(i in listaEnlaces){
   }else{
     owastCategory<-"No está asociado a ninguna clase de OWAST"
   }
-  
+
   #Sacar CWE
   lineaCWE<-grep("Standards Mapping - Common Weakness Enumeration",textWeakness)
   if(!is.na(lineaCWE[1])){
@@ -122,7 +122,6 @@ for(i in listaEnlaces){
     URL<-append(URL,input)
   }
   df = data.frame(TITULO,ABSTRACT,OWASP,CWE,URL)
-  
 }
 #sink()
 
