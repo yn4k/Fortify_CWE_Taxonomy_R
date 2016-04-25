@@ -47,8 +47,15 @@ convertirVulneravilidadDataFrame <- function(vulnerabilidad){
 
   df <- data.frame(nombre="ID", valor=id)
   df <- rbind(df, data.frame(nombre="Descripcion", valor=descripcion))
-  df <- rbind(df, data.frame(nombre="FaseIntroduccion", valor=fase))
-  df <- rbind(df, data.frame(nombre="Consecuencia", valor=consecuencia))
+
+  if (length(fase)>0){
+    df <- rbind(df, data.frame(nombre="FaseIntroduccion", valor=fase))
+  }
+
+  if (length(consecuencia)>0){
+    df <- rbind(df, data.frame(nombre="Consecuencia", valor=consecuencia))
+  }
+
   if (length(taxonomia)>0){
     df <- rbind(df, data.frame(nombre="Taxonomia", valor=taxonomia))
   }
@@ -107,6 +114,56 @@ convertirCategoriaDataFrame <- function(categoria){
 
 }
 
+buscarCompuesto <- function(idVulnerabilidad){
+  xpath <- paste("/Weakness_Catalog/Compound_Elements/Compound_Element[@ID=",idVulnerabilidad,"]")
+
+  tryCatch({
+    return(getNodeSet(rootNode, xpath)[[1]])
+  }, warning = function(w){
+
+  }, error = function(e){
+    return(NA)
+  } )
+}
+
+convertirCompuestoDataFrame <- function(compuesto){
+  #Id
+  id <- xmlGetAttr(categoria, "ID")
+
+  #Descripcion
+  xpath <- paste("./Description/Description_Summary")
+  descripcion <- xpathSApply(compuesto,xpath,xmlValue)
+
+  #Fase de introduccion
+  xpath <- paste("./Time_of_Introduction/Introductory_Phase")
+  fase <- xpathSApply(compuesto,xpath,xmlValue)
+
+  #Consecuencias habituales
+  xpath <- paste("./Common_Consequences/Common_Consequence/Consequence_Technical_Impact")
+  consecuencia <- xpathSApply(compuesto,xpath,xmlValue)
+
+  #Taxonomia asociada
+  xpath <- paste("./Taxonomy_Mappings/Taxonomy_Mapping/Mapped_Node_Name")
+  taxonomia <- xpathSApply(compuesto,xpath,xmlValue)
+
+  df <- data.frame(nombre="ID", valor=id)
+  df <- rbind(df, data.frame(nombre="Descripcion", valor=descripcion))
+
+  if (length(fase)>0){
+    df <- rbind(df, data.frame(nombre="FaseIntroduccion", valor=fase))
+  }
+
+  if (length(consecuencia)>0){
+    df <- rbind(df, data.frame(nombre="Consecuencia", valor=consecuencia))
+  }
+
+  if (length(taxonomia)>0){
+    df <- rbind(df, data.frame(nombre="Taxonomia", valor=taxonomia))
+  }
+
+  return(df)
+}
+
 getVulnerabilidad <- function(vulId){
   nodo <- buscarVulnerabilidad(vulId)
   if (!is.na(nodo)){
@@ -120,7 +177,10 @@ getVulnerabilidad <- function(vulId){
     }
     else{
       #Probamos con elementos compuestos
-
+      nodo <- buscarCompuesto(vulId)
+      if (!is.na(nodo)){
+        return(convertirCompuestoDataFrame(nodo))
+      }
     }
   }
 }
