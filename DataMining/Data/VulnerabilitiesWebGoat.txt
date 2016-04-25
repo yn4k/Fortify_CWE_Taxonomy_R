@@ -1,0 +1,1210 @@
+Critical#Command Injection#Exec.java:103#1EE43C8EBD079E2A1595DC2E202F0C99
+Critical#Command Injection#Exec.java:292#1EE43C8EBD079E2A1595DC2E202F0C9A
+Critical#Command Injection#WSDLScanning.java:143#2390CF7C0D738E2BE2F968716E8C1539
+Critical#Cross-Site Scripting: Persistent#BackDoors.java:125#9BF8789DF9C0CCB6DBF071D592563C54
+Critical#Cross-Site Scripting: Persistent#BackDoors.java:126#45708E1EF2D60DAC753B122522A7537E
+Critical#Cross-Site Scripting: Persistent#BackDoors.java:127#961B750FFA42A8955E468768E4F13CCF
+Critical#Cross-Site Scripting: Persistent#BackDoors.java:128#3BC31286F68156D8BF9A7F34BA37635B
+Critical#Cross-Site Scripting: Persistent#CSRF.java:193#7F5910D8AF054AAE63BCB1A22ECFA207
+Critical#Cross-Site Scripting: Persistent#CSRF.java:245#BFC40FBA3F9B73C3A8654B3F76C62244
+Critical#Cross-Site Scripting: Persistent#CSRF.java:248#AAFC1F7059CAAA46A9CD6BDBA80E9307
+Critical#Cross-Site Scripting: Persistent#CSRF.java:253#AAFC1F7059CAAA46A9CD6BDBA80E9308
+Critical#Cross-Site Scripting: Persistent#CSRF.java:257#AAFC1F7059CAAA46A9CD6BDBA80E9309
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#F923DCADEC840E9C80C09336D9C4FDA6
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#534E027931D59EC4A4462FF83B150B17
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#A493155D278EDB3DFFB05B30943C65A7
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#DFBCFFBD3519668DCBC0A9405DECFDA0
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#817C085918DF353C388139CCC2BAEBF2
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#C4B549D12E0B69217B2645D2663BDF51
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#0A63D93D46BAE019693FC96144F860E5
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#EDF8A46B61B836CABDDD520B54B33001
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#A9D00682BDB65300B83730C998008491
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#B006533175FFC04DA1C8A68E496D8F69
+Critical#Cross-Site Scripting: Persistent#DatabaseUtilities.java:154#F9F0A777F6E9CC63EFCDDD557D44DB7C
+Critical#Cross-Site Scripting: Persistent#ECSFactory.java:292#06CA400013FB6F492D5C1678976823BE
+Critical#Cross-Site Scripting: Persistent#ECSFactory.java:450#81C6BF09430D7517DEFF022D71F3EC88
+Critical#Cross-Site Scripting: Persistent#EditProfile.jsp:8#89A1DA0110B048F0C1FA83091CEFBC7E
+Critical#Cross-Site Scripting: Persistent#EditProfile.jsp:8#633B4289FE9D8B2DE356DFF0BE4E1635
+Critical#Cross-Site Scripting: Persistent#EditProfile.jsp:8#58B163896652248C0F8F684A3AFB9C66
+Critical#Cross-Site Scripting: Persistent#ListStaff.jsp:8#53D458774D44DCD26E456926211DD264
+Critical#Cross-Site Scripting: Persistent#ListStaff.jsp:8#69E2D2478BB949A4B4AC44E30EFF4B15
+Critical#Cross-Site Scripting: Persistent#ListStaff.jsp:8#AB79656A66CEF9E653D878D1A98A0DB6
+Critical#Cross-Site Scripting: Persistent#SqlNumericInjection.java:264#A6812F7C6FC5DE38A4539262BA6AA1A6
+Critical#Cross-Site Scripting: Persistent#SqlNumericInjection.java:265#69196A7A21B35483FE9D3DA03D2AE088
+Critical#Cross-Site Scripting: Persistent#StoredXss.java:228#C6A666FC90242705B57829FF6DC411F7
+Critical#Cross-Site Scripting: Persistent#StoredXss.java:233#3A8E3BB2450E531B99FA728F81DEA041
+Critical#Cross-Site Scripting: Persistent#StoredXss.java:239#3A8E3BB2450E531B99FA728F81DEA042
+Critical#Cross-Site Scripting: Persistent#StoredXss.java:247#3A8E3BB2450E531B99FA728F81DEA043
+Critical#Cross-Site Scripting: Persistent#ViewProfile.jsp:9#6AD399F5FA5260A79E8F3A4BF6DC1E11
+Critical#Cross-Site Scripting: Persistent#ViewProfile.jsp:9#DB15B1C839F82C90CA195C96AC0ADE53
+Critical#Cross-Site Scripting: Persistent#ViewProfile.jsp:11#531CE4D77B783ED03BAD965802F3D126
+Critical#Cross-Site Scripting: Persistent#WSDLScanning.java:221#103E3E2BD66BBF76D489F9B4A08A4637
+Critical#Cross-Site Scripting: Reflected#AbstractLesson.java:872#EEC853E23854174F9A6951A9CC55840E
+Critical#Cross-Site Scripting: Reflected#AbstractLesson.java:872#E37E79651849FC3D1A90C1ABAD6E637D
+Critical#Cross-Site Scripting: Reflected#AbstractLesson.java:920#56F91135D0561F50D05F151536F819F8
+Critical#Cross-Site Scripting: Reflected#AbstractLesson.java:1086#762CD42A531DB9C63409543D3F6FCB09
+Critical#Cross-Site Scripting: Reflected#BackDoors.java:235#6999DE3FC99AF2500FE3F95C518BC7D3
+Critical#Cross-Site Scripting: Reflected#BasicAuthentication.java:143#D5C3ED4CE0DAF762A1F6D507F0B2914F
+Critical#Cross-Site Scripting: Reflected#BasicAuthentication.java:145#E350095CB012D2ECF7AC8B80E4032750
+Critical#Cross-Site Scripting: Reflected#BlindSqlInjection.java:83#535C0D30E0E2024CF59AA5BC682735DB
+Critical#Cross-Site Scripting: Reflected#Encoding.java:359#7E29B49E42036569BB51EF5AD7810192
+Critical#Cross-Site Scripting: Reflected#Encoding.java:369#33ADB22325F193F677D42E030B2918D4
+Critical#Cross-Site Scripting: Reflected#Encoding.java:793#BEDCCF5FAF96831DFB46C298DEA5D5F1
+Critical#Cross-Site Scripting: Reflected#Encoding.java:794#8ADD0449AB48BA588FCC57E4041FC215
+Critical#Cross-Site Scripting: Reflected#Encoding.java:794#CDC14D16B2CD1B1BA14427B6ECE70C10
+Critical#Cross-Site Scripting: Reflected#ForgotPassword.java:191#EA39016909F45F53EEFCE398478A6CEC
+Critical#Cross-Site Scripting: Reflected#ForgotPassword.java:195#EA39016909F45F53EEFCE398478A6CED
+Critical#Cross-Site Scripting: Reflected#HttpBasics.java:69#AD369356003E8FDF1BE045DC0DBD47C6
+Critical#Cross-Site Scripting: Reflected#HttpOnly.java:233#699EC0C6D59F22AD41D6C82B0643977E
+Critical#Cross-Site Scripting: Reflected#HttpSplitting.java:112#BCE407BB56586EA1ECB60962B79933E8
+Critical#Cross-Site Scripting: Reflected#HttpSplitting.java:180#9A75C2F16C64D536498D5DE279270851
+Critical#Cross-Site Scripting: Reflected#JavaScriptValidation.java:151#7254A7590AFC4358ECE78B61DC667AC7
+Critical#Cross-Site Scripting: Reflected#JavaScriptValidation.java:152#19446190ED48006EA5FC0AC7391FB73C
+Critical#Cross-Site Scripting: Reflected#JavaScriptValidation.java:153#E7650F080FCA7F6E00F264D3F365723C
+Critical#Cross-Site Scripting: Reflected#JavaScriptValidation.java:154#2B2E80C3F1C5324EC70FFBD406310CAB
+Critical#Cross-Site Scripting: Reflected#JavaScriptValidation.java:155#164F50FC73966E07C13D9DBF85E6B422
+Critical#Cross-Site Scripting: Reflected#JavaScriptValidation.java:156#011CBF50B0452709FF1FE1CC8FA779EA
+Critical#Cross-Site Scripting: Reflected#JavaScriptValidation.java:157#3E1DFE39AC6795E887C355DBA577DA93
+Critical#Cross-Site Scripting: Reflected#LogSpoofing.java:110#C3326FC70AC577D4188C03DC1617EF6A
+Critical#Cross-Site Scripting: Reflected#main.jsp:114#F0C452DD95EEB75FBD4E0080F1B2DDFE
+Critical#Cross-Site Scripting: Reflected#main.jsp:119#F0C452DD95EEB75FBD4E0080F1B2DDFF
+Critical#Cross-Site Scripting: Reflected#main.jsp:124#F0C452DD95EEB75FBD4E0080F1B2DE00
+Critical#Cross-Site Scripting: Reflected#main.jsp:130#F0C452DD95EEB75FBD4E0080F1B2DE01
+Critical#Cross-Site Scripting: Reflected#main.jsp:135#F0C452DD95EEB75FBD4E0080F1B2DE02
+Critical#Cross-Site Scripting: Reflected#main.jsp:163#0857E967144A3C48AF21E136E28DE988
+Critical#Cross-Site Scripting: Reflected#main.jsp:163#1F4D8999288D6DA8B7B5B087BF56236C
+Critical#Cross-Site Scripting: Reflected#main.jsp:180#20602B86593A9D1D9862D6A794987367
+Critical#Cross-Site Scripting: Reflected#main.jsp:191#6A8D5F3E087C041E8E659D78A8038B83
+Critical#Cross-Site Scripting: Reflected#ReflectedXSS.java:123#67479E5D27D466B1FF4EC8510AF92AAB
+Critical#Cross-Site Scripting: Reflected#ReflectedXSS.java:136#BDC530F36AC693299AFA524089900733
+Critical#Cross-Site Scripting: Reflected#ReflectedXSS.java:150#27054C1C60FF93F008A72761A672E678
+Critical#Cross-Site Scripting: Reflected#ReflectedXSS.java:165#0E0CE8A9C2B1F827612536E92E906C5D
+Critical#Cross-Site Scripting: Reflected#ReflectedXSS.java:200#737A32658038060D09F9D4E83CEDD366
+Critical#Cross-Site Scripting: Reflected#ReflectedXSS.java:206#34B726630369800850C455085CAE1693
+Critical#Cross-Site Scripting: Reflected#ReportCardScreen.java:295#855A95B78EDD43416CCC1AE36767637D
+Critical#Cross-Site Scripting: Reflected#ReportCardScreen.java:295#2E7359DAC61CBD5EEA7A4A3822651FC3
+Critical#Cross-Site Scripting: Reflected#SearchStaff.jsp:11#D2C4D5097B2586970BF696EDF290930C
+Critical#Cross-Site Scripting: Reflected#SearchStaff.jsp:11#891F1520D5AD761710B43C7E5BF566AE
+Critical#Cross-Site Scripting: Reflected#SearchStaff.jsp:11#F4C1EDD488D86810E45802B9BD96338B
+Critical#Cross-Site Scripting: Reflected#SilentTransactions.java:94#97BA5F6CFFA7CE2669A297AF767A1380
+Critical#Cross-Site Scripting: Reflected#SqlNumericInjection.java:115#713995E0CBF19FA7E893063A6864CBE2
+Critical#Cross-Site Scripting: Reflected#SqlStringInjection.java:105#CAEF78F7ACB495B39AA41859B49D818E
+Critical#Cross-Site Scripting: Reflected#SqlStringInjection.java:235#A5B4B2C39CB4345D9B5FFD6693E8163B
+Critical#Cross-Site Scripting: Reflected#TraceXSS.java:124#7301D589B66FA41DBA27DB202B5E3D64
+Critical#Cross-Site Scripting: Reflected#TraceXSS.java:137#44FDD9D3ECD8BB124A2D2AE3DB505BFB
+Critical#Cross-Site Scripting: Reflected#TraceXSS.java:151#E4C288AABC832D50D5EAD02C06A5B684
+Critical#Cross-Site Scripting: Reflected#TraceXSS.java:166#6D839FD4FF3C7C9D318E33593549D73A
+Critical#Cross-Site Scripting: Reflected#TraceXSS.java:201#F4234FFE417E22CE535656E88D5CCA53
+Critical#Cross-Site Scripting: Reflected#TraceXSS.java:207#7DCA70B4BA1061E14FB34018488AD663
+Critical#Cross-Site Scripting: Reflected#UncheckedEmail.java:135#A0834B132B47A950D85048419A21D3F0
+Critical#Cross-Site Scripting: Reflected#UncheckedEmail.java:158#B3487FE513D17B392D49D97E04467D8B
+Critical#Cross-Site Scripting: Reflected#ViewDatabase.java:72#DDF21C7928D0862974445A3FE742FCEC
+Critical#Cross-Site Scripting: Reflected#ViewProfile.jsp:171#D1A65BACC7873A294E32634E64B53CC5
+Critical#Cross-Site Scripting: Reflected#ViewProfile.jsp:171#A1FB9AC88D5FF26D4F9735B93960E831
+Critical#Cross-Site Scripting: Reflected#WeakAuthenticationCookie.java:377#CF9B858F163C81EE801A23EFD0AC293E
+Critical#Cross-Site Scripting: Reflected#WeakAuthenticationCookie.java:377#11FA55D8F0417B4A234427DC70BDDB59
+Critical#Cross-Site Scripting: Reflected#WeakSessionID.java:262#3CBAC9D11F228AA2C599D3AA935DD4A6
+Critical#Cross-Site Scripting: Reflected#WSDLScanning.java:219#EB3B473F2445E5F0A53D92F1FBC270F0
+Critical#Cross-Site Scripting: Reflected#WsSAXInjection.java:155#F823DF60A920405312EAD8D12E68D5F5
+Critical#Cross-Site Scripting: Reflected#WsSqlInjection.java:152#F42DEED1CBE2D594CCC8BF02CC460E3E
+Critical#Cross-Site Scripting: Reflected#WsSqlInjection.java:175#ECCDC093B44A753B2043DDE5391DD4EC
+Critical#Open Redirect#config.jsp:12#C86A891B36E42BF0DE95533BE14256E1
+Critical#Open Redirect#config.jsp:12#778BDE257A877D8A9BA91D26FD8BCC4C
+Critical#Open Redirect#redirect.jsp:12#F6CD023C7BCC36C2C28232A560005079
+Critical#Open Redirect#redirect.jsp:12#03D6F4D45B8103BA1DA7BC09AFFD2B60
+Critical#Open Redirect#redirect.jsp:12#A65EB364AA4A70FB8F0DC54E696FECAC
+Critical#Password Management: Hardcoded Password#Challenge2Screen.java:108#08A16DC70306E095E7B1B995EAC8758A
+Critical#Password Management: Hardcoded Password#CreateDB.java:70#C6B7BABAA6543DC3A46BEF45A9E04C1C
+Critical#Password Management: Hardcoded Password#CrossSiteScripting.java:95#B61C6BD3AB5235F2BA40D1D58179F315
+Critical#Password Management: Hardcoded Password#DatabaseUtilities.java:98#DFE5CCB06D8F608016DD7B1BC4E28D5B
+Critical#Password Management: Hardcoded Password#DOS_Login.java:64#92F0529952890D159704864A64A192D1
+Critical#Password Management: Hardcoded Password#ECSFactory.java:70#D183B4A3E730EE8649089B2723E0E7F5
+Critical#Password Management: Hardcoded Password#FailOpenAuthentication.java:76#19707E2F3CAFF81AD72BCB354FF81CF7
+Critical#Password Management: Hardcoded Password#HtmlClues.java:63#EB6B887B9B1DC3D780E080FEFD0B3F53
+Critical#Password Management: Hardcoded Password#HtmlClues.java:83#3E9A67399C7A2107EBB53F4242B220BB
+Critical#Password Management: Hardcoded Password#LogSpoofing.java:59#B54B2ECDEF2176EC24B0B740A9FF096E
+Critical#Password Management: Hardcoded Password#RoleBasedAccessControl.java:88#C08F0BD6B96D1E80E7B2E0997AC62714
+Critical#Password Management: Hardcoded Password#SQLInjection.java:94#C77966108874987B93F59964642BB17A
+Critical#Password Management: Hardcoded Password#WeakAuthenticationCookie.java:70#892F027CEE1824D8530E56BB419913C5
+Critical#Password Management: Hardcoded Password#WeakAuthenticationCookie.java:133#3C780692FBD577DBAA855A9A0E1B63A0
+Critical#Password Management: Hardcoded Password#WeakAuthenticationCookie.java:137#3C780692FBD577DBAA855A9A0E1B63A1
+Critical#Password Management: Hardcoded Password#WeakSessionID.java:68#9099D33FE61D0D1287401FB105FD341F
+Critical#Password Management: Hardcoded Password#WSDLScanning.java:147#C9F66C7212252423D2CBA090538D5087
+Critical#Password Management: Hardcoded Password#WsSAXInjection.java:69#414CF516AA34BE02B596DBD770FA8D39
+Critical#Password Management: Hardcoded Password#XPATHInjection.java:79#3C852EAD6AFD1D3F620116293F79185D
+Critical#Path Manipulation#CommandInjection.java:172#A6ABD66A03A5E2632772F0318E15C2DF
+Critical#Path Manipulation#CommandInjection.java:183#A6ABD66A03A5E2632772F0318E15C2E0
+Critical#Path Manipulation#LessonTracker.java:238#6A816DAC2936E8533ADD82949B24BAB3
+Critical#Path Manipulation#LessonTracker.java:238#BA25C24DE874F549CD77BE4663DFCC40
+Critical#Path Manipulation#PathBasedAccessControl.java:136#14CE92280CDA2D010FC1B2096F04AC06
+Critical#Privacy Violation#EditProfile.jsp:53#9B61B294960F74E0A7640C0F617AEE9B
+Critical#Privacy Violation#EditProfile.jsp:53#195E3E39264932335DE8245E5BC3AE77
+Critical#Privacy Violation#EditProfile.jsp:53#CB5EA5F88F4DCDB88C8B841F5DE32068
+Critical#Privacy Violation#EditProfile.jsp:54#7C4336F35EC5310C33F71FED123FDD72
+Critical#Privacy Violation#EditProfile.jsp:54#FAFC96964BAE184A51760B5BEE1D573E
+Critical#Privacy Violation#EditProfile.jsp:54#CF272EEF4690E8F39DFDE650DDECC6D5
+Critical#Privacy Violation#EditProfile.jsp:54#2C9157739B92714B9C6546FF18D977F7
+Critical#Privacy Violation#EditProfile.jsp:54#2A27409B8D196FB8DD248EBCB258A304
+Critical#Privacy Violation#EditProfile.jsp:54#ACF67FE69473AD2FCF83EC6E2600BBBF
+Critical#Privacy Violation#EditProfile.jsp:66#68A4ECC9435B121BB1272344D6F64BA1
+Critical#Privacy Violation#EditProfile.jsp:66#88445B07CC3E0782AA711B06CE2C649F
+Critical#Privacy Violation#EditProfile.jsp:66#FD1AF7E7FCF4343F50E6871ED36AE66D
+Critical#Privacy Violation#EditProfile.jsp:67#9ABB17DF78946503BBCFCD15142FEF15
+Critical#Privacy Violation#EditProfile.jsp:67#D7E5F214614A63EE2D8682A45EEE945B
+Critical#Privacy Violation#EditProfile.jsp:67#C7D5C56270067D75B986F150B0D631E9
+Critical#Privacy Violation#EditProfile.jsp:67#ECB29B873739C9E9F4B7F819389800F5
+Critical#Privacy Violation#EditProfile.jsp:67#77DF5909919615C72040CCB859909E20
+Critical#Privacy Violation#EditProfile.jsp:67#6955C21A4D2FDD288445BE697F5BF340
+Critical#Privacy Violation#EditProfile.jsp:72#16FB3C8A72EAF291CB7F34FE1378A80F
+Critical#Privacy Violation#EditProfile.jsp:73#314C3E7323FE764AB7025F2C9E133EDD
+Critical#Privacy Violation#EditProfile.jsp:73#2FF12F36541D5129F589939A40C87447
+Critical#Privacy Violation#ParameterNotFoundException.java:54#5E69A727A231CD8ECF1311C4DABF86BD
+Critical#Privacy Violation#ParameterNotFoundException.java:54#653BC22E0B18298FA822AEA15C8DD8A6
+Critical#Privacy Violation#ParameterNotFoundException.java:54#7EDA4AB335E028B1A7620351353D9541
+Critical#Privacy Violation#ParameterNotFoundException.java:54#6C721EF2E9704C4C94BFC11574CF04AD
+Critical#Privacy Violation#ParameterNotFoundException.java:54#BBDD7E47BFA6F4D3D884A16F93DACDCE
+Critical#Privacy Violation#ParameterNotFoundException.java:54#31BE6343A0D2F95463E6967907F465AE
+Critical#Privacy Violation#ParameterNotFoundException.java:54#767FC201B2B8CC97B04C92814C3D8820
+Critical#Privacy Violation#ParameterNotFoundException.java:54#FD067016C70D5FB1997E5E11D4D30D7D
+Critical#Privacy Violation#ParameterNotFoundException.java:54#287000CB289F94A2D000C2135A46B8E1
+Critical#Privacy Violation#ParameterNotFoundException.java:54#CB4C984A1BA521A2604E9BBCEF6995F0
+Critical#Privacy Violation#ParameterNotFoundException.java:54#4D6F5C54F83CEC6C7689E5E34BA02A74
+Critical#Privacy Violation#ParameterNotFoundException.java:54#13AE22C88661F95BF75681BE4BF98F12
+Critical#Privacy Violation#ParameterNotFoundException.java:54#8FD35C8F85AA13C33B6A545EEDAC5D5D
+Critical#Privacy Violation#ParameterNotFoundException.java:54#D5C76C17C5FE92CA3F31722313D1D577
+Critical#Privacy Violation#ParameterParser.java:631#C1244A13CA3BF8F9BA502170CED62589
+Critical#Privacy Violation#ParameterParser.java:631#4C152E7D555F91D3A6EAFEC6063DFA6B
+Critical#Privacy Violation#ParameterParser.java:631#57FA7046BC7D07B612A460B6E68E9B03
+Critical#Privacy Violation#ParameterParser.java:631#50934B47CAF8C39533054827417ABCDA
+Critical#Privacy Violation#ParameterParser.java:631#CCF6FB905F08BCDAE1AD9CC2C1DAD709
+Critical#Privacy Violation#ParameterParser.java:631#69836F0C6868D3255303F4FBDCA94B26
+Critical#Privacy Violation#ParameterParser.java:631#0377CACDE1F4A610BEF25E9911551213
+Critical#Privacy Violation#ParameterParser.java:635#14A1B567247BF568D0D344ACA37916A4
+Critical#Privacy Violation#ParameterParser.java:635#39BD5B82BDC59C2B5279E38B322D35F6
+Critical#Privacy Violation#ParameterParser.java:635#BED13FB389450D63713AE49D474E2840
+Critical#Privacy Violation#ParameterParser.java:635#1D17CC1C85766D6D159A75DB22247288
+Critical#Privacy Violation#ParameterParser.java:635#0C0D100B70B3A2BC5ABEB4C9B50E9312
+Critical#Privacy Violation#ParameterParser.java:635#CCCF2E26645D21ACE4F17192CB10D1D6
+Critical#Privacy Violation#ParameterParser.java:635#74041EDF8320D2D6B8B66462C981A066
+Critical#Privacy Violation#ParameterParser.java:695#4663FD29543DC990B07C1AD5A92A1AD5
+Critical#Privacy Violation#ParameterParser.java:695#234F492B9FA93BEC5CB835B914E130C3
+Critical#Privacy Violation#ParameterParser.java:695#B5A6AD2192A37A873428D8DFB306F716
+Critical#Privacy Violation#ParameterParser.java:695#02F53FC73CF2F826B49641D0B9BF0618
+Critical#Privacy Violation#ParameterParser.java:695#3E10B89B5E2952BF0112AAF5A6B60C5C
+Critical#Privacy Violation#ParameterParser.java:695#3E0608F1FDEE4BB9F5EBA611961CA367
+Critical#Privacy Violation#ParameterParser.java:695#CB29631933C8B9549C2F18F0A8BA7440
+Critical#Privacy Violation#ParameterParser.java:699#BA702E0AA648996AE8C3D20995234418
+Critical#Privacy Violation#ParameterParser.java:699#486B21E65ED03BDE62D69C141662A3CD
+Critical#Privacy Violation#ParameterParser.java:699#089FB0E4C27C4DFE845FE47E11FFE34F
+Critical#Privacy Violation#ParameterParser.java:699#7BE7D98946A7E8421C7A0322CF9FA691
+Critical#Privacy Violation#ParameterParser.java:699#6A53F0B8A0211B3999F8E0DFAA5FA0C2
+Critical#Privacy Violation#ParameterParser.java:699#0F9075FB829A58EDC38EE064182D0933
+Critical#Privacy Violation#ParameterParser.java:699#53B8608CDA8C228F8DC4AECB84BBEEBD
+Critical#Privacy Violation#ViewProfile.jsp:54#DF3A706B74449691852B86E868FBEDF0
+Critical#Privacy Violation#ViewProfile.jsp:54#B7D8CC2630F2A3A11965B36B53B13CF4
+Critical#Privacy Violation#ViewProfile.jsp:54#1AEC87ABE2BBDC0159F5C8BFDD596CAD
+Critical#Privacy Violation#ViewProfile.jsp:54#4F0D2AE110EAD60DB12D5EA2347458D6
+Critical#Privacy Violation#ViewProfile.jsp:58#05EA9527196B6F22F32EB012FECD9B19
+Critical#Privacy Violation#ViewProfile.jsp:58#77ACC073AE2008FDA4853206D0F6F3A2
+Critical#Privacy Violation#ViewProfile.jsp:67#6F996D18E740A6F2B96158308DD954FB
+Critical#Privacy Violation#ViewProfile.jsp:67#CA243C0FD3E0DF9510DE54FEFC1F0E53
+Critical#Privacy Violation#ViewProfile.jsp:67#D78ED427F0165C3E8E1B1981FA1CDD0C
+Critical#Privacy Violation#ViewProfile.jsp:67#38C4FE37119FCB9BC2C98938A60B93F6
+Critical#Privacy Violation#ViewProfile.jsp:71#1FF4341E2F7F861BEA2708EBBB8C113F
+Critical#Privacy Violation#ViewProfile.jsp:71#7C380BB1D04FBFFF8B3F9F961435359A
+Critical#SQL Injection#BackDoors.java:106#7DE5CB2BC4041A1E67F217526A3B5F3A
+Critical#SQL Injection#BackDoors.java:113#675BD3A413F61AD447FA0DCCD6661859
+Critical#SQL Injection#BlindSqlInjection.java:122#4C2F0A022D42BDB810AB61020436E6EE
+Critical#SQL Injection#Challenge2Screen.java:220#722C045E93DFA161A8B0B9F3C11E00B5
+Critical#SQL Injection#DOS_Login.java:114#BDB979C5A4BED6AFC08178F9E4372662
+Critical#SQL Injection#DOS_Login.java:134#609AB6BC75F18101BAF34F183F5F90BB
+Critical#SQL Injection#Login.java:148#7BB8EDC73CB58A98C025349FD6634C4B
+Critical#SQL Injection#Login.java:149#290AE35B54CA1238FC786348AEAD4C6D
+Critical#SQL Injection#Login.java:149#7BDD81B455000B4713391796B65D396B
+Critical#SQL Injection#Login.java:191#D1EF88605230D7F736402E17D85C0DCE
+Critical#SQL Injection#Login.java:191#FE929098BDBCED1E049EDA7D79C3BA13
+Critical#SQL Injection#SqlNumericInjection.java:130#ECD88BA59A13D27920D89B9150B55964
+Critical#SQL Injection#SqlStringInjection.java:112#8A18E35BD3EFE32534AC9384A5BE6956
+Critical#SQL Injection#ThreadSafetyProblem.java:103#2636332ACE18588AF8D2FAAD06436683
+Critical#SQL Injection#UpdateProfile.java:176#A763A01AFCFA6EA768C7045BFF271909
+Critical#SQL Injection#UpdateProfile.java:248#1BA016A253E02A521F93B3FE8326D3B6
+Critical#SQL Injection#UpdateProfile.java:248#4C1FCFCA2C8B123EF5A2352B71C40263
+Critical#SQL Injection#UpdateProfile.java:248#4EEAB05EB064C3B925D99AAE170F718D
+Critical#SQL Injection#UpdateProfile.java:248#6EB2F2FA65B0712F919DA4A441EA91C4
+Critical#SQL Injection#UpdateProfile.java:248#C7251E9EB27461586D6CA0B5DD1FED0C
+Critical#SQL Injection#UpdateProfile.java:248#A17C4D04E1782E491588042AC8FE1D41
+Critical#SQL Injection#UpdateProfile.java:248#102133874B3B236067674F95CDA65378
+Critical#SQL Injection#UpdateProfile.java:248#BCA3D333363FC5AC917286E91F517058
+Critical#SQL Injection#UpdateProfile.java:248#DECADC8CF18805DE8D393C1FF350A884
+Critical#SQL Injection#UpdateProfile.java:248#D6285BDE3B6367571257E12E7237E331
+Critical#SQL Injection#UpdateProfile.java:295#FF21E2912F55A44C41F11B4A151F2DA6
+Critical#SQL Injection#UpdateProfile.java:340#72F28D8F000869CC39934273918DB898
+Critical#SQL Injection#UpdateProfile.java:340#F241067F505B2D49558AEB12BAEB3A86
+Critical#SQL Injection#UpdateProfile.java:340#0AE1973FD4FF73765D0BEC7F8886DBFB
+Critical#SQL Injection#UpdateProfile.java:340#D32951D526755AC8D8AE2790B9BC4289
+Critical#SQL Injection#UpdateProfile.java:340#6D8E8E746A0B2870F8099EC8D0CBF6A0
+Critical#SQL Injection#UpdateProfile.java:340#23738AA4672374B793E3F0B3EF6F77C2
+Critical#SQL Injection#UpdateProfile.java:340#9D3EBB494D095ACB73F8E6265896C275
+Critical#SQL Injection#UpdateProfile.java:340#CDB62E3970E486E23A3869664BE02CE7
+Critical#SQL Injection#UpdateProfile.java:340#CD2D57A971D7F45E4E5903C44BB03E13
+Critical#SQL Injection#UpdateProfile.java:340#40F182886B5388EEFE531DC0B78022F2
+Critical#SQL Injection#UpdateProfile.java:340#FBEE1D44AE79C9DBD77CF348837EC499
+Critical#SQL Injection#UpdateProfile.java:340#B8EC49F42C1791942978ED0508097358
+Critical#SQL Injection#ViewDatabase.java:90#6F6AC2229DF8D02A530F051A6AD33967
+Critical#SQL Injection#ViewProfile.java:118#4B75C779AA009A701775FF47139B7184
+Critical#SQL Injection#ViewProfile.java:178#E38E0F334AA88DFD78863C64FC25B729
+Critical#SQL Injection#WsSqlInjection.java:240#80F2D5A5B05EF3E157B2A00601FAC160
+Critical#SQL Injection#WsSqlInjection.java:240#CFA08E705B2FEB36B31081983682AFBA
+Critical#XML External Entity Injection#WsSAXInjection.java:179#19CB89F1F7B672FBFF1128011115C382
+Critical#XPath Injection#XPATHInjection.java:158#C60AE754EFD609218E5CAD052E66D479
+High#Access Control: Database#CSRF.java:240#84FFE5168E43537E8D8CFDCAAA9B69C7
+High#Access Control: Database#DefaultLessonAction.java:313#208FD7F188CF792F010EAB479557DC1B
+High#Access Control: Database#DeleteProfile.java:115#94F70CC4CA9A594CC36E37ABB63796C4
+High#Access Control: Database#EditProfile.java:96#0AB4959EA5D215B181FE4194059D2DCC
+High#Access Control: Database#EditProfile.java:96#C12753C200D0A523D0CA7A7174F62E2D
+High#Access Control: Database#StoredXss.java:223#1F72229B57AC19054FB8B361DB503B8F
+High#Access Control: Database#UpdateProfile.java:248#667659943D38E11A7314F5756F3B6ED4
+High#Access Control: Database#ViewProfile.java:112#353BEB1EA8A6913149908F465F6C4554
+High#Access Control: Database#ViewProfile.java:132#5B5ECC3A24A1970466B1171D8B870783
+High#Command Injection#Exec.java:122#9C6A92D032F5471E511A27C044B3EDDE
+High#Command Injection#Exec.java:311#9C6A92D032F5471E511A27C044B3EDDF
+High#Denial of Service: Regular Expression#CommandInjection.java:201#64844B739E4EC75AAAB867C4769DD699
+High#Denial of Service: Regular Expression#HttpSplitting.java:100#595D8F3F7DD5F72AFFCE9DA99104C971
+High#Denial of Service: Regular Expression#PathBasedAccessControl.java:199#25AA398603E63D9FBF7168FA7BA5E317
+High#Denial of Service: Regular Expression#Screen.java:331#8C03E1829A1044F233812DF3BF55C59F
+High#File Disclosure: J2EE#Interceptor.java:135#37C1153AD13E5150BD4872F68F9751F9
+High#Header Manipulation#HttpOnly.java:198#7EE2372D0C9398D6F28362CB801A5D49
+High#Header Manipulation#HttpOnly.java:212#2957B5B069CB47161A6FBA398311B2A1
+High#Insecure Randomness#WeakSessionID.java:77#478C6A9953C6D2996ECAB34ED911B6A0
+High#J2EE Bad Practices: Non-Serializable Object Stored in Session#HammerHead.java:184#C132DFA0ABEA321646A688A816F4F1C1
+High#J2EE Bad Practices: Non-Serializable Object Stored in Session#HammerHead.java:185#C132DFA0ABEA321646A688A816F4F1C2
+High#J2EE Bad Practices: Non-Serializable Object Stored in Session#HammerHead.java:495#29D810062489A2E27F456691F0033C62
+High#Log Forging#HammerHead.java:173#D4F6841F5B571DFA285F015756FE58A3
+High#Log Forging#HammerHead.java:173#CB47C3483DA161AFDAD611B3ECDE062F
+High#Log Forging#HammerHead.java:205#F90BC8B23A129DD6A654B8EE14A202D3
+High#Log Forging#HammerHead.java:205#81E68A780910D710E6290EA2FEFC6A98
+High#Log Forging#HammerHead.java:306#4179E644761CD4A3FAF2F275662F135A
+High#Log Forging#HammerHead.java:306#3E3C937B3D0198B6F1DE184BAF51F1E6
+High#Log Forging#LessonSource.java:105#96A538553C505647E58E259A23FE04AB
+High#Log Forging#LessonSource.java:105#25146322E3E5D6C9F6EEC559EBC4B1A5
+High#Null Dereference#CreateDB.java:88#B417DEFFDEAD6DE8088D7C3F17CA67CB
+High#Null Dereference#Encoding.java:648#D797A398E012EB1CDCAE32BF00644EAE
+High#Null Dereference#Encoding.java:674#8D828F3B19E452F8FF5CAA70C4112957
+High#Null Dereference#LessonSource.java:134#B50E8FCC4DAAA7731EA9B3E088230EDB
+High#Null Dereference#LessonTracker.java:260#B6C3A77AAA4D1A0D6C3E08A2B01439F9
+High#Null Dereference#LessonTracker.java:401#6FAEC70B7AF50870D34891D1ACCFB573
+High#Null Dereference#WebgoatProperties.java:124#F4F896032A2C7099E53702EEC72BC02B
+High#Null Dereference#XPATHInjection.java:185#DB4F3DDACD82302E2DA008EB284971D6
+High#Password Management: Empty Password#DOS_Login.java:87#C59C95ED474FD05F7CB5280ED6D5E9E6
+High#Password Management: Empty Password#FailOpenAuthentication.java:68#D418E4ADD567B4E39A89D6016AA1B620
+High#Password Management: Hardcoded Password#WsSAXInjection.java:208#EC4044811A7C650EB4E3BCB3A1330351
+High#Password Management: Password in Configuration File#build.xml:85#91458334F83CDCFBC7E32671F8D65125
+High#Password Management: Password in Configuration File#server-config.wsdd:11#5E0FC7EC055048EF51BDE8974450F9CA
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:91#B2F935DB9D9101F2007981595EFE39FA
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:94#0C44CD5BB5361DB96E12E36594AA4CF1
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:96#7BBF44F9C54BFA46F2DB455FDAA99218
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:98#0C15CFDBC9593186412491D1E413DD37
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:100#3C4A3131050CC60B27940AB38957D2CC
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:102#06BCAF8544560127282453F54A6C02F8
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:104#62A16B93EBE18142F72A9429F72F8D1D
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:106#C10CC80219E23586F49B56A09EFD5C8A
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:108#21D6A59D3A5B3773B565C8A068A6F786
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:110#5BDD633E9F9464E5B57B5CA0175FE7BA
+High#Portability Flaw: Locale Dependent Comparison#CommandInjection.java:113#7A4F663B47CF248531452655594A697E
+High#Race Condition: Singleton Member Field#HammerHead.java:135#E2D4A2D542D71542FC025DF66EF28C26
+High#Race Condition: Static Database Connection#SoapRequest.java:74#DCFF36250D3F64C32E667FEFA44D89EB
+High#Race Condition: Static Database Connection#WSDLScanning.java:82#F442CD3145F2B123E11DAE0F8EC32D15
+High#Unreleased Resource: Database#CreateDB.java:70#9CC65560EA0A2E0B99A4F34F77582BCB
+High#Unreleased Resource: Database#CreateDB.java:73#D91D9D2F568DE51F5261A463BB23A245
+High#Unreleased Resource: Database#CreateDB.java:91#D087040CC5EC38F946C4D265C04CEC7F
+High#Unreleased Resource: Database#SoapRequest.java:412#9E04332C771DC6643C26B2FD61F35F93
+High#Unreleased Resource: Database#SoapRequest.java:418#04ED8DE06DF66F9C36907FBF82DEB835
+High#Unreleased Resource: Database#SoapRequest.java:422#3A61CC50D67E795CD5D9C72962426B3D
+High#Unreleased Resource: Database#WSDLScanning.java:274#1633DEC41E18BD7F8A60AFD79EFA55AD
+High#Unreleased Resource: Database#WSDLScanning.java:280#FEA45A3D84A912105A0DEA1F42093C48
+High#Unreleased Resource: Database#WSDLScanning.java:284#1A190EDA4C62457810D8ED1385AAAC6C
+High#Unreleased Resource: Database#WsSqlInjection.java:229#82D70BA5E84D0C9D4F5969FFB9E2BB82
+High#Unreleased Resource: Database#WsSqlInjection.java:237#451A17229ADFC2431B64826831C3B627
+High#Unreleased Resource: Database#WsSqlInjection.java:240#CDAFF78604806F2C9413943C8A3A691B
+High#Unreleased Resource: Sockets#Interceptor.java:97#5FE51BD703C66A13DECFB42082887BB3
+High#Unreleased Resource: Sockets#Interceptor.java:99#6E883028625C238DE857656E3B8CB5B4
+High#Unreleased Resource: Streams#AbstractLesson.java:567#8D2F9470457AA1DBB019D65452C98DCC
+High#Unreleased Resource: Streams#AbstractLesson.java:669#6A452E3BFF473737F95196432C59610A
+High#Unreleased Resource: Streams#AbstractLesson.java:954#D56D1FEF7BB4EBA49C9A395DF0D88AC4
+High#Unreleased Resource: Streams#AbstractLesson.java:1031#15C50D550084CFABCE3D6DBB896ACCE3
+High#Unreleased Resource: Streams#Challenge2Screen.java:381#13D5F7ED75A3AB864A34A5714569EF65
+High#Unreleased Resource: Streams#Challenge2Screen.java:383#13D5F7ED75A3AB864A34A5714569EF66
+High#Unreleased Resource: Streams#Challenge2Screen.java:404#48CFC4960DE0E45B88DAE1B75077B408
+High#Unreleased Resource: Streams#Challenge2Screen.java:406#48CFC4960DE0E45B88DAE1B75077B409
+High#Unreleased Resource: Streams#Challenge2Screen.java:433#49AC82522DFE5219AF616B4DD208B330
+High#Unreleased Resource: Streams#Challenge2Screen.java:434#1C63C03CDAD3AAC473C04FED33047A6E
+High#Unreleased Resource: Streams#LessonAdapter.java:93#C4EC2EDAF3F91A3A50B5499E737521B1
+High#Unreleased Resource: Streams#LessonAdapter.java:285#CB8421F4774F0AA99840B6DD04FD0829
+High#Unreleased Resource: Streams#PathBasedAccessControl.java:192#C18864ACC2F321D56CB007715E732C95
+High#Unreleased Resource: Streams#WebgoatProperties.java:43#106C950FC6B8B677064B203028BDB065
+High#Unreleased Resource: Streams#XPATHInjection.java:155#42AB68D270545768293D3D37571A4EFE
+High#Weak Encryption#Encoding.java:489#1D385E28C2D8A9E9F68F0AB8888B5EDF
+High#Weak Encryption#Encoding.java:491#348DE279CA4677D539557F0772DC215F
+High#Weak Encryption#Encoding.java:533#80F4A07EEEB4A2FFE6B25E72C01862B9
+High#Weak Encryption#Encoding.java:535#8703C5DCE8BC7D1128B656E2516864AA
+Medium#Axis 2 Misconfiguration: Debug Information#web.xml:89#6EAF343D747C9A95AAD3933BF76BF3B9
+Medium#Axis 2 Misconfiguration: Debug Information#web.xml:90#6EAF343D747C9A95AAD3933BF76BF3BA
+Medium#Axis 2 Misconfiguration: Debug Information#web.xml:91#6EAF343D747C9A95AAD3933BF76BF3BB
+Medium#Axis 2 Misconfiguration: Debug Information#web.xml:95#6EAF343D747C9A95AAD3933BF76BF3BC
+Medium#Axis 2 Misconfiguration: Debug Information#web.xml:216#6EAF343D747C9A95AAD3933BF76BF3BD
+Medium#Axis 2 Misconfiguration: Debug Information#web.xml:217#6EAF343D747C9A95AAD3933BF76BF3BE
+Medium#Cross-Site Scripting: Poor Validation#Encoding.java:793#ABE65C8CD07715EC51CB0EBED2FE3A64
+Medium#Weak Cryptographic Hash: Insecure PBE Iteration Count#Encoding.java:487#76F83F7F586982395D3369DC6BF4F293
+Medium#Weak Cryptographic Hash: Insecure PBE Iteration Count#Encoding.java:531#3F04FAE769A4DDF255BE805DC7914D4B
+Medium#XML Entity Expansion Injection#WsSAXInjection.java:179#BBC567EFA4F4314AFBFE6BF76601E2D7
+Low#Access Control: Database#CSRF.java:95#F5DB2399BCF45F26A9D0E56DAB79DB5D
+Low#Access Control: Database#CSRF.java:96#7940141AF36A489B515D0ED18BEF8CA8
+Low#Access Control: Database#FindProfile.java:144#6B52EFAB231FF1EECBDA107D4F7E0B96
+Low#Access Control: Database#FindProfile.java:145#537215A55A139B75824DDAA931320440
+Low#Access Control: Database#FindProfile.java:176#924C5A60F61CA197AB650BDB09E7A71A
+Low#Access Control: Database#FindProfile.java:177#BB5CCF13B9AD54A3BABD62BDE9AAD00D
+Low#Access Control: Database#SoapRequest.java:419#9599B7B1D829DFAA84732AAB3EFB71C3
+Low#Access Control: Database#SoapRequest.java:419#B633EF04A9935A253B0DAA0AC19A3B47
+Low#Access Control: Database#SoapRequest.java:419#E657A5419784596E93B1184DCCC75670
+Low#Access Control: Database#SoapRequest.java:419#3953DF6D1FD8CD9B3AAE359C0D88DBA7
+Low#Access Control: Database#SqlNumericInjection.java:207#E0EBA09191C5892E861B85728D311174
+Low#Access Control: Database#SqlStringInjection.java:193#BE76CEED4482369CF9672F28D427452F
+Low#Access Control: Database#StoredXss.java:105#E175C0818A393F8AC66003EF1E53532D
+Low#Access Control: Database#StoredXss.java:106#FEC57B833988B9E526A96A059169CE19
+Low#Access Control: Database#UpdateProfile.java:248#5E48E83194156E1E1DAB63C65687F387
+Low#Access Control: Database#UpdateProfile.java:248#A809EF5CBDC04EFA711C6C43AA8D822D
+Low#Access Control: Database#UpdateProfile.java:340#1F3281F354AA0A927BDD27C40593640B
+Low#Access Control: Database#UpdateProfile.java:340#828B4C08016E2D231D17CD37B0D68322
+Low#Access Control: Database#UpdateProfile.java:340#4835BFE84CE7F37B13AFEB4AEB90560D
+Low#Access Control: Database#WSDLScanning.java:281#3025582889EF3C8D361408D3CF7FDE6D
+Low#Access Control: Database#WSDLScanning.java:281#51BA2F50810D608DEEFF970FBDA420F8
+Low#Access Control: Database#WSDLScanning.java:281#6C4DCAF0482F77B264F2491154246A8B
+Low#Access Control: Database#WSDLScanning.java:281#5C469213CFD768DB1DF3299735C7D8C4
+Low#Code Correctness: Byte Array to String Conversion#Encoding.java:266#621F63B48D8B4198A5CC0417D7082A53
+Low#Code Correctness: Byte Array to String Conversion#Encoding.java:911#3D0034E039A6E0A13772F4ADD5BD9265
+Low#Code Correctness: Class Does Not Implement equals#ForgotPassword.java:244#BDB2A3F74EC3117F1BA96F70F37829F8
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:157#16D6CF47D31D62F16D4E3F43FA7A8B44
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:158#16D6CF47D31D62F16D4E3F43FA7A8B45
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:159#16D6CF47D31D62F16D4E3F43FA7A8B46
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:160#16D6CF47D31D62F16D4E3F43FA7A8B47
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:161#16D6CF47D31D62F16D4E3F43FA7A8B48
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:164#16D6CF47D31D62F16D4E3F43FA7A8B49
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:165#16D6CF47D31D62F16D4E3F43FA7A8B4A
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:166#16D6CF47D31D62F16D4E3F43FA7A8B4B
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:167#16D6CF47D31D62F16D4E3F43FA7A8B4C
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:168#16D6CF47D31D62F16D4E3F43FA7A8B4D
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:169#16D6CF47D31D62F16D4E3F43FA7A8B4E
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:170#16D6CF47D31D62F16D4E3F43FA7A8B4F
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:171#16D6CF47D31D62F16D4E3F43FA7A8B50
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:172#16D6CF47D31D62F16D4E3F43FA7A8B51
+Low#Code Correctness: Constructor Invokes Overridable Function#CrossSiteScripting.java:173#16D6CF47D31D62F16D4E3F43FA7A8B52
+Low#Code Correctness: Constructor Invokes Overridable Function#ErrorScreen.java:78#8FDDBC89A7978624A41EA4955BC82EAE
+Low#Code Correctness: Constructor Invokes Overridable Function#ErrorScreen.java:79#8FDDBC89A7978624A41EA4955BC82EAF
+Low#Code Correctness: Constructor Invokes Overridable Function#ErrorScreen.java:92#982C4153A7C2094C3187CE0BDE674EDC
+Low#Code Correctness: Constructor Invokes Overridable Function#ErrorScreen.java:93#982C4153A7C2094C3187CE0BDE674EDD
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:150#22336A06AB5AE996F194CA67380A92D6
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:151#22336A06AB5AE996F194CA67380A92D7
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:152#22336A06AB5AE996F194CA67380A92D8
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:153#22336A06AB5AE996F194CA67380A92D9
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:154#22336A06AB5AE996F194CA67380A92DA
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:157#22336A06AB5AE996F194CA67380A92DB
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:158#22336A06AB5AE996F194CA67380A92DC
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:159#22336A06AB5AE996F194CA67380A92DD
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:160#22336A06AB5AE996F194CA67380A92DE
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:161#22336A06AB5AE996F194CA67380A92DF
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:162#22336A06AB5AE996F194CA67380A92E0
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:163#22336A06AB5AE996F194CA67380A92E1
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:164#22336A06AB5AE996F194CA67380A92E2
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:165#22336A06AB5AE996F194CA67380A92E3
+Low#Code Correctness: Constructor Invokes Overridable Function#RoleBasedAccessControl.java:166#22336A06AB5AE996F194CA67380A92E4
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:160#8A8F349F4A7D12F520D70E2605A487F8
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:161#8A8F349F4A7D12F520D70E2605A487F9
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:162#8A8F349F4A7D12F520D70E2605A487FA
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:163#8A8F349F4A7D12F520D70E2605A487FB
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:164#8A8F349F4A7D12F520D70E2605A487FC
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:167#8A8F349F4A7D12F520D70E2605A487FD
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:168#8A8F349F4A7D12F520D70E2605A487FE
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:169#8A8F349F4A7D12F520D70E2605A487FF
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:170#8A8F349F4A7D12F520D70E2605A48800
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:171#8A8F349F4A7D12F520D70E2605A48801
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:172#8A8F349F4A7D12F520D70E2605A48802
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:173#8A8F349F4A7D12F520D70E2605A48803
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:174#8A8F349F4A7D12F520D70E2605A48804
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:175#8A8F349F4A7D12F520D70E2605A48805
+Low#Code Correctness: Constructor Invokes Overridable Function#SQLInjection.java:176#8A8F349F4A7D12F520D70E2605A48806
+Low#Code Correctness: Constructor Invokes Overridable Function#WelcomeScreen.java:56#CA4202EE85A139F5FCE4BF2B5FB48A6D
+Low#Code Correctness: Erroneous Class Compare#WebSession.java:1197#50280E6173D3503A63A60F3725842C1E
+Low#Code Correctness: Erroneous String Compare#WeakAuthenticationCookie.java:142#82451BC3C8011EC409D88C464B7EED12
+Low#Code Correctness: Erroneous String Compare#XMLInjection.java:280#A97731E88128DB0418D3E9407511DF2D
+Low#Code Correctness: Erroneous String Compare#XMLInjection.java:282#A97731E88128DB0418D3E9407511DF2E
+Low#Code Correctness: Erroneous String Compare#XMLInjection.java:292#A97731E88128DB0418D3E9407511DF2F
+Low#Code Correctness: Multiple Stream Commits#HammerHead.java:187#8023503AE57B843EDD726F7055D9D14E
+Low#Code Correctness: Multiple Stream Commits#HammerHead.java:200#31ED40444F5744E2D3C71687E8F6619E
+Low#Code Correctness: Multiple Stream Commits#LessonSource.java:100#B627A89B5E3F7A38D81F7B1DC1541966
+Low#Cookie Security: Cookie not Sent Over SSL#Challenge2Screen.java:172#C35E841239A860687BE4D44F0A632052
+Low#Cookie Security: Cookie not Sent Over SSL#Challenge2Screen.java:193#76956C6F50A8BB8878A246F1AC419422
+Low#Cookie Security: Cookie not Sent Over SSL#WeakAuthenticationCookie.java:146#4D0F3E0D42BC3B7B51921EBC28FC5109
+Low#Cookie Security: Cookie not Sent Over SSL#WeakSessionID.java:209#2A2549A45BA107BFC46244BD13790B37
+Low#Cross-Site Request Forgery#EditProfile.jsp:10#65F213B2D7005890C3BF135292168CBF
+Low#Cross-Site Request Forgery#EditProfile.jsp:10#65F213B2D7005890C3BF135292168CC0
+Low#Cross-Site Request Forgery#EditProfile.jsp:10#65F213B2D7005890C3BF135292168CC1
+Low#Cross-Site Request Forgery#error.jsp:10#7D485DA459DF7748146325F0631D1376
+Low#Cross-Site Request Forgery#ListStaff.jsp:13#FEF9E579C7E5CD6E90F5095ACE9DBCF5
+Low#Cross-Site Request Forgery#ListStaff.jsp:14#FEF9E579C7E5CD6E90F5095ACE9DBCF6
+Low#Cross-Site Request Forgery#ListStaff.jsp:14#FEF9E579C7E5CD6E90F5095ACE9DBCF7
+Low#Cross-Site Request Forgery#Login.jsp:9#32CEBF5942D6BE15569EE80C14D77D00
+Low#Cross-Site Request Forgery#Login.jsp:9#32CEBF5942D6BE15569EE80C14D77CFF
+Low#Cross-Site Request Forgery#Login.jsp:9#32CEBF5942D6BE15569EE80C14D77CFE
+Low#Cross-Site Request Forgery#SearchStaff.jsp:15#BC5DAE8DABA732D5B01E90941D0D14AB
+Low#Cross-Site Request Forgery#SearchStaff.jsp:15#BC5DAE8DABA732D5B01E90941D0D14AC
+Low#Cross-Site Request Forgery#SearchStaff.jsp:15#BC5DAE8DABA732D5B01E90941D0D14AD
+Low#Cross-Site Request Forgery#ViewProfile.jsp:112#2C27CFBE39E26D55A37B5D0E7CF89FA9
+Low#Cross-Site Request Forgery#ViewProfile.jsp:116#2C27CFBE39E26D55A37B5D0E7CF89FA5
+Low#Cross-Site Request Forgery#ViewProfile.jsp:118#2C27CFBE39E26D55A37B5D0E7CF89FA1
+Low#Cross-Site Request Forgery#ViewProfile.jsp:125#2C27CFBE39E26D55A37B5D0E7CF89FAA
+Low#Cross-Site Request Forgery#ViewProfile.jsp:128#2C27CFBE39E26D55A37B5D0E7CF89FA6
+Low#Cross-Site Request Forgery#ViewProfile.jsp:130#2C27CFBE39E26D55A37B5D0E7CF89FA2
+Low#Cross-Site Request Forgery#ViewProfile.jsp:138#2C27CFBE39E26D55A37B5D0E7CF89FAB
+Low#Cross-Site Request Forgery#ViewProfile.jsp:141#2C27CFBE39E26D55A37B5D0E7CF89FA7
+Low#Cross-Site Request Forgery#ViewProfile.jsp:143#2C27CFBE39E26D55A37B5D0E7CF89FA3
+Low#Cross-Site Request Forgery#ViewProfile.jsp:148#2C27CFBE39E26D55A37B5D0E7CF89FAC
+Low#Cross-Site Request Forgery#ViewProfile.jsp:151#2C27CFBE39E26D55A37B5D0E7CF89FA8
+Low#Cross-Site Request Forgery#ViewProfile.jsp:153#2C27CFBE39E26D55A37B5D0E7CF89FA4
+Low#Cross-Site Request Forgery#webgoat.jsp:74#B11FB8A058D60D6205DC10CE9231A39B
+Low#Cross-Site Request Forgery#webgoat_challenge.jsp:51#1C1A08DCAD976BAF4B7FB41B40D657D0
+Low#Dead Code: Expression is Always false#Exec.java:111#669500378F907B78CA08CC46CA89322E
+Low#Dead Code: Expression is Always false#Exec.java:156#669500378F907B78CA08CC46CA89322F
+Low#Dead Code: Expression is Always false#Exec.java:202#669500378F907B78CA08CC46CA893230
+Low#Dead Code: Expression is Always true#Exec.java:118#70455FA71C94161ED714654EC07D1E4F
+Low#Dead Code: Unused Method#CommandInjection.java:304#6B21E97CFCB72AEAF78F934815DA0258
+Low#Dead Code: Unused Method#HammerHead.java:237#0FE09111D584C0E2862D878C283B4749
+Low#Denial of Service#AbstractLesson.java:380#95AE736E3A7D74C95F35C1A5AF0DC9B7
+Low#Denial of Service#AbstractLesson.java:465#D952C12A5423B822395BF743BB148DCC
+Low#Denial of Service#AbstractLesson.java:1035#82D086BCD95AD09F495F3C599DF5CE7E
+Low#Denial of Service#Exec.java:229#EDF948D557DECD622C3456D5B753A504
+Low#Denial of Service#Exec.java:418#EDF948D557DECD622C3456D5B753A503
+Low#Denial of Service#LessonAdapter.java:95#9AF0499627DB625C86C9B1EF9C22A9FB
+Low#Denial of Service#LessonAdapter.java:288#11410FE5B221F247DBAF9EE94BA91A8A
+Low#Denial of Service: Parse Double#ParameterParser.java:280#3BEA5261041854351D7746FB65912185
+Low#Hidden Field#EditProfile.jsp:122#1476C8B0C760E2016C8068C4A5339638
+Low#Hidden Field#EditProfile.jsp:122#1476C8B0C760E2016C8068C4A5339634
+Low#Hidden Field#EditProfile.jsp:123#1476C8B0C760E2016C8068C4A5339639
+Low#Hidden Field#EditProfile.jsp:123#1476C8B0C760E2016C8068C4A5339635
+Low#Hidden Field#EditProfile.jsp:125#1476C8B0C760E2016C8068C4A5339636
+Low#Hidden Field#EditProfile.jsp:126#1476C8B0C760E2016C8068C4A5339637
+Low#Hidden Field#ViewProfile.jsp:113#3BA3237BB990001599A95536937A5CD5
+Low#Hidden Field#ViewProfile.jsp:117#3BA3237BB990001599A95536937A5CD2
+Low#Hidden Field#ViewProfile.jsp:119#3BA3237BB990001599A95536937A5CCF
+Low#Hidden Field#ViewProfile.jsp:126#3BA3237BB990001599A95536937A5CD6
+Low#Hidden Field#ViewProfile.jsp:129#3BA3237BB990001599A95536937A5CD3
+Low#Hidden Field#ViewProfile.jsp:131#3BA3237BB990001599A95536937A5CD0
+Low#Hidden Field#ViewProfile.jsp:139#3BA3237BB990001599A95536937A5CD7
+Low#Hidden Field#ViewProfile.jsp:142#3BA3237BB990001599A95536937A5CD4
+Low#Hidden Field#ViewProfile.jsp:144#3BA3237BB990001599A95536937A5CD1
+Low#J2EE Bad Practices: getConnection()#CreateDB.java:70#C80D7C3499FFE0DA5ABD6063A35EED34
+Low#J2EE Bad Practices: getConnection()#DatabaseUtilities.java:68#C03165CB85975247DBF40E816A1A007A
+Low#J2EE Bad Practices: getConnection()#DatabaseUtilities.java:78#A09AE144AE395B011A8BCD8E723A9244
+Low#J2EE Bad Practices: getConnection()#DatabaseUtilities.java:98#800E5D45253401B7011A3E425FA7E38C
+Low#J2EE Bad Practices: getConnection()#DatabaseUtilities.java:105#2CD2759C69A0E24CF5AFD8284BFECEA4
+Low#J2EE Bad Practices: Leftover Debug Code#CreateDB.java:50#4C617F5E1017A5616DA20C1873DA1A59
+Low#J2EE Bad Practices: Leftover Debug Code#Encoding.java:740#47D0E56CF6C0BE005EB528F440C796D2
+Low#J2EE Bad Practices: Leftover Debug Code#Exec.java:502#39935F5497EC906A3A07B9EA4DB66A0C
+Low#J2EE Bad Practices: Leftover Debug Code#WebgoatProperties.java:112#6DE0722B567CE1995B714A6C99B27D45
+Low#J2EE Bad Practices: Sockets#Interceptor.java:93#45A23F71D11BF7CC82AD74A1C9CD62B5
+Low#J2EE Bad Practices: Threads#Exec.java:114#71F0625AE57A741FA803D1184A21994A
+Low#J2EE Bad Practices: Threads#Exec.java:114#5C731C3DAD18958D2CBB751EF331FE4E
+Low#J2EE Bad Practices: Threads#Exec.java:303#71F0625AE57A741FA803D1184A219949
+Low#J2EE Bad Practices: Threads#Exec.java:303#5C731C3DAD18958D2CBB751EF331FE4D
+Low#J2EE Bad Practices: Threads#ThreadSafetyProblem.java:95#BB4EF0C6DFBF7384D36B5136BC23EEE0
+Low#J2EE Bad Practices: Threads#ThreadWatcher.java:108#5C8CC415FD7278B9B8A35B3C53B39381
+Low#J2EE Misconfiguration: Excessive Servlet Mappings#web.xml:200#E11F263227031B7EBEBEBA1EA7476158
+Low#J2EE Misconfiguration: Excessive Session Timeout#web.xml:248#C2F39B963AB1AFACD8D57325EEAF747F
+Low#J2EE Misconfiguration: Missing Data Transport Constraint#web.xml:274#4745492F4C56918DB027E1B7D27069F8
+Low#J2EE Misconfiguration: Missing Data Transport Constraint#web.xml:286#4745492F4C56918DB027E1B7D27069F9
+Low#J2EE Misconfiguration: Missing Error Handling#web.xml:6#399A248E35AE0FBB04255DE45FA9754C
+Low#J2EE Misconfiguration: Missing Error Handling#web-unix.xml:6#88F4D7D5D6180F7BCFE26DFEB49ADCA4
+Low#J2EE Misconfiguration: Missing Error Handling#web-windows.xml:6#A4F1C9B64A6151C8466143432EBAA61B
+Low#J2EE Misconfiguration: Missing Servlet Mapping#web.xml:79#5E91D4245219FB0BEA8CCB65B50465D4
+Low#Missing Check against Null#Challenge2Screen.java:644#ACDE20A434A7B822AF9A8A04B1FCAB10
+Low#Missing Check against Null#HttpOnly.java:299#518797903AE242F8EC4C9B414CE99CD2
+Low#Missing Check against Null#ParameterParser.java:1072#C183732E31D7FFCBFC8E6D6F50331C35
+Low#Missing Check against Null#WSDLScanning.java:201#DA66D0FAB27C3D7E59E285E24796B78B
+Low#Missing Check for Null Parameter#AbstractLesson.java:317#F5B20153166B92D817BF3782C29D4980
+Low#Missing Check for Null Parameter#Category.java:81#2DA1FACB1915C00E7C43FF9061771897
+Low#Object Model Violation: Just one of equals() and hashCode() Defined#AbstractLesson.java:317#8A93D887707FAF67D0C6134B8419AB66
+Low#Object Model Violation: Just one of equals() and hashCode() Defined#Category.java:81#B622BC093E6CFFB3E7119C5620832581
+Low#Password Management: Password in Comment#BasicAuthentication.java:258#2032FFDA1ACE66CF7BF8140FEDEF58A6
+Low#Password Management: Password in Comment#BufferOverflow.java:59#2032FFDA1ACE66CF7BF8140FEDEF58A7
+Low#Password Management: Password in Comment#Challenge2Screen.java:139#2672B79A28F1D268BE0BE4510ECA2F0D
+Low#Password Management: Password in Comment#Course.java:76#83F06CD8F02FEA5F506B1C33E9C723D5
+Low#Password Management: Password in Comment#DeleteProfile.java:107#63FDA39339AABEFFDAFC338CF3882124
+Low#Password Management: Password in Comment#DeleteProfile.java:136#63FDA39339AABEFFDAFC338CF3882125
+Low#Password Management: Password in Comment#ECSFactory.java:169#FA2E59EFE5B8C6E2A801F7C450DB6779
+Low#Password Management: Password in Comment#EditProfile.java:100#4881C1A9E2A09BF6D6243B886530CA6D
+Low#Password Management: Password in Comment#EditProfile.java:100#4881C1A9E2A09BF6D6243B886530CA72
+Low#Password Management: Password in Comment#EditProfile.java:158#4881C1A9E2A09BF6D6243B886530CA6E
+Low#Password Management: Password in Comment#EditProfile.java:161#4881C1A9E2A09BF6D6243B886530CA73
+Low#Password Management: Password in Comment#FailOpenAuthentication.java:98#5CC6F221C368158E158C40EA7AD04851
+Low#Password Management: Password in Comment#FailOpenAuthentication.java:102#28B72891B4552F5DD8F0964834D3AC43
+Low#Password Management: Password in Comment#FindProfile.java:152#4881C1A9E2A09BF6D6243B886530CA74
+Low#Password Management: Password in Comment#FindProfile.java:184#4881C1A9E2A09BF6D6243B886530CA6F
+Low#Password Management: Password in Comment#ForcedBrowsing.java:103#2032FFDA1ACE66CF7BF8140FEDEF58A8
+Low#Password Management: Password in Comment#ForgotPassword.java:285#2032FFDA1ACE66CF7BF8140FEDEF58A9
+Low#Password Management: Password in Comment#RemoteAdminFlaw.java:69#2032FFDA1ACE66CF7BF8140FEDEF58AA
+Low#Password Management: Password in Comment#UpdateProfile.java:149#63FDA39339AABEFFDAFC338CF3882126
+Low#Password Management: Password in Comment#UpdateProfile.java:198#63FDA39339AABEFFDAFC338CF3882127
+Low#Password Management: Password in Comment#UpdateProfile.java:221#63FDA39339AABEFFDAFC338CF3882122
+Low#Password Management: Password in Comment#UpdateProfile.java:270#63FDA39339AABEFFDAFC338CF3882123
+Low#Password Management: Password in Comment#ViewProfile.java:115#4881C1A9E2A09BF6D6243B886530CA70
+Low#Password Management: Password in Comment#ViewProfile.java:121#4881C1A9E2A09BF6D6243B886530CA77
+Low#Password Management: Password in Comment#ViewProfile.java:135#4881C1A9E2A09BF6D6243B886530CA75
+Low#Password Management: Password in Comment#ViewProfile.java:175#4881C1A9E2A09BF6D6243B886530CA71
+Low#Password Management: Password in Comment#ViewProfile.java:181#4881C1A9E2A09BF6D6243B886530CA78
+Low#Password Management: Password in Comment#ViewProfile.java:195#4881C1A9E2A09BF6D6243B886530CA76
+Low#Poor Error Handling: Empty Catch Block#Course.java:377#B4314B398110D1A245F120ACF94D95B2
+Low#Poor Error Handling: Empty Catch Block#DefaultLessonAction.java:145#ABE768E5DB127C1880CAC97B6FD02B02
+Low#Poor Error Handling: Empty Catch Block#DefaultLessonAction.java:178#D74773F2B70F375A5CC8F8E4E041126B
+Low#Poor Error Handling: Empty Catch Block#DefaultLessonAction.java:236#769FB1D68E26C32059C84C220A85D193
+Low#Poor Error Handling: Empty Catch Block#DeleteProfile.java:176#9A51D4CAF48BD3F8D3960159C5A77305
+Low#Poor Error Handling: Empty Catch Block#FindProfile.java:118#919D3DCDEEE1C50910AC7CE42DFA83A5
+Low#Poor Error Handling: Empty Catch Block#FindProfile.java:235#F23C1087E34409F5607C5C5C9FF79069
+Low#Poor Error Handling: Empty Catch Block#LessonAdapter.java:101#2EE47323376419DC1AC49BFA7555650D
+Low#Poor Error Handling: Empty Catch Block#LessonAdapter.java:307#79B88F7181952E921D27629409A338C8
+Low#Poor Error Handling: Empty Catch Block#LessonTracker.java:247#C5BD52D4D9034951347E8AE8481F11BC
+Low#Poor Error Handling: Empty Catch Block#LessonTracker.java:262#C5BD52D4D9034951347E8AE8481F11BD
+Low#Poor Error Handling: Empty Catch Block#LessonTracker.java:403#EE6D0BB18FEBEFDBFB1DB27798A63FBA
+Low#Poor Error Handling: Empty Catch Block#Login.java:297#3C981B07C32984A2B6FCC54FF7C3C879
+Low#Poor Error Handling: Empty Catch Block#ReportCardScreen.java:87#1C951988FCDAF1CF15CAF1830327E1B7
+Low#Poor Error Handling: Empty Catch Block#SoapRequest.java:265#E634F9908A591794FB74A17FCF57E637
+Low#Poor Error Handling: Empty Catch Block#SoapRequest.java:322#C68EA40BEECE32111F72F73D44E84514
+Low#Poor Error Handling: Empty Catch Block#SoapRequest.java:428#2B0FBB29B2ED4A753A1DF572AB283458
+Low#Poor Error Handling: Empty Catch Block#SoapRequest.java:431#2B0FBB29B2ED4A753A1DF572AB283459
+Low#Poor Error Handling: Empty Catch Block#UserTracker.java:133#F9F54F32E40D2263C480BFDACBC06D4E
+Low#Poor Error Handling: Empty Catch Block#UserTracker.java:161#B7D5283FEEA8EDDE4F293D1ABEEFE6B1
+Low#Poor Error Handling: Empty Catch Block#ViewProfile.java:105#159167DE098A6340587F852302B47EE0
+Low#Poor Error Handling: Empty Catch Block#ViewProfile.java:253#B5AE766122FA68FC09EFB2ED6960705F
+Low#Poor Error Handling: Empty Catch Block#ViewProfile.java:268#B5AE766122FA68FC09EFB2ED69607060
+Low#Poor Error Handling: Empty Catch Block#WeakSessionID.java:228#92C43F310A3F956352502EAD36C5B551
+Low#Poor Error Handling: Empty Catch Block#WeakSessionID.java:234#92C43F310A3F956352502EAD36C5B552
+Low#Poor Error Handling: Empty Catch Block#WebSession.java:1027#FA8A0C3A1898EAD80E9E3514FADABD65
+Low#Poor Error Handling: Empty Catch Block#WSDLScanning.java:232#764375566B11856609060FAE78DD1113
+Low#Poor Error Handling: Empty Catch Block#WSDLScanning.java:290#711C492D0F8D5CD85496BA28D71F1133
+Low#Poor Error Handling: Empty Catch Block#WSDLScanning.java:293#711C492D0F8D5CD85496BA28D71F1134
+Low#Poor Error Handling: Empty Catch Block#WsSqlInjection.java:243#6843E1A15E92F2D722831D80D2C09DE5
+Low#Poor Error Handling: Empty Catch Block#WsSqlInjection.java:246#6843E1A15E92F2D722831D80D2C09DE6
+Low#Poor Error Handling: Empty Catch Block#WsSqlInjection.java:273#88586BB1D4487A36D1054CED59AE80BD
+Low#Poor Error Handling: Overly Broad Catch#AbstractLesson.java:420#E80E51AB9225B4EA3FA4674302DC130A
+Low#Poor Error Handling: Overly Broad Catch#AbstractLesson.java:476#F93C83B4FFD27A376FB49DE36A9D44D2
+Low#Poor Error Handling: Overly Broad Catch#AbstractLesson.java:571#20BA5BBCC9DDDA06B46463E3D6B3E983
+Low#Poor Error Handling: Overly Broad Catch#AbstractLesson.java:810#30F39BBC28D0369D663791E91DDFBFA6
+Low#Poor Error Handling: Overly Broad Catch#AbstractLesson.java:903#9BCF360F710A55757FC8BD2BCC652BF0
+Low#Poor Error Handling: Overly Broad Catch#AbstractLesson.java:1042#788548B8FF65CC4AF3A944A36AD831BA
+Low#Poor Error Handling: Overly Broad Catch#AccessControlMatrix.java:111#D85F7F08CD96663CB4852A0166EBAC84
+Low#Poor Error Handling: Overly Broad Catch#BackDoors.java:134#FB25471481DE82711751425170451DD3
+Low#Poor Error Handling: Overly Broad Catch#BasicAuthentication.java:157#319D6AB060984AB435CFC2164A196538
+Low#Poor Error Handling: Overly Broad Catch#BasicAuthentication.java:248#AD2FEB0CD76C9ED8B99A2A5F61415514
+Low#Poor Error Handling: Overly Broad Catch#BlindSqlInjection.java:142#A638BBFC9558DCBD6543396FED7E085F
+Low#Poor Error Handling: Overly Broad Catch#BlindSqlInjection.java:341#A5C4F2CFD0C6A55CD11A173A3EC43334
+Low#Poor Error Handling: Overly Broad Catch#Challenge2Screen.java:265#4919F2422E04E3C4D0B440616F633827
+Low#Poor Error Handling: Overly Broad Catch#Challenge2Screen.java:346#B78E4DB4CCF0A63E485127E81BAEB186
+Low#Poor Error Handling: Overly Broad Catch#Challenge2Screen.java:388#51B54953C34AEE1514439CF36E4EF00F
+Low#Poor Error Handling: Overly Broad Catch#Challenge2Screen.java:439#F07967E12A769BEE46B8C32F248610D0
+Low#Poor Error Handling: Overly Broad Catch#Challenge2Screen.java:726#CF1625E05308FFEA3F1E0E6E3565D80D
+Low#Poor Error Handling: Overly Broad Catch#CommandInjection.java:208#7EF40D82A5F7C67496FCA5ABE720E01E
+Low#Poor Error Handling: Overly Broad Catch#Course.java:377#757165A83BF25887A323F656ED89A76B
+Low#Poor Error Handling: Overly Broad Catch#CrossSiteScripting.java:381#EFBAC65F8FEB6F6E14FACDBB742BCC7E
+Low#Poor Error Handling: Overly Broad Catch#CSRF.java:100#F718D43EBA284DCE994D82A30120BE9B
+Low#Poor Error Handling: Overly Broad Catch#CSRF.java:199#34584650395D5F2534406558498B5C27
+Low#Poor Error Handling: Overly Broad Catch#CSRF.java:272#7FCE6A612F85C47C347711EDAAA88EFA
+Low#Poor Error Handling: Overly Broad Catch#DatabaseUtilities.java:108#6CA7FAD40A38050006A40F1929490FEC
+Low#Poor Error Handling: Overly Broad Catch#DefaultLessonAction.java:213#B409E99A33FDC4241E8D86D237E45FCC
+Low#Poor Error Handling: Overly Broad Catch#DefaultLessonAction.java:275#CB037CB8BCEA4B8C012A909978867083
+Low#Poor Error Handling: Overly Broad Catch#DefaultLessonAction.java:323#F73424BDB903FB4CBC3231399EBF1980
+Low#Poor Error Handling: Overly Broad Catch#DeleteProfile.java:123#424A8CB8DF4C3613CD348380203A43AC
+Low#Poor Error Handling: Overly Broad Catch#DeleteProfile.java:152#80328305A482EF3761B1FC9FE95E8CAF
+Low#Poor Error Handling: Overly Broad Catch#DOMInjection.java:89#E094301BE5A2AD6CE88C5C1EA1DF7303
+Low#Poor Error Handling: Overly Broad Catch#DOS_Login.java:175#B85AB37C215E8F38F75A4F5BAC72C4C6
+Low#Poor Error Handling: Overly Broad Catch#EditProfile.java:128#F895A6CAB37A1636D3B9FBBEA23C9674
+Low#Poor Error Handling: Overly Broad Catch#EditProfile.java:128#3A68691E3A25CB0691DEE03515003B96
+Low#Poor Error Handling: Overly Broad Catch#EditProfile.java:186#F225C68286E6C19D93D2C1E94F95F7D3
+Low#Poor Error Handling: Overly Broad Catch#EditProfile.java:189#ED38BB2EA4B2AB8E05B08409D36DDEC4
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:454#FA89BB7A1F8F3D3C0EE4DDF569255312
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:506#4393AAA5E6FF2AAE50E53DB18E0ED96E
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:550#69AFA8F30F5B963A36227586517A896A
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:888#7C97574C3CAD67BA5CD63D67D481A34A
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:913#343C03986DD94B14AE89E112D9996126
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:934#9904A183BAB676911A2289782DC66DDE
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:955#753A183455F634315530AE1E98A143DF
+Low#Poor Error Handling: Overly Broad Catch#Encoding.java:1010#DA56595234EEEA123859B0B222390CC4
+Low#Poor Error Handling: Overly Broad Catch#ErrorScreen.java:107#E4F576AD9B9099E7648A661FD3E026DC
+Low#Poor Error Handling: Overly Broad Catch#Exec.java:242#74B6FE7F53E88BA44158125257AF085B
+Low#Poor Error Handling: Overly Broad Catch#Exec.java:431#EDFA3F9BD1D1F3E8EDF285A937CF99B4
+Low#Poor Error Handling: Overly Broad Catch#FailOpenAuthentication.java:83#0DE544B64FCA127F87821524FA7D9AD5
+Low#Poor Error Handling: Overly Broad Catch#FailOpenAuthentication.java:120#0DE544B64FCA127F87821524FA7D9AD6
+Low#Poor Error Handling: Overly Broad Catch#FindProfile.java:184#68CCD41D75FDFDEB656F110D33C98BEB
+Low#Poor Error Handling: Overly Broad Catch#FindProfile.java:216#349863551B1440EF6513F300D1F84040
+Low#Poor Error Handling: Overly Broad Catch#HiddenFieldTampering.java:162#F781AE2F2B5CFCB65D86E93F9447C3BB
+Low#Poor Error Handling: Overly Broad Catch#HtmlClues.java:117#FEE47E13497AADC6846BF2CF26134240
+Low#Poor Error Handling: Overly Broad Catch#HttpBasics.java:75#9A64EB5F4DAAD544B98B7A3F77888671
+Low#Poor Error Handling: Overly Broad Catch#HttpOnly.java:135#86B0143484F9727BE30DABC842B2E830
+Low#Poor Error Handling: Overly Broad Catch#HttpOnly.java:182#DC120EC648920C0CB86F457A3F43AE04
+Low#Poor Error Handling: Overly Broad Catch#HttpSplitting.java:134#087ABE155D9A70976AC25EB45032F4DB
+Low#Poor Error Handling: Overly Broad Catch#HttpSplitting.java:235#B02AB669464EFCA850ADAB79153AB0F3
+Low#Poor Error Handling: Overly Broad Catch#JavaScriptValidation.java:256#22A4836C713C17B989180F3ECF1010FA
+Low#Poor Error Handling: Overly Broad Catch#JSONInjection.java:96#CC441EE121689CBCFF5985EF5C6F0192
+Low#Poor Error Handling: Overly Broad Catch#LessonAdapter.java:101#2F63C2CCFAE28AED6CFE759ECFC70042
+Low#Poor Error Handling: Overly Broad Catch#LessonAdapter.java:133#9CC762D4A5363E23A8411E24D9256C7C
+Low#Poor Error Handling: Overly Broad Catch#LessonAdapter.java:307#479D8434A7EC31083CB113B28A3585E9
+Low#Poor Error Handling: Overly Broad Catch#LessonTracker.java:251#3541B59CCC3B82B15BA004D41B6A464C
+Low#Poor Error Handling: Overly Broad Catch#LessonTracker.java:262#3541B59CCC3B82B15BA004D41B6A464D
+Low#Poor Error Handling: Overly Broad Catch#LessonTracker.java:391#5FE5E75EFAB278E8A87ABDB6DFA6EB57
+Low#Poor Error Handling: Overly Broad Catch#LessonTracker.java:403#5FE5E75EFAB278E8A87ABDB6DFA6EB58
+Low#Poor Error Handling: Overly Broad Catch#ListStaff.java:118#DE07BA20F02DE0CC255E1AB94B0DBE18
+Low#Poor Error Handling: Overly Broad Catch#ListStaff.java:118#C9A7E69771B873400CAE5FA10ADEB634
+Low#Poor Error Handling: Overly Broad Catch#ListStaff.java:166#689F5C908F1B8DAE49A26F85304E6B42
+Low#Poor Error Handling: Overly Broad Catch#ListStaff.java:166#CF1706576AE627A199EABD745ADE9FFB
+Low#Poor Error Handling: Overly Broad Catch#Login.java:165#AC78C0ECCCAC39C732C6CDEF74BB1DEF
+Low#Poor Error Handling: Overly Broad Catch#Login.java:166#5FAD05CA7E47A3D714C0E012ED7B41B0
+Low#Poor Error Handling: Overly Broad Catch#Login.java:208#7B4A94FE46C68B8E768B5669284DE4A0
+Low#Poor Error Handling: Overly Broad Catch#Login.java:213#B6451DDB15F48A240F5C0CD2D1AF8E5B
+Low#Poor Error Handling: Overly Broad Catch#Login.java:255#CA272157D4AC84194B040102D6B38471
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:120#5A1F1426EE75EE3FBA9FFDAE1D0E00C5
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:141#22D5DCF1F61F33777ABC35D715FFD8FC
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:179#BE61BA7E4DC82B0854B087781BE03EAF
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:223#DA6FAC864D9770BC794738AD32E422AD
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:261#D6E0432232121ACB0F40714D5AB71B02
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:298#52DDE6243FB32F58A3B0D46D4BEAC5BA
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:335#E3F7FA445FC73DF499C6AFEC68297B99
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:356#80A724A9D020652B8760D4E8E231BE77
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:428#E01A48FB4FD50C871F401912AB854C59
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:484#740A8235F59F66F7C610FBA1BF3186F7
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:521#A12C31E20DFB8C2A5A81F7FE3F5B1DF8
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:610#1CDC68976671DD5108A6F06DA34767BF
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:672#BE70E7463930BF26AAF4E27EC47E9F79
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:731#1DF8D64FED6C5F59B7CFACAB117EFFBB
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:752#107D5D46B5327212671D1CDE8DD190E7
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:859#C6C902626308763F1CFA82F399CDD3E9
+Low#Poor Error Handling: Overly Broad Catch#ParameterParser.java:882#7FB1865C3542152C05F76E139A80A4DB
+Low#Poor Error Handling: Overly Broad Catch#PathBasedAccessControl.java:205#2E131433EC8F7F66252F9B914828ED18
+Low#Poor Error Handling: Overly Broad Catch#PathBasedAccessControl.java:214#2E131433EC8F7F66252F9B914828ED19
+Low#Poor Error Handling: Overly Broad Catch#ProductsAdminScreen.java:85#B25556823A56BD9833EC97928C6BE3C8
+Low#Poor Error Handling: Overly Broad Catch#ReflectedXSS.java:219#5D57D541A4E77A3C27CEC7F47437BC72
+Low#Poor Error Handling: Overly Broad Catch#RefreshDBScreen.java:96#FC4F6942D7BC47D8FED62F11B3107EC4
+Low#Poor Error Handling: Overly Broad Catch#RefreshDBScreen.java:165#47EE7B29EE0DDEE757C5385A1C716A5D
+Low#Poor Error Handling: Overly Broad Catch#ReportCardScreen.java:87#FE6BAAC5859A30F6057733FE921F1499
+Low#Poor Error Handling: Overly Broad Catch#RoleBasedAccessControl.java:360#2CE624894A609924F7D4811F5D835C9F
+Low#Poor Error Handling: Overly Broad Catch#RoleBasedAccessControl.java:454#2A5B93F3990FF7D7E3B485F4F920B493
+Low#Poor Error Handling: Overly Broad Catch#SilentTransactions.java:115#4E00CFEBE4072CA999C97E68292B7D0E
+Low#Poor Error Handling: Overly Broad Catch#SoapRequest.java:270#FF9C422AE5C85400EE3E51EA7FEE2716
+Low#Poor Error Handling: Overly Broad Catch#SoapRequest.java:327#654431F026EFD8AFD155E91265356C4F
+Low#Poor Error Handling: Overly Broad Catch#SoapRequest.java:431#D402C68F2F35B97004E831047079827B
+Low#Poor Error Handling: Overly Broad Catch#SQLInjection.java:363#AE6FA423BE9EB9E79EE35D5495B7C7A5
+Low#Poor Error Handling: Overly Broad Catch#SqlNumericInjection.java:159#20177ECB226CB47AB96ECB5624B41718
+Low#Poor Error Handling: Overly Broad Catch#SqlNumericInjection.java:239#0F0FF924977DE9C7C73A2AF3FDA77CA2
+Low#Poor Error Handling: Overly Broad Catch#SqlNumericInjection.java:398#3DFB1C5A8A92E662E77EA3A291DE2B4B
+Low#Poor Error Handling: Overly Broad Catch#SqlStringInjection.java:149#86B323E8F3792762476EEE992CC99816
+Low#Poor Error Handling: Overly Broad Catch#SqlStringInjection.java:219#534D5EF2946C55543E83552AB2236A87
+Low#Poor Error Handling: Overly Broad Catch#SqlStringInjection.java:314#882B6B78EAA59D4913A171F38EBEDFD7
+Low#Poor Error Handling: Overly Broad Catch#StoredXss.java:110#75A884C9E8D537F1E385E0A32F9CCF44
+Low#Poor Error Handling: Overly Broad Catch#StoredXss.java:271#E655FCB6180BE4E1728D9E4C4269B663
+Low#Poor Error Handling: Overly Broad Catch#StoredXss.java:361#C5C5AC1CBC1408C22FA356532AB2E6E6
+Low#Poor Error Handling: Overly Broad Catch#SummaryReportCardScreen.java:99#8DF99DB0044A09539852F92D2ECEB075
+Low#Poor Error Handling: Overly Broad Catch#ThreadSafetyProblem.java:125#62C7FE330BAB70CA63BDA5F86313AAB4
+Low#Poor Error Handling: Overly Broad Catch#ThreadSafetyProblem.java:214#5D8297B8270664CD91F31526192B8A95
+Low#Poor Error Handling: Overly Broad Catch#TraceXSS.java:220#865AB8CA7625D46FD1BE10801C0E6F9B
+Low#Poor Error Handling: Overly Broad Catch#UncheckedEmail.java:193#074F613B1C85894BEC463C4BC282021B
+Low#Poor Error Handling: Overly Broad Catch#UpdateProfile.java:185#2D2BEE50E4F5B5AB5A6DF0D134FC0BE8
+Low#Poor Error Handling: Overly Broad Catch#UpdateProfile.java:234#B726383BB69E9D0173CA12650859233E
+Low#Poor Error Handling: Overly Broad Catch#UpdateProfile.java:257#2EF06EFC80CA9FC3BE40DB3F601F8239
+Low#Poor Error Handling: Overly Broad Catch#UpdateProfile.java:306#B2272914D82DDB38D16D455828C529E1
+Low#Poor Error Handling: Overly Broad Catch#UpdateProfile.java:319#35E7C34DDD91F7453241A6A5F469F467
+Low#Poor Error Handling: Overly Broad Catch#UpdateProfile.java:348#F15DA3960EE5AC46A5FFA169F84C1F62
+Low#Poor Error Handling: Overly Broad Catch#UpdateProfile.java:390#E1B463F82834469B4244B82822DE919E
+Low#Poor Error Handling: Overly Broad Catch#UserAdminScreen.java:85#15D987114F12FA24A0A82EA17D1EBC02
+Low#Poor Error Handling: Overly Broad Catch#UserTracker.java:133#3B2CBFD932D36A92199DC47C13DA9CD0
+Low#Poor Error Handling: Overly Broad Catch#UserTracker.java:161#5271617895250A2E580F5ECA4DB66EBA
+Low#Poor Error Handling: Overly Broad Catch#ViewDatabase.java:102#2A58CC1547323D1AFB16464A0341A35F
+Low#Poor Error Handling: Overly Broad Catch#ViewProfile.java:143#C4D54C64E816134C129CC4FB04CE5624
+Low#Poor Error Handling: Overly Broad Catch#ViewProfile.java:149#0307B18A0460D1B5E9CBA4A6CB1641F1
+Low#Poor Error Handling: Overly Broad Catch#ViewProfile.java:163#B46AC326DC1F30F6B03F47CD78124682
+Low#Poor Error Handling: Overly Broad Catch#ViewProfile.java:203#93CE2393E73626FF83259F7BF183836D
+Low#Poor Error Handling: Overly Broad Catch#ViewProfile.java:209#2377CF1BE73B3B048AA0A81997710936
+Low#Poor Error Handling: Overly Broad Catch#ViewProfile.java:223#D046B32B2A81C19087C1C3A499D9C743
+Low#Poor Error Handling: Overly Broad Catch#WeakAuthenticationCookie.java:194#3D97B81482736027CF4EEF717491B02E
+Low#Poor Error Handling: Overly Broad Catch#WeakSessionID.java:135#125144A9692E181B4844EEA386485889
+Low#Poor Error Handling: Overly Broad Catch#WebSession.java:445#7BFDA23213F13C4DFA0DCDE812F9DF47
+Low#Poor Error Handling: Overly Broad Catch#WebSession.java:1027#FC983A936500FBD36F907D60CBDB3FA5
+Low#Poor Error Handling: Overly Broad Catch#WSDLScanning.java:161#DB817FE1BE7E92EF836558E4363C204B
+Low#Poor Error Handling: Overly Broad Catch#WSDLScanning.java:232#AB64E4CAE731235ED984445C420778D4
+Low#Poor Error Handling: Overly Broad Catch#WSDLScanning.java:261#AB64E4CAE731235ED984445C420778D5
+Low#Poor Error Handling: Overly Broad Catch#WSDLScanning.java:293#F8FCFA39D7E71A2FD62A3B00FBDC8C15
+Low#Poor Error Handling: Overly Broad Catch#WsSAXInjection.java:163#7CA6791DD58737AB497E5E78D71B71E6
+Low#Poor Error Handling: Overly Broad Catch#WsSqlInjection.java:216#B80F7E5451D2354A70D8080A4A26F131
+Low#Poor Error Handling: Overly Broad Catch#WsSqlInjection.java:246#AA803124133D98FE04A15C11A816D18D
+Low#Poor Error Handling: Overly Broad Catch#XMLInjection.java:126#494710AD032BFD3226C4503F00F32525
+Low#Poor Error Handling: Overly Broad Throws#BackDoors.java:87#022767F21A8D334E484C3E7CEC2C6749
+Low#Poor Error Handling: Overly Broad Throws#BackDoors.java:142#3CEFB658C858D961F2C1942155C3C953
+Low#Poor Error Handling: Overly Broad Throws#Challenge2Screen.java:397#D9C7CC39D5B7A558E88FA78611553BF4
+Low#Poor Error Handling: Overly Broad Throws#HtmlClues.java:135#4767A39CC82624C8DF94CE558388608F
+Low#Poor Error Handling: Overly Broad Throws#HttpSplitting.java:161#B1EAD77CBD01B93091502EBF26A4247B
+Low#Poor Error Handling: Overly Broad Throws#HttpSplitting.java:191#8C3759D2B027E1A49E71D3884549506C
+Low#Poor Error Handling: Overly Broad Throws#LessonAdapter.java:144#210AA1A8EFBCB73D3D72870FCFCE5041
+Low#Poor Error Handling: Overly Broad Throws#LessonAdapter.java:152#5503BCF906889669D3706765FAA2A3D8
+Low#Poor Error Handling: Overly Broad Throws#LessonAdapter.java:160#444E18A164A77C9987658EB0D0F46EBF
+Low#Poor Error Handling: Overly Broad Throws#LessonAdapter.java:168#20D8D8DC490B4033D5BED8E678B7B761
+Low#Poor Error Handling: Overly Broad Throws#LessonAdapter.java:176#F3E81447B7A253F2AB8E9FF9EBE13A3F
+Low#Poor Error Handling: Overly Broad Throws#LessonAdapter.java:184#7DCAF2F4819DDFC80CC5DDD5783F98D8
+Low#Poor Error Handling: Overly Broad Throws#WeakAuthenticationCookie.java:85#543877893EBD02DFE17A9E604F23A9F3
+Low#Poor Error Handling: Overly Broad Throws#WeakAuthenticationCookie.java:124#7A9D14739BA15F55897876721C44C389
+Low#Poor Error Handling: Overly Broad Throws#WeakAuthenticationCookie.java:373#DFD20D8A60BD076F656B2B332AA1F9B2
+Low#Poor Error Handling: Throw Inside Finally#Interceptor.java:118#17E77BB9D3B68EEDFB3FFF3FE10B4377
+Low#Poor Logging Practice: Use of a System Output Stream#AbstractLesson.java:422#DEF38D529FC2FAD74E4EB1C518722812
+Low#Poor Logging Practice: Use of a System Output Stream#AbstractLesson.java:478#27BC666113F2CFC868E3CA65D2C89F34
+Low#Poor Logging Practice: Use of a System Output Stream#AbstractLesson.java:960#37635EECC3C6B321C571737A2EDF72D7
+Low#Poor Logging Practice: Use of a System Output Stream#AbstractLesson.java:1044#4DB0C4C7484B1BC7DED7FD5D654E0315
+Low#Poor Logging Practice: Use of a System Output Stream#BlindSqlInjection.java:343#9240DA4A67F3261C56DD14951F08BFAC
+Low#Poor Logging Practice: Use of a System Output Stream#Challenge2Screen.java:728#208CC9439D8BBD0EF6A7FA217C42BAF8
+Low#Poor Logging Practice: Use of a System Output Stream#CommandInjection.java:87#B5CEF3088653D1EB0FC57A1296AD4BAF
+Low#Poor Logging Practice: Use of a System Output Stream#CommandInjection.java:264#A762ABB9403892D49EFC78C3720C32AB
+Low#Poor Logging Practice: Use of a System Output Stream#CommandInjection.java:285#45061B1E02B98799473F8A6E78BC4A66
+Low#Poor Logging Practice: Use of a System Output Stream#CommandInjection.java:306#115DE7E55178D4232C6ABF96346DEC56
+Low#Poor Logging Practice: Use of a System Output Stream#Course.java:71#368BE56DC03554499D14E197D9C9F157
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:62#F6EFAEDA0214169B96CB9979E5C03C98
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:77#F6EFAEDA0214169B96CB9979E5C03C99
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:96#F6EFAEDA0214169B96CB9979E5C03C9A
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:120#F6EFAEDA0214169B96CB9979E5C03C9B
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:122#F6EFAEDA0214169B96CB9979E5C03C9C
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:150#724E94D249DD72230BB4A189D83487D5
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:164#724E94D249DD72230BB4A189D83487D6
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:189#24C087A4806CB569AFD1A909CC8E8E16
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:202#24C087A4806CB569AFD1A909CC8E8E17
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:240#3542DDF0D10488FB2A1E72BBA01A617A
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:254#3542DDF0D10488FB2A1E72BBA01A617B
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:291#9DA9A88EBD392A6A7FE7FAADC8ADF8CB
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:306#9DA9A88EBD392A6A7FE7FAADC8ADF8CC
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:352#C16B16C098BEE5CE2B8634CD6CAFE7A8
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:364#C16B16C098BEE5CE2B8634CD6CAFE7A9
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:391#CBBCD347E74E1C3A0DC1F646A88AC8DF
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:405#CBBCD347E74E1C3A0DC1F646A88AC8E0
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:447#6FF27C0075EC88B18F1BC5DF6A388EC7
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:472#6FF27C0075EC88B18F1BC5DF6A388EC8
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:549#127C2D515D6915803C85A5BFF9CD96DE
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:562#127C2D515D6915803C85A5BFF9CD96DF
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:604#68E135A1A0A5F990F2281AD652A575AB
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:618#68E135A1A0A5F990F2281AD652A575AC
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:714#AAEBC31612A7257DD3CB71C4D9922BA7
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:727#AAEBC31612A7257DD3CB71C4D9922BA8
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:856#0CB45A2FA542F2ADD850FC11D2A0D93D
+Low#Poor Logging Practice: Use of a System Output Stream#CreateDB.java:867#0CB45A2FA542F2ADD850FC11D2A0D93E
+Low#Poor Logging Practice: Use of a System Output Stream#CrossSiteScripting.java:359#F3622B291F5D16CC3A727AF90D75988B
+Low#Poor Logging Practice: Use of a System Output Stream#CrossSiteScripting.java:365#F3622B291F5D16CC3A727AF90D75988C
+Low#Poor Logging Practice: Use of a System Output Stream#CrossSiteScripting.java:372#F3622B291F5D16CC3A727AF90D75988D
+Low#Poor Logging Practice: Use of a System Output Stream#CrossSiteScripting.java:378#F3622B291F5D16CC3A727AF90D75988E
+Low#Poor Logging Practice: Use of a System Output Stream#CrossSiteScripting.java:384#F3622B291F5D16CC3A727AF90D75988F
+Low#Poor Logging Practice: Use of a System Output Stream#DatabaseUtilities.java:95#CCD4B143682A4683F6EC630E93BFB3DA
+Low#Poor Logging Practice: Use of a System Output Stream#DeleteProfile.java:80#D7742027805A041229AED9F1E04A58E2
+Low#Poor Logging Practice: Use of a System Output Stream#DeleteProfile.java:85#D7742027805A041229AED9F1E04A58E3
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:746#5CB1C5DBB07B0DC28312DFF53243B8CB
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:747#5CB1C5DBB07B0DC28312DFF53243B8CC
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:748#5CB1C5DBB07B0DC28312DFF53243B8CD
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:749#5CB1C5DBB07B0DC28312DFF53243B8CE
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:750#5CB1C5DBB07B0DC28312DFF53243B8CF
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:751#5CB1C5DBB07B0DC28312DFF53243B8D0
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:752#5CB1C5DBB07B0DC28312DFF53243B8D1
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:753#5CB1C5DBB07B0DC28312DFF53243B8D2
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:754#5CB1C5DBB07B0DC28312DFF53243B8D3
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:755#5CB1C5DBB07B0DC28312DFF53243B8D4
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:756#5CB1C5DBB07B0DC28312DFF53243B8D5
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:757#5CB1C5DBB07B0DC28312DFF53243B8D6
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:758#5CB1C5DBB07B0DC28312DFF53243B8D7
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:759#5CB1C5DBB07B0DC28312DFF53243B8D8
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:760#5CB1C5DBB07B0DC28312DFF53243B8D9
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:761#5CB1C5DBB07B0DC28312DFF53243B8DA
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:762#5CB1C5DBB07B0DC28312DFF53243B8DB
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:763#5CB1C5DBB07B0DC28312DFF53243B8DC
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:764#5CB1C5DBB07B0DC28312DFF53243B8DD
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:765#5CB1C5DBB07B0DC28312DFF53243B8DE
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:766#5CB1C5DBB07B0DC28312DFF53243B8DF
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:767#5CB1C5DBB07B0DC28312DFF53243B8E0
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:768#5CB1C5DBB07B0DC28312DFF53243B8E1
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:769#5CB1C5DBB07B0DC28312DFF53243B8E2
+Low#Poor Logging Practice: Use of a System Output Stream#Encoding.java:770#5CB1C5DBB07B0DC28312DFF53243B8E3
+Low#Poor Logging Practice: Use of a System Output Stream#ErrorScreen.java:159#31DEE6B21465265B07E2F227B82A1848
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:506#F3C745B5FF30BF594AB3FB9613BFE4B9
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:509#F3C745B5FF30BF594AB3FB9613BFE4BA
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:510#F3C745B5FF30BF594AB3FB9613BFE4BB
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:513#F3C745B5FF30BF594AB3FB9613BFE4BC
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:517#F3C745B5FF30BF594AB3FB9613BFE4BD
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:520#F3C745B5FF30BF594AB3FB9613BFE4BE
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:524#F3C745B5FF30BF594AB3FB9613BFE4BF
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:525#F3C745B5FF30BF594AB3FB9613BFE4C0
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:528#F3C745B5FF30BF594AB3FB9613BFE4C1
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:529#F3C745B5FF30BF594AB3FB9613BFE4C2
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:532#F3C745B5FF30BF594AB3FB9613BFE4C3
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:533#F3C745B5FF30BF594AB3FB9613BFE4C4
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:536#F3C745B5FF30BF594AB3FB9613BFE4C5
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:537#F3C745B5FF30BF594AB3FB9613BFE4C6
+Low#Poor Logging Practice: Use of a System Output Stream#Exec.java:540#F3C745B5FF30BF594AB3FB9613BFE4C7
+Low#Poor Logging Practice: Use of a System Output Stream#FindProfile.java:83#D1EE3E3E679515ABBEC66C9A8682183B
+Low#Poor Logging Practice: Use of a System Output Stream#FindProfile.java:88#D1EE3E3E679515ABBEC66C9A8682183C
+Low#Poor Logging Practice: Use of a System Output Stream#FindProfile.java:120#481CC74E021AC4A5CE81F944517BE70B
+Low#Poor Logging Practice: Use of a System Output Stream#FindProfile.java:125#481CC74E021AC4A5CE81F944517BE70C
+Low#Poor Logging Practice: Use of a System Output Stream#HammerHead.java:245#CBC1A299785CBB6162BAC7CE6631AC42
+Low#Poor Logging Practice: Use of a System Output Stream#HammerHead.java:246#CBC1A299785CBB6162BAC7CE6631AC43
+Low#Poor Logging Practice: Use of a System Output Stream#HammerHead.java:307#2770E49728E1EE378BC0BD7B34A122C9
+Low#Poor Logging Practice: Use of a System Output Stream#LessonAdapter.java:136#A99D14BD0EF414E4CC24FC619B870E81
+Low#Poor Logging Practice: Use of a System Output Stream#LessonTracker.java:253#379104AF7B371A11C95744BFF851EF1E
+Low#Poor Logging Practice: Use of a System Output Stream#LessonTracker.java:394#49BA822B92A28A157097157E71E8D54F
+Low#Poor Logging Practice: Use of a System Output Stream#Login.java:90#63AAE86AA63EFA0F04478DEC38636E37
+Low#Poor Logging Practice: Use of a System Output Stream#Login.java:94#774AF09F9D9AF6B802DCB89E57DBCBA0
+Low#Poor Logging Practice: Use of a System Output Stream#Login.java:95#63AAE86AA63EFA0F04478DEC38636E38
+Low#Poor Logging Practice: Use of a System Output Stream#Login.java:99#774AF09F9D9AF6B802DCB89E57DBCBA1
+Low#Poor Logging Practice: Use of a System Output Stream#Logout.java:70#A248F4EA4F9AE3C7A9F4065B29868BEA
+Low#Poor Logging Practice: Use of a System Output Stream#Logout.java:75#A248F4EA4F9AE3C7A9F4065B29868BEB
+Low#Poor Logging Practice: Use of a System Output Stream#RefreshDBScreen.java:163#FCE9252971FBC36A1EF9D0890878DBE6
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:337#42D2933A94AA297DFBE1ECB83906AB85
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:343#42D2933A94AA297DFBE1ECB83906AB86
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:350#42D2933A94AA297DFBE1ECB83906AB87
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:356#42D2933A94AA297DFBE1ECB83906AB88
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:363#42D2933A94AA297DFBE1ECB83906AB89
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:431#AF02319C982F88E8E439A4AF52D3A8A5
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:437#AF02319C982F88E8E439A4AF52D3A8A6
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:444#AF02319C982F88E8E439A4AF52D3A8A7
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:450#AF02319C982F88E8E439A4AF52D3A8A8
+Low#Poor Logging Practice: Use of a System Output Stream#RoleBasedAccessControl.java:457#AF02319C982F88E8E439A4AF52D3A8A9
+Low#Poor Logging Practice: Use of a System Output Stream#SQLInjection.java:341#D5A59CA2C8C13FB34B53721AE5C9B3D2
+Low#Poor Logging Practice: Use of a System Output Stream#SQLInjection.java:347#D5A59CA2C8C13FB34B53721AE5C9B3D3
+Low#Poor Logging Practice: Use of a System Output Stream#SQLInjection.java:354#D5A59CA2C8C13FB34B53721AE5C9B3D4
+Low#Poor Logging Practice: Use of a System Output Stream#SQLInjection.java:360#D5A59CA2C8C13FB34B53721AE5C9B3D5
+Low#Poor Logging Practice: Use of a System Output Stream#SQLInjection.java:366#D5A59CA2C8C13FB34B53721AE5C9B3D6
+Low#Poor Logging Practice: Use of a System Output Stream#SqlNumericInjection.java:400#6794198C77BE950520AE92E98DDE52CE
+Low#Poor Logging Practice: Use of a System Output Stream#SqlStringInjection.java:316#E997F562F8DE6D557D70AEE555AAC79C
+Low#Poor Logging Practice: Use of a System Output Stream#ThreadSafetyProblem.java:216#777AE55746C2DC9DD86A75F09986D338
+Low#Poor Logging Practice: Use of a System Output Stream#UpdateProfile.java:109#4CFCAFDD85B95ADCE288F8E77CEAB6F2
+Low#Poor Logging Practice: Use of a System Output Stream#UpdateProfile.java:114#4CFCAFDD85B95ADCE288F8E77CEAB6F3
+Low#Poor Logging Practice: Use of a System Output Stream#UpdateProfile.java:124#15703B6CEB9E56DD9D02968AF88F30B3
+Low#Poor Logging Practice: Use of a System Output Stream#UpdateProfile.java:129#15703B6CEB9E56DD9D02968AF88F30B4
+Low#Poor Logging Practice: Use of a System Output Stream#WebgoatProperties.java:49#507FB7849EF51D8DB486A5FCAB42291A
+Low#Poor Logging Practice: Use of a System Output Stream#WebgoatProperties.java:121#7F7F84EAD88E1BE410B4BA7DD7830C8C
+Low#Poor Logging Practice: Use of a System Output Stream#WebgoatProperties.java:124#7F7F84EAD88E1BE410B4BA7DD7830C8D
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:283#401FDDB8941EABC2D0C09279338A72DB
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:439#969986E45D1FEA078E32B58E5E84595D
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:441#969986E45D1FEA078E32B58E5E84595E
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:447#969986E45D1FEA078E32B58E5E84595F
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:801#BD7F96C92A07827F35E49DCFB8C9D8C5
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:988#D04EC036DB9FF599C02E3087AB9F1B07
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:1089#D04EC036DB9FF599C02E3087AB9F1B08
+Low#Poor Logging Practice: Use of a System Output Stream#WebSession.java:1112#7298F4FD0956AB4D64B7E4F6ABDF77E8
+Low#Poor Style: Confusing Naming#UserTracker.java:49#54F30CBCD507B01E1FA9ABBBCFE3B1AD
+Low#Poor Style: Non-final Public Static Field#DatabaseUtilities.java:50#C2BFA7617B92FB6BE0C2ED442FE41955
+Low#Poor Style: Non-final Public Static Field#HammerHead.java:85#4BC01878981195B737F743B5F5D2B440
+Low#Poor Style: Non-final Public Static Field#Screen.java:54#E17ACA7483F9F7AF59E377D763E7983D
+Low#Poor Style: Non-final Public Static Field#SoapRequest.java:74#2E81F5EFD08CBCDDBAC3E3611EA9EDCA
+Low#Poor Style: Non-final Public Static Field#WSDLScanning.java:82#3D3B0CF2E42BCD0A6398480A11773DE6
+Low#Poor Style: Non-final Public Static Field#XMLInjection.java:61#A23E4C61BF5F1E75B85E8B32C06E75CE
+Low#Poor Style: Redundant Initialization#ReflectedXSS.java:77#1AFAE43C3EC1A83437CA6249E1EEB17D
+Low#Poor Style: Redundant Initialization#ReflectedXSS.java:78#1AFAE43C3EC1A83437CA6249E1EEB17E
+Low#Poor Style: Redundant Initialization#TraceXSS.java:77#6217E95FDB01B1D733F100A0B6143FC6
+Low#Poor Style: Redundant Initialization#TraceXSS.java:78#6217E95FDB01B1D733F100A0B6143FC7
+Low#Poor Style: Value Never Read#FindProfile.java:114#09E976C98BDE478103A337247CC0F756
+Low#Redundant Null Check#FailOpenAuthentication.java:86#BC8C98608E9EB9F2AAD5C716652F0043
+Low#Redundant Null Check#FailOpenAuthentication.java:104#987807EAE60CA92A96535EF3C959F28B
+Low#Redundant Null Check#PathBasedAccessControl.java:110#A26B43E0B8AAAD5F57F50A634528CE5A
+Low#Resource Injection#Interceptor.java:93#C41ED2B38B12CC87733F9860635B3D57
+Low#Resource Injection#Interceptor.java:94#1EC821B90272EDDCE494AE29582A4CF2
+Low#SQL Injection#CSRF.java:181#91BE8A9509668E194A8C877526E7160F
+Low#SQL Injection#DefaultLessonAction.java:203#DDA192CA04BD34CB09615F5ADA6D6D06
+Low#SQL Injection#DefaultLessonAction.java:256#B9D18A1B80F2CE2982A1DF0C011D7BFC
+Low#SQL Injection#DefaultLessonAction.java:265#B9D18A1B80F2CE2982A1DF0C011D7BFB
+Low#SQL Injection#DeleteProfile.java:144#3B9CAEDBA3EF988863E7FA1E4EDE4143
+Low#SQL Injection#DOS_Login.java:139#360E3CE77448ED1F01C49BC9140332C0
+Low#SQL Injection#DOS_Login.java:147#A3CC95BCD894EAD3D13DABC323E3D63B
+Low#SQL Injection#DOS_Login.java:162#360E3CE77448ED1F01C49BC9140332BF
+Low#SQL Injection#ListStaff.java:98#6D819C0ADD8C403642DF5539DCD83183
+Low#SQL Injection#ListStaff.java:98#DAF3388936B50051AC1AD8A12D19604C
+Low#SQL Injection#ListStaff.java:146#C254DB2A8D71FBAEA8349DB39FFCF7B4
+Low#SQL Injection#ListStaff.java:146#B89C6E51C5549D303051AB4FFC873D4D
+Low#SQL Injection#StoredXss.java:343#EBF2B90A529B6D5F6E3A143881FF46FC
+Low#SQL Injection#UpdateProfile.java:225#EC5D2A161015138659834F595ABEC843
+Low#SQL Injection#UpdateProfile.java:297#D22EAF3DF450EDEF696802635C6007D6
+Low#SQL Injection#UpdateProfile.java:311#8670E2308E8A72DAAF573E8910CC3532
+Low#SQL Injection#UpdateProfile.java:382#ADB2838EEF4321355CBA5524A2E21C12
+Low#SQL Injection#ViewProfile.java:172#125AFBB5C27425AA50E71B144AE97786
+Low#SQL Injection#ViewProfile.java:192#F88C48ED63341D13C54050C71557B4B7
+Low#System Information Leak#AbstractLesson.java:423#F0AF230D6D4B8FD61D448F00098EF862
+Low#System Information Leak#AbstractLesson.java:479#D76FD51A11E5483E308232F0748769C5
+Low#System Information Leak#AbstractLesson.java:807#D613F7CF5C9DCE819D72E14B4C1612FB
+Low#System Information Leak#AbstractLesson.java:813#52AB825BF8B0D376878A2332E3C287FB
+Low#System Information Leak#AbstractLesson.java:1045#791A891A76696CCE5590E44AE11A9C91
+Low#System Information Leak#AccessControlMatrix.java:114#51D7D308BD3345DCA7B15A0BEB7EBE70
+Low#System Information Leak#BasicAuthentication.java:160#AB0F9C0F0179DC45DB936C0CAB702657
+Low#System Information Leak#BasicAuthentication.java:251#10D4432215FC1D906CED38AA5E8FCC55
+Low#System Information Leak#BlindSqlInjection.java:145#9DE7F1DA6C0A12A6FD5E01E6393AB3DA
+Low#System Information Leak#BlindSqlInjection.java:344#125F01FC217C384431D1097619DF9AD9
+Low#System Information Leak#Challenge2Screen.java:390#D91B3091E8E264DF8C6FF60BC35600BA
+Low#System Information Leak#Challenge2Screen.java:441#EC550B01611ECF96AB4E36233F98E1DA
+Low#System Information Leak#Challenge2Screen.java:729#434C02AFB8035E739BE7929C0035BE55
+Low#System Information Leak#CommandInjection.java:211#160F81FA3700C4ACF05278016D591DEE
+Low#System Information Leak#Course.java:72#D9886F39472E4FB32B12FB9ED7A42A23
+Low#System Information Leak#CreateDB.java:63#F8A0BE43919B1CC24D313FC8505FB218
+Low#System Information Leak#CreateDB.java:78#F8A0BE43919B1CC24D313FC8505FB217
+Low#System Information Leak#CreateDB.java:101#BF7CEA65EB8E52B7BA7F9689AD3E7319
+Low#System Information Leak#CreateDB.java:126#BF7CEA65EB8E52B7BA7F9689AD3E7318
+Low#System Information Leak#CreateDB.java:165#2A4E10165937706D57A241B308EAA8AE
+Low#System Information Leak#CreateDB.java:203#5C590077BD415569074E3ADC37FB4548
+Low#System Information Leak#CreateDB.java:255#F5CE104ADE787D309B188DA800E168D9
+Low#System Information Leak#CreateDB.java:307#93CD6DEBF68343122976265824799022
+Low#System Information Leak#CreateDB.java:365#FF76220E74EDAE7E4486A521D44AFB49
+Low#System Information Leak#CreateDB.java:406#3D85ED8EA02BD2FB40285F67BE1CDE88
+Low#System Information Leak#CrossSiteScripting.java:360#94BC2CB125163422C63F4E162F0FF0CB
+Low#System Information Leak#CrossSiteScripting.java:366#163B719F69C0908312A41CC536248C81
+Low#System Information Leak#CrossSiteScripting.java:373#031C838BEA3E68948136390E110422AA
+Low#System Information Leak#CrossSiteScripting.java:379#0010C1C949B6B1146790E9BA51866F0D
+Low#System Information Leak#CrossSiteScripting.java:385#6848A018EE47A64FCA5A0F716FFE688A
+Low#System Information Leak#CSRF.java:275#E8DC3D6ED853BCA5483F2920F6C6F78F
+Low#System Information Leak#DatabaseUtilities.java:110#94544F7344343065945982F8E21BCE4E
+Low#System Information Leak#DefaultLessonAction.java:210#58FD40089E718B766C6FA96FD22C8D81
+Low#System Information Leak#DefaultLessonAction.java:216#450EDF14D048E6125EA598D94E9995C0
+Low#System Information Leak#DefaultLessonAction.java:272#10D794BC1E42F40B8C7789FAB6124876
+Low#System Information Leak#DefaultLessonAction.java:278#C29E60A69A0EFA8B7965E98438EF7399
+Low#System Information Leak#DefaultLessonAction.java:320#3F6FFF90338B5D7AD8036C3213B71E6F
+Low#System Information Leak#DefaultLessonAction.java:326#81034BADE3549CFFE651854181BA6561
+Low#System Information Leak#DeleteProfile.java:81#8B01FD5075A32F5302CF5236E389A97E
+Low#System Information Leak#DeleteProfile.java:86#A43277672E8AE03DDDA5863F1377295E
+Low#System Information Leak#DeleteProfile.java:120#52C8ADF9D15390304DD17CB7F9DC8B02
+Low#System Information Leak#DeleteProfile.java:126#29F8047D0743AF3156E0715069C95333
+Low#System Information Leak#DeleteProfile.java:149#AD7C11D3EB0D8558FDC22AB525483F1A
+Low#System Information Leak#DeleteProfile.java:155#E0A0EB22F4A6987698B4EBD02907B826
+Low#System Information Leak#DOMInjection.java:92#9EA2F7ECE0EB7F2DFEA0C97602F3136D
+Low#System Information Leak#DOS_Login.java:172#AD77F23B2F560ACFD13DFB3502BC039A
+Low#System Information Leak#EditProfile.java:125#D17F85CED9B5B55047EDD0446A9B17D7
+Low#System Information Leak#EditProfile.java:125#BD4FADFC5F19C155B261ECC46F46E82D
+Low#System Information Leak#EditProfile.java:131#A1F3CAB3AF6B424ADC408CBF64AACBA5
+Low#System Information Leak#EditProfile.java:131#271C9A6472859F4F33CAACB572549F42
+Low#System Information Leak#EditProfile.java:183#A35E8449693CFFD71A5DF12FFDCBA587
+Low#System Information Leak#EditProfile.java:186#8BD6B7903C38236E8FA6C3B3480A6A40
+Low#System Information Leak#EditProfile.java:189#1628D80D60254DD5FE7AF2F02C279A5B
+Low#System Information Leak#EditProfile.java:192#A74A9A8AC3B36246B6F2AAA5700D66AC
+Low#System Information Leak#Encoding.java:459#8F8078791C5A9942DFCEEC021779672F
+Low#System Information Leak#Encoding.java:646#23B0D96DBFC08A66930F5E2F13D76E31
+Low#System Information Leak#Encoding.java:672#4F0DE05D9365625B7CCD08D58B128F2D
+Low#System Information Leak#Encoding.java:774#047AD488FEFFFA0C26F978A64B811539
+Low#System Information Leak#ErrorScreen.java:258#9173282D79F380158CB220AE42554726
+Low#System Information Leak#FindProfile.java:84#E8F7B8415D904326CE5A76C29F60DD94
+Low#System Information Leak#FindProfile.java:89#DC355E945A033F5571B6641B8C9BE798
+Low#System Information Leak#FindProfile.java:121#D872647971F4264544026202303B0C13
+Low#System Information Leak#FindProfile.java:126#F7FD358E0D1F0374731F1FA9D063D96F
+Low#System Information Leak#FindProfile.java:181#4808FFAF7D3634E85349E16A6E77465F
+Low#System Information Leak#FindProfile.java:187#B227CC5643407A75A63DAD656CCB9DC6
+Low#System Information Leak#FindProfile.java:213#7BA6A8A7BD79BE08A61BCA60190284D4
+Low#System Information Leak#FindProfile.java:219#35E084BA77E09CEA853C2E8B67EC5A90
+Low#System Information Leak#HammerHead.java:192#B98B6B12E7E2107A2C5FB412E8074669
+Low#System Information Leak#HammerHead.java:204#D7EA539980EA0892CA2126A54762616B
+Low#System Information Leak#HammerHead.java:204#D7EA539980EA0892CA2126A54762616A
+Low#System Information Leak#HammerHead.java:204#D7EA539980EA0892CA2126A54762616C
+Low#System Information Leak#HiddenFieldTampering.java:165#131F17E79F63F981BB3DAA10455F2822
+Low#System Information Leak#HttpBasics.java:78#705FAE3DBC111FD136600AFD4984E076
+Low#System Information Leak#HttpOnly.java:138#9F51D6250F83EF2B7731EF14E7136769
+Low#System Information Leak#HttpOnly.java:183#95782931E073FCBD728BDF3DA7F39E90
+Low#System Information Leak#HttpSplitting.java:137#5C63D969F93AD4F6406AD4E5C137651D
+Low#System Information Leak#Interceptor.java:110#4D29817A94B639966ABCDE67289F0FAB
+Low#System Information Leak#Interceptor.java:115#4D29817A94B639966ABCDE67289F0FAA
+Low#System Information Leak#JavaScriptValidation.java:259#FC52535F6E6C764EA9B84AD5EA60A650
+Low#System Information Leak#JSONInjection.java:98#E8EF5733799D99324748E618EBE6DC59
+Low#System Information Leak#LessonAdapter.java:137#1D501737C15AE10645708C25342F008F
+Low#System Information Leak#LessonSource.java:93#71BF097995A06C0A5E79ED93F9DFA30B
+Low#System Information Leak#LessonSource.java:104#2509DC39A77F6D65BBCF8ACCFF657FFE
+Low#System Information Leak#LessonTracker.java:254#FF10EE5C1C632AD667838979FD8C253C
+Low#System Information Leak#ListStaff.java:115#0A84CFB7DBE148BCA531CBABA1A42650
+Low#System Information Leak#ListStaff.java:115#30BA3110C9C99222B1E03052176CC477
+Low#System Information Leak#ListStaff.java:121#8CFD6F3F11F1F76C099AC5ACA733778E
+Low#System Information Leak#ListStaff.java:121#F816B701BF42B2D5F9B436A63C987F2E
+Low#System Information Leak#ListStaff.java:163#9523285F3B0BA5E8E91C4E11492A65D6
+Low#System Information Leak#ListStaff.java:163#E39A9E190CF6A50B4EEB36F90B79EEEE
+Low#System Information Leak#ListStaff.java:169#7DEFC09894FCD4141B09E0898E429C4A
+Low#System Information Leak#ListStaff.java:169#DD063791D0680D5C9FF93F0599D7712B
+Low#System Information Leak#Login.java:91#FCD568019EB69AF39AA163B0918E3C7F
+Low#System Information Leak#Login.java:95#0399A1EC2D554723E3929010E2556E8C
+Low#System Information Leak#Login.java:96#7865EB7B5AC47B29248E8C5025A008B0
+Low#System Information Leak#Login.java:100#0278C28651A419EA7D7D5DB87A1FB695
+Low#System Information Leak#Login.java:162#8F523C6484F562CF74E05CFD919CB035
+Low#System Information Leak#Login.java:163#1A29C2FBFDD046228D0B134428F51657
+Low#System Information Leak#Login.java:168#2A0E5C8A8D2080682AAF42D79BC24679
+Low#System Information Leak#Login.java:169#CAF560698F78E62F29FC0CF1F6955816
+Low#System Information Leak#Login.java:205#F0476D607FC7E88A788D476EA7DD55C0
+Low#System Information Leak#Login.java:210#D2CBE98F96B851D86A2DBB88FA6101B5
+Low#System Information Leak#Login.java:211#51602EFB444788618FD1F4B49284D96E
+Low#System Information Leak#Login.java:216#578089EE6998BD5FC900CA94A6F4B9F9
+Low#System Information Leak#Login.java:252#7506F4DA48F6F86385C9F1B201CA3849
+Low#System Information Leak#Login.java:258#15A52F2B4AB4C9974369F7251DBFB23C
+Low#System Information Leak#Logout.java:71#542A1F6930BFCE61860BFF17756539E2
+Low#System Information Leak#Logout.java:76#8E895F72A0E053B9527EBDA1C3B8F849
+Low#System Information Leak#LogSpoofing.java:128#808268520EA61ACECDD3CE502C001181
+Low#System Information Leak#PathBasedAccessControl.java:217#DABE998A0B6FAD79EB0991E4EAAC181B
+Low#System Information Leak#ProductsAdminScreen.java:88#F2A3B37C92D64B9A4D3A13851DF8D76E
+Low#System Information Leak#ReflectedXSS.java:222#F570B583EF594B28853E556BE72B33B8
+Low#System Information Leak#RefreshDBScreen.java:99#B5DBB03F9B63EAF24FDBFAEEDA0E29E2
+Low#System Information Leak#RefreshDBScreen.java:169#AFC4AB32F20D390E9F9D1EC215C5F28B
+Low#System Information Leak#RoleBasedAccessControl.java:338#4C58672C07CE0B3888AD33A0CFF3D994
+Low#System Information Leak#RoleBasedAccessControl.java:344#390CC7C47C215AE245AA7F18DFBC4FEA
+Low#System Information Leak#RoleBasedAccessControl.java:351#D9E6C19FF94A89C45637A61042D0DCF4
+Low#System Information Leak#RoleBasedAccessControl.java:358#92A45ABC6BEBD81AF05D783F150A01FD
+Low#System Information Leak#RoleBasedAccessControl.java:364#CD805D9C1A798A2C4DDC3D19F51A75BC
+Low#System Information Leak#RoleBasedAccessControl.java:432#3A34FB4634245DAC8FB32F4AEBABD802
+Low#System Information Leak#RoleBasedAccessControl.java:438#EAE355985C5A5A425BE5693E5B2DBE14
+Low#System Information Leak#RoleBasedAccessControl.java:445#784F6C1C531B36F70C18F0DABF1C7DCA
+Low#System Information Leak#RoleBasedAccessControl.java:452#F40DFD7D0A6A3177917B8D561E6CDCC9
+Low#System Information Leak#RoleBasedAccessControl.java:458#7A60E2A9434AE4E21CEEE27DFBE160CF
+Low#System Information Leak#SilentTransactions.java:117#067B838962D6B799229870C93909DAA7
+Low#System Information Leak#SoapRequest.java:273#EE0D0F6E41CCBAFA3ACD09D5E3B4810A
+Low#System Information Leak#SoapRequest.java:330#1483B63B83BB6AA4D820DD9274638C54
+Low#System Information Leak#SQLInjection.java:342#D13CCAFA47C75F58C2F9560901CDDCA9
+Low#System Information Leak#SQLInjection.java:348#2C6E09CD1E289637CD671775BC99CADE
+Low#System Information Leak#SQLInjection.java:355#B922D2C153F3FCD70F6920FBA8EF3AE2
+Low#System Information Leak#SQLInjection.java:361#BF4701C7B0F1C825C65450C4897AB8B7
+Low#System Information Leak#SQLInjection.java:367#7608F03C2C01ADB55C091F61822D3207
+Low#System Information Leak#SqlNumericInjection.java:162#95DE204D0F2739B96963DADDC6173ABA
+Low#System Information Leak#SqlNumericInjection.java:242#53B038E0AE5B68AA1F4A9E8507FB4AAC
+Low#System Information Leak#SqlNumericInjection.java:323#4C653A33A0D6848A352377AB4CBAB1AD
+Low#System Information Leak#SqlNumericInjection.java:401#BCA2815261DDE9801EF85E500931CC3B
+Low#System Information Leak#SqlStringInjection.java:152#7D6003CBCB0DCF48E600ED712C83AABF
+Low#System Information Leak#SqlStringInjection.java:222#72460759C5B6E978E5FE283EAEEC81F3
+Low#System Information Leak#SqlStringInjection.java:317#C96F82E5F189CA5A0B7AAB52DD930CAB
+Low#System Information Leak#StoredXss.java:274#3BF075B4B198A249D1BAC3FEB3984E40
+Low#System Information Leak#SummaryReportCardScreen.java:101#A94731E83EB1AF8526072EA57511AF95
+Low#System Information Leak#ThreadSafetyProblem.java:128#B9BF1DFE73632286CCBD9DB579BF1F6C
+Low#System Information Leak#ThreadSafetyProblem.java:217#2AB41AE8E1843F47BA77436620AA16AB
+Low#System Information Leak#TraceXSS.java:223#ABD8BC13CE60A8E57DCFA6DABD7C58FD
+Low#System Information Leak#UncheckedEmail.java:196#5FEF0BF8E504E8EEB64A4B64E33D7339
+Low#System Information Leak#UpdateProfile.java:110#820D9127C18956E39B7BFD623247D3DA
+Low#System Information Leak#UpdateProfile.java:115#34F7DA75494088350E0041164CF31E69
+Low#System Information Leak#UpdateProfile.java:125#E4EB3C3CC86A124D05029C605EAFE89D
+Low#System Information Leak#UpdateProfile.java:130#9566BFFB8B5ACE187FB90DDCEEAC6C17
+Low#System Information Leak#UpdateProfile.java:181#05B7CDDF96E7DFE39C750A2146B40FF2
+Low#System Information Leak#UpdateProfile.java:188#91E288900A767B8B3AC64CB500252086
+Low#System Information Leak#UpdateProfile.java:230#F25983B958BB80B53993CD341D48CED5
+Low#System Information Leak#UpdateProfile.java:237#12A7BB006A4A13923C074307011194B8
+Low#System Information Leak#UpdateProfile.java:253#181A204DA906FACB0A0455C47657CF13
+Low#System Information Leak#UpdateProfile.java:257#96C276DAF9BB2936A2F0FEB3DA40763A
+Low#System Information Leak#UpdateProfile.java:260#D8119249773A39CD022B883126F43C24
+Low#System Information Leak#UpdateProfile.java:263#21A8BD721CDE61C4EE753B32957EA7C8
+Low#System Information Leak#UpdateProfile.java:299#8C48CE78706C16033CB0373C60EBF66E
+Low#System Information Leak#UpdateProfile.java:302#8E8BA4B0E6CF6803058E507305B358C3
+Low#System Information Leak#UpdateProfile.java:309#D9077301391A2AB9CFF320A0941B7299
+Low#System Information Leak#UpdateProfile.java:315#8C48CE78706C16033CB0373C60EBF66D
+Low#System Information Leak#UpdateProfile.java:321#65081290A748CDED3B8C7556ECE0F677
+Low#System Information Leak#UpdateProfile.java:345#348D9FB5ADC466B0BF5C0E5163F660CB
+Low#System Information Leak#UpdateProfile.java:351#3DDF4C741AC3A01CBE48D925C7B3268F
+Low#System Information Leak#UpdateProfile.java:387#D60D775DBDAE54DDEBF316C5113E73DC
+Low#System Information Leak#UpdateProfile.java:393#D9A6AE2AC85C0E39449C242C052F302B
+Low#System Information Leak#UserAdminScreen.java:88#F1BE853B45C96F767817CE6D92D5FC4C
+Low#System Information Leak#ViewDatabase.java:105#B1D0DC02CF0F0466CA099B070DE0D4F7
+Low#System Information Leak#ViewProfile.java:140#4FDA9B15885A673A877D3550A8CABB1E
+Low#System Information Leak#ViewProfile.java:146#7A4AD89F74574F83E5609198EF01BDC2
+Low#System Information Leak#ViewProfile.java:146#96AF7220DB83AEDCBF2DD2A39C114AF0
+Low#System Information Leak#ViewProfile.java:152#2CDD488F9BB6E1BB829186146B4BA075
+Low#System Information Leak#ViewProfile.java:160#DA6AE311765259AD2C01E2BC5A36B04E
+Low#System Information Leak#ViewProfile.java:166#D1157449ECBB492F0958DEFDB268BDCE
+Low#System Information Leak#ViewProfile.java:200#435FCB107394C1B62FA1D1B941C914E7
+Low#System Information Leak#ViewProfile.java:206#FC1E4C3D52D781762C0317B5BBFBAA8F
+Low#System Information Leak#ViewProfile.java:206#3C5D38A41A6EB2D7820B964AB70ED332
+Low#System Information Leak#ViewProfile.java:212#1DF65556F09BBF74F1A33163DDB09405
+Low#System Information Leak#ViewProfile.java:220#62FF1026DD549BC6C832899FFA125D79
+Low#System Information Leak#ViewProfile.java:226#2CBD712DEF62123F610AA40637D8643F
+Low#System Information Leak#WeakAuthenticationCookie.java:197#F320CD0D64400B8E8CD55AB226B1808C
+Low#System Information Leak#WeakSessionID.java:138#A8A03FD3342B94A6241E845EEB5873DD
+Low#System Information Leak#WebgoatProperties.java:122#6C9B74DBF9AFC6C9F7143AA58F624D58
+Low#System Information Leak#WebSession.java:448#5F643FA678E744ABB5F223B467A50363
+Low#System Information Leak#WSDLScanning.java:155#9BCB204A4306E1E6CB007BE7A2EE0469
+Low#System Information Leak#WSDLScanning.java:159#9BCB204A4306E1E6CB007BE7A2EE0468
+Low#System Information Leak#WSDLScanning.java:163#9BCB204A4306E1E6CB007BE7A2EE0467
+Low#System Information Leak#WSDLScanning.java:264#0C519A9DA8C7ECBC38BFA1BFE8776F64
+Low#System Information Leak#WsSAXInjection.java:166#2B04DD17B5D46FB70C0FD974CE08F0CD
+Low#System Information Leak#WsSqlInjection.java:219#25742E56A92040D260B30A6926B06A6C
+Low#System Information Leak#XMLInjection.java:128#4955E5682DB1F23BC21B272890D9F5DD
+Low#System Information Leak#XPATHInjection.java:202#74C884820E4739861A03F8B6D623275D
+Low#System Information Leak#XPATHInjection.java:207#74C884820E4739861A03F8B6D623275C
+Low#System Information Leak#XPATHInjection.java:212#EA9B69789F87214E21A83B60748AE677
+Low#System Information Leak: HTML Comment in JSP#ViewProfile.jsp:1#F19A3E30D5A2BCE3F3617F4A4FCA45D6
+Low#System Information Leak: HTML Comment in JSP#ViewProfile.jsp:31#DC2DCA50559A993EAA03A50D4960A30C
+Low#System Information Leak: HTML Comment in JSP#ViewProfile.jsp:84#65D9CF95D4DC5BA1E5FD281D2F5C0650
+Low#System Information Leak: Incomplete Servlet Error Handling#Controller.java:60#54251F5A135A88AE020A82374D18D74A
+Low#System Information Leak: Incomplete Servlet Error Handling#HammerHead.java:119#961AB637F576744C071C9F31DED9DB0C
+Low#System Information Leak: Incomplete Servlet Error Handling#LessonSource.java:67#F74DC7B8D62E094A5E141FA3A0BE003E
+Low#System Information Leak: Internal#AbstractLesson.java:422#BC4C3AFB66A9949C193A3809DDA9E40C
+Low#System Information Leak: Internal#AbstractLesson.java:478#1E98A6F7A122158FAD7179B0502E34B1
+Low#System Information Leak: Internal#AbstractLesson.java:960#F0879411EBC690469AFC6E5E7FF4EDC1
+Low#System Information Leak: Internal#AbstractLesson.java:1044#63B451D8A2A6D70B0E55D1795D455FAF
+Low#System Information Leak: Internal#BlindSqlInjection.java:343#E8944AADCF578C5024D1735F7C279E48
+Low#System Information Leak: Internal#DatabaseUtilities.java:95#0B38BCEEE7F2B81F7433FA988C11E625
+Low#System Information Leak: Internal#ErrorScreen.java:159#F54BAA218F40DA45D1D12747610709EA
+Low#System Information Leak: Internal#Exec.java:509#22527F24D3F8FE925A856B7C8B72C8B2
+Low#System Information Leak: Internal#Exec.java:509#07DC81F1724D3DD1F052EE4103383C30
+Low#System Information Leak: Internal#Exec.java:509#F82BAB3CD0F3C4174E4E45AD5A4AC744
+Low#System Information Leak: Internal#Exec.java:509#159D205600BB0BD92FC54008D21A504B
+Low#System Information Leak: Internal#Exec.java:513#22527F24D3F8FE925A856B7C8B72C8B3
+Low#System Information Leak: Internal#Exec.java:513#F82BAB3CD0F3C4174E4E45AD5A4AC745
+Low#System Information Leak: Internal#Exec.java:513#159D205600BB0BD92FC54008D21A504C
+Low#System Information Leak: Internal#Exec.java:513#07DC81F1724D3DD1F052EE4103383C31
+Low#System Information Leak: Internal#Exec.java:524#07DC81F1724D3DD1F052EE4103383C32
+Low#System Information Leak: Internal#Exec.java:524#22527F24D3F8FE925A856B7C8B72C8B4
+Low#System Information Leak: Internal#Exec.java:524#159D205600BB0BD92FC54008D21A504D
+Low#System Information Leak: Internal#Exec.java:524#F82BAB3CD0F3C4174E4E45AD5A4AC746
+Low#System Information Leak: Internal#Exec.java:528#159D205600BB0BD92FC54008D21A504E
+Low#System Information Leak: Internal#Exec.java:528#22527F24D3F8FE925A856B7C8B72C8B5
+Low#System Information Leak: Internal#Exec.java:528#07DC81F1724D3DD1F052EE4103383C33
+Low#System Information Leak: Internal#Exec.java:528#F82BAB3CD0F3C4174E4E45AD5A4AC747
+Low#System Information Leak: Internal#Exec.java:532#F82BAB3CD0F3C4174E4E45AD5A4AC748
+Low#System Information Leak: Internal#Exec.java:532#159D205600BB0BD92FC54008D21A504F
+Low#System Information Leak: Internal#Exec.java:532#07DC81F1724D3DD1F052EE4103383C34
+Low#System Information Leak: Internal#Exec.java:532#22527F24D3F8FE925A856B7C8B72C8B6
+Low#System Information Leak: Internal#Exec.java:536#22527F24D3F8FE925A856B7C8B72C8B7
+Low#System Information Leak: Internal#Exec.java:536#07DC81F1724D3DD1F052EE4103383C35
+Low#System Information Leak: Internal#Exec.java:536#F82BAB3CD0F3C4174E4E45AD5A4AC749
+Low#System Information Leak: Internal#Exec.java:536#159D205600BB0BD92FC54008D21A5050
+Low#System Information Leak: Internal#Exec.java:540#07DC81F1724D3DD1F052EE4103383C36
+Low#System Information Leak: Internal#Exec.java:540#22527F24D3F8FE925A856B7C8B72C8B8
+Low#System Information Leak: Internal#Exec.java:540#F82BAB3CD0F3C4174E4E45AD5A4AC74A
+Low#System Information Leak: Internal#Exec.java:540#159D205600BB0BD92FC54008D21A5051
+Low#System Information Leak: Internal#HammerHead.java:193#B7C1C1CB2A70786BA5A237EC0231FBC0
+Low#System Information Leak: Internal#HammerHead.java:306#395FF4482C440E0DFFFDBE3D38ACE125
+Low#System Information Leak: Internal#HammerHead.java:306#A442B6350AC6E369A724F565263FE717
+Low#System Information Leak: Internal#HammerHead.java:307#AB4E42C5163F2C47C0CE0592AD5E896C
+Low#System Information Leak: Internal#HammerHead.java:307#99230E892495D721C9D0F9664711B616
+Low#System Information Leak: Internal#LessonAdapter.java:136#BEB4814E49EAA11F2CEA573D16ECDB6E
+Low#System Information Leak: Internal#LessonSource.java:94#01C7651E942A3833D17DC17AB436A13F
+Low#System Information Leak: Internal#SqlNumericInjection.java:400#99A79585931C6987EC2A75B20966728B
+Low#System Information Leak: Internal#SqlStringInjection.java:316#ED66ED89B95DC2286E131198E0F14E9C
+Low#System Information Leak: Internal#ThreadSafetyProblem.java:216#19CF0F630868DEF6CFF0C696A02B48A3
+Low#System Information Leak: Internal#WebSession.java:283#C7904A5B11FD09A0ECD5EAF045A3EA81
+Low#System Information Leak: Internal#WebSession.java:439#1FB2CF819183512D88277250FA30C246
+Low#System Information Leak: Internal#WebSession.java:441#D1BF871BD67B399815A6110FA943DC60
+Low#Trust Boundary Violation#Controller.java:77#A38556DE67E45D6FD76EB8CA305BF7E2
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#C54417B3E576A1FDD1569F17681B9016
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#8D953789E993984945F21FAAABC89B91
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#2765A568F229F1188B978BDCE4A579E1
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#E86CFE12FE945DE38CB73BAA84F38771
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#2D1FA024D4DFE45CE0035FA67E25D258
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#0C0C8B9415D288E04DB054A14BAAAFC7
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#2F062F4EFA6F7C44791C8BE23ADB614D
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#E8CB1989D91C9403340C9FC204378F27
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#1B69835E685B71332F2064C89B2E3543
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#71B4EB86510B82272737C85FAB0C1C03
+Low#Trust Boundary Violation#DefaultLessonAction.java:89#F811B22E8C806088373A51D32900FE1B
+Low#Trust Boundary Violation#HammerHead.java:183#80A3A11CD9D722CAA90546C38D01517F
+Low#Trust Boundary Violation#HammerHead.java:184#8C2298C28EAD54C49A027E984836FAE8
+Low#Trust Boundary Violation#HammerHead.java:184#61D0966B274374F6382BC95F02BF2889
+Low#Trust Boundary Violation#HammerHead.java:184#A54417F51D870868E54662BC68F653EE
+Low#Trust Boundary Violation#HammerHead.java:184#1826F88E3CB1313A29ECF27BFA68181E
+Low#Trust Boundary Violation#HammerHead.java:184#51DBCE032FF4373A6D7CCFE44C3F8E6D
+Low#Trust Boundary Violation#HammerHead.java:184#77BA61D8F09850A2F2D323DEFFC86E9B
+Low#Trust Boundary Violation#HammerHead.java:185#131AD9E498DC5F616F653759D244F66B
+Low#Trust Boundary Violation#HammerHead.java:495#FEF7EFA10ADAB405E0AB39C1D6ED4595
+Low#Trust Boundary Violation#HammerHead.java:495#0D78DCF702146A4B484387747516319D
+Low#Trust Boundary Violation#HammerHead.java:495#5BB6E76C3C50D46B0287F22E8D8A412D
+Low#Trust Boundary Violation#HammerHead.java:495#C2F6648DA6B4EE9D863E03208E085ABC
+Low#Unchecked Return Value#CommandInjection.java:220#30AE8696BEA3CD405C5B06406DC2D875
+Low#Unchecked Return Value#SoapRequest.java:140#064C4C93451D67B8E1CE35240CA83095
+Low#Unsafe Reflection#DatabaseUtilities.java:66#CF6350F88FA69DDBB6F671F1EE6C01D7
+Low#Weak Cryptographic Hash#Encoding.java:640#387A6E66112334525B764D5859E55E28
+Low#Weak Cryptographic Hash#HttpOnly.java:175#7B3C46156F8E01CD8D68BF30D9E9F0D0
