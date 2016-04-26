@@ -32,27 +32,6 @@ for(i in listaEnlaces){
     abstract[i+1]<-gsub("\\b<code>\\b","",abstract[i+1])
   }
 
-  ##Limpiamos la explicación
-  #explicacionPosIni<-grep("<h2>EXPLANATION</h2>",textWeakness)
-  #checkEjemplo<-grep("<b>Example",textWeakness)
-  #if(!is.na(checkEjemplo[1])){
-   # explicacionPosFin<-checkEjemplo[1]-1
-  #}else{
-    #explicacionPosFin<-grep("<h2>REFERENCES</h2>",textWeakness)-1
-  #}
-  #explicacionPosFin<-grep("<h2>REFERENCES</h2>",textWeakness)-1
-  #explicacion<-""
-  #for(i in 0:(explicacionPosFin-explicacionPosIni-1)){
-  #  explicacion[i+1]<-gsub("<br><h2></h2>","\n\n",textWeakness[explicacionPosIni+i])
-  #}
-  #Limpiamos la referencia
-  #referencePosIni<-grep("<h2>REFERENCES</h2>",textWeakness)
-  #referencePosFin<-grep("© Copyright 2008",textWeakness)-4
-  #reference<-""
-  #for(i in 0:(referencePosFin-referencePosIni-1)){
-  #  reference[i+1]<-gsub("[<h2></h2><p></p><br><em></em>]","",textWeakness[referencePosIni+i])
-  #}
-
   #Sacar OWAST 2013
   lineaOwast<-grep("Standards Mapping - OWASP Top 10 2013",textWeakness)
   if(!is.na(lineaOwast[1])){
@@ -60,7 +39,7 @@ for(i in listaEnlaces){
     owastCategory<-matrix(unlist(strsplit(owast, "<em>")),byrow = TRUE)
     owastCategory<-gsub("</em> <br></p>","",owastCategory[2])
   }else{
-    owastCategory<-"No está asociado a ninguna clase de OWAST"
+    owastCategory<-NA
   }
 
   #Sacar CWE
@@ -74,40 +53,9 @@ for(i in listaEnlaces){
     cweCategory<-gsub(" ","",cweCategory)
     #cweCategory<-matrix(unlist(strsplit(cweCategory, ", ")),byrow = TRUE)
   }else{
-    cweCategory<-"No está asociado a ningún CWE"
+    cweCategory<-NA
   }
-  #Creamos XML
-  #sink("WeaknessXML.xml")
-  #cat("<Title>")
-  #cat(titulo)
-  #cat("\n\t")
-  #cat("<Abstract>")
-  #cat(abstract)
-  #cat("\n\t")
-  #cat("</Abstract>")
-  #cat("<Owast>")
-  #cat("</Owast>")
-  #cat(owastCategory)
-  #cat("\n\t")
-  #cat("<CWE>")
-  #  cont<-1
-   # for(i in cweCategory){
-   #   cat("\n\t\t")
 
-  #    cat("<",cont,">")
-  #    cat(i)
-  #    cat("<",cont,"/>")
-  #    cont<-cont+1
-  #  }
-  #cat("\n\t")
-  #cat("</CWE>")
-  #cat("\n\t")
-  #cat("<Enlace>")
-  #cat(input)
-  #cat("</Enlace>")
-  #cat("\n")
-  #cat("</Title>")
-  #XML<-readLines("weekness.txt")
   if(!exists("TITULO")){
     TITULO<-titulo
     ABSTRACT<-abstract[3]
@@ -122,6 +70,6 @@ for(i in listaEnlaces){
     URL<-append(URL,input)
   }
   df = data.frame(TITULO,ABSTRACT,OWASP,CWE,URL)
+  write.csv(df, file = "Daya/MyData.csv")
 }
-#sink()
 

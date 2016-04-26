@@ -1,17 +1,17 @@
 cargar<-function(){
-  listVulnerabilities<-readLines("Data/VulnerabilitiesWebGoat.txt")
-  dataFrame<-read.csv("Data/MyData.csv", header = T)
+  listVulnerabilities<<-readLines("Data/VulnerabilitiesWebGoat.txt")
+  dataFrame<<-read.csv("Data/MyData.csv", header = T)
 }
 
 getInfoReport<-function(){
-  listCWE <- as.character(dataFrame$CWE)
+  listCWE <<- as.character(dataFrame$CWE)
   listHP <- as.character(dataFrame$TITULO)
   URLHP <- as.character(dataFrame$URL)
-  contSinCWE<-0
-  contador<-1
+  contSinCWE<<-0
+  contador<<-1
   dataFrameFinal<-data.frame()
   for(i in listCWE){
-    if(i!="No está asociado a ningún CWE"){
+    if(!is.na(i)){
       selectedCWE <- strsplit(i,",")[[1]]
       for(CWE in selectedCWE){
         if(contador==1){
