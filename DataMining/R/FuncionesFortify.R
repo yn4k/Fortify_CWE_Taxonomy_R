@@ -38,6 +38,9 @@ getInfoReport<-function(){
       contSinCWE<-contSinCWE+1
     contador <- contador + 1
   }
+
+  slices <- c(contSinCWE, contador)
+  pie(slices, labels = "Sin CWE", main="Relación total vulnerabilidades con/sin CWE")
+
   return(dataFrameFinal)
 }
-
