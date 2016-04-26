@@ -1,11 +1,11 @@
 ##Código sucio de test para la descarga de los URL de fortify
 
 library(scrapeR)
-
+getURL<-function(){
 input <- "http://www.hpenterprisesecurity.com/vulncat/es/vulncat/all.html"
 doc <- htmlTreeParse(input, useInternal=TRUE)
 sink("your.file.txt")
-doc
+print(doc)
 sink()
 text<-readLines("your.file.txt")
 for(j in seq(text)){
@@ -66,3 +66,4 @@ for(i in listaSecciones){
 #sink()
 
 #listaEnlaces tiene todos los enlaces los procesamos
+}

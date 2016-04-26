@@ -128,7 +128,7 @@ buscarCompuesto <- function(idVulnerabilidad){
 
 convertirCompuestoDataFrame <- function(compuesto){
   #Id
-  id <- xmlGetAttr(categoria, "ID")
+  id <- xmlGetAttr(compuesto, "ID")
 
   #Descripcion
   xpath <- paste("./Description/Description_Summary")
@@ -180,6 +180,9 @@ getVulnerabilidad <- function(vulId){
       nodo <- buscarCompuesto(vulId)
       if (!is.na(nodo)){
         return(convertirCompuestoDataFrame(nodo))
+      }
+      else{
+        return(NA)
       }
     }
   }

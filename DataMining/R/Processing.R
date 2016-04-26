@@ -5,11 +5,11 @@ for(i in listaEnlaces){
   cont<-cont+1
   input <- i
   doc <- htmlTreeParse(input, useInternal=TRUE)
-  sink(paste("Weakness/",cont,"_weekness.txt",sep = ""))
+  sink(paste("Data/Weakness/",cont,"_weekness.txt",sep = ""))
   print(doc)
   sink()
 
-  textWeakness<-readLines(paste("Weakness/",cont,"_weekness.txt",sep = ""))
+  textWeakness<-readLines(paste("Data/Weakness/",cont,"_weekness.txt",sep = ""))
   for(j in seq(textWeakness)){
     textWeakness[j] <- gsub("\td","",textWeakness[j])
     textWeakness[j] <- gsub("\t","",textWeakness[j])

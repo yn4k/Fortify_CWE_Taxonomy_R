@@ -1,3 +1,4 @@
+contNoExistOWASP<-function(){
 df<-read.csv("Data/MyData.csv", header = T)
 stringCompare<-""
 stringCompare[1]<-"No está asociado a ninguna clase de OWAST"
@@ -25,3 +26,4 @@ for(j in 1:length(stringCompare)){
   pie(contador,labels = stringCompare)
 }
 
+}
